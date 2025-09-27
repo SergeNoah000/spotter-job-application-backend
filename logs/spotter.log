@@ -1,0 +1,1542 @@
+INFO 2025-09-25 12:38:05,046 autoreload 1063787 139964708583232 Watching for file changes with StatReloader
+INFO 2025-09-25 15:38:42,028 autoreload 1063787 139964708583232 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-09-25 15:39:26,817 autoreload 1091157 139832662116160 Watching for file changes with StatReloader
+WARNING 2025-09-25 15:58:52,279 log 1091157 139832505923328 Not Found: /
+WARNING 2025-09-25 15:58:52,280 basehttp 1091157 139832505923328 "GET / HTTP/1.1" 404 2878
+WARNING 2025-09-25 15:58:52,858 log 1091157 139832505923328 Not Found: /favicon.ico
+WARNING 2025-09-25 15:58:52,858 basehttp 1091157 139832505923328 "GET /favicon.ico HTTP/1.1" 404 2929
+WARNING 2025-09-25 15:59:07,721 log 1091157 139832505923328 Not Found: /accounts
+WARNING 2025-09-25 15:59:07,723 basehttp 1091157 139832505923328 "GET /accounts HTTP/1.1" 404 2920
+WARNING 2025-09-25 15:59:23,315 log 1091157 139832505923328 Not Found: /accounts/
+WARNING 2025-09-25 15:59:23,316 basehttp 1091157 139832505923328 "GET /accounts/ HTTP/1.1" 404 6509
+INFO 2025-09-25 15:59:45,537 basehttp 1091157 139832505923328 "GET /api/ HTTP/1.1" 200 690
+WARNING 2025-09-25 16:00:14,471 log 1091157 139832505923328 Unauthorized: /api/trips/
+WARNING 2025-09-25 16:00:14,472 basehttp 1091157 139832505923328 "GET //api/trips/ HTTP/1.1" 401 58
+WARNING 2025-09-25 16:00:34,922 log 1091157 139832505923328 Unauthorized: /api/eld-logs/
+WARNING 2025-09-25 16:00:34,923 basehttp 1091157 139832505923328 "GET /api/eld-logs/ HTTP/1.1" 401 58
+INFO 2025-09-25 16:00:51,252 basehttp 1091157 139832505923328 "GET /admin/doc/ HTTP/1.1" 302 0
+INFO 2025-09-25 16:00:51,721 basehttp 1091157 139832505923328 "GET /admin/login/?next=/admin/doc/ HTTP/1.1" 200 4191
+INFO 2025-09-25 16:00:52,205 basehttp 1091157 139832495957760 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-09-25 16:00:52,211 basehttp 1091157 139832479172352 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-09-25 16:00:52,214 basehttp 1091157 139832487565056 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-09-25 16:00:52,295 basehttp 1091157 139832470779648 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO 2025-09-25 16:00:52,297 basehttp 1091157 139832505923328 "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2025-09-25 16:00:52,358 basehttp 1091157 139832479172352 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-09-25 16:00:52,358 basehttp 1091157 139832487565056 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-09-25 16:00:58,075 basehttp 1091157 139832487565056 "POST /admin/login/?next=/admin/doc/ HTTP/1.1" 200 4349
+INFO 2025-09-25 16:01:03,605 basehttp 1091157 139832487565056 "GET /admin/login/?next=/admin/doc/ HTTP/1.1" 200 4191
+INFO 2025-09-25 16:02:18,875 autoreload 1091157 139832662116160 /home/sergeo/Documents/spotter-application/spotter-backend/spotter_project/settings.py changed, reloading.
+INFO 2025-09-25 16:02:29,822 autoreload 1093715 140548723943232 Watching for file changes with StatReloader
+INFO 2025-09-25 16:13:52,290 basehttp 1093715 140548567856896 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-09-25 16:14:02,395 basehttp 1093715 140548567856896 "POST /api/auth/login/ HTTP/1.1" 200 1123
+INFO 2025-09-25 16:14:02,566 basehttp 1093715 140548567856896 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-25 16:14:02,568 basehttp 1093715 140548546451200 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-25 16:14:02,571 basehttp 1093715 140548538058496 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-25 16:14:02,571 basehttp 1093715 140548529665792 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+WARNING 2025-09-25 16:14:02,604 log 1093715 140548538058496 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-25 16:14:02,605 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-25 16:14:02,611 log 1093715 140548546451200 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-25 16:14:02,612 basehttp 1093715 140548546451200 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-25 16:14:02,673 log 1093715 140548538058496 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-25 16:14:02,677 log 1093715 140548529665792 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-25 16:14:02,678 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-25 16:14:02,679 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-25 16:18:02,558 log 1093715 140548538058496 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-25 16:18:02,566 log 1093715 140548529665792 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-25 16:18:02,573 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-25 16:18:02,575 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-25 16:18:02,613 log 1093715 140548538058496 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-25 16:18:02,619 log 1093715 140548546451200 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-25 16:18:02,626 basehttp 1093715 140548546451200 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-25 16:18:02,628 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-25 16:18:20,296 log 1093715 140548546451200 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-25 16:18:20,299 log 1093715 140548538058496 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-25 16:18:20,303 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-25 16:18:20,310 basehttp 1093715 140548546451200 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-25 16:18:20,334 log 1093715 140548567856896 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-25 16:18:20,335 log 1093715 140548529665792 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-25 16:18:20,338 basehttp 1093715 140548567856896 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-25 16:18:20,343 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+INFO 2025-09-25 16:18:58,277 basehttp 1093715 140548529665792 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-25 16:18:58,279 basehttp 1093715 140548567856896 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+WARNING 2025-09-25 16:18:58,302 log 1093715 140548567856896 Not Found: /api/accounts/profile/
+WARNING 2025-09-25 16:18:58,303 basehttp 1093715 140548567856896 "GET /api/accounts/profile/ HTTP/1.1" 404 4934
+WARNING 2025-09-25 16:18:58,368 log 1093715 140548529665792 Not Found: /api/accounts/profile/
+WARNING 2025-09-25 16:18:58,371 basehttp 1093715 140548529665792 "GET /api/accounts/profile/ HTTP/1.1" 404 4934
+WARNING 2025-09-26 07:55:16,035 log 1093715 140548567856896 Not Found: /favicon.ico
+WARNING 2025-09-26 07:55:16,127 basehttp 1093715 140548567856896 "GET /favicon.ico HTTP/1.1" 404 2929
+INFO 2025-09-26 09:15:02,320 basehttp 1093715 140548567856896 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-09-26 09:15:04,552 basehttp 1093715 140548567856896 "POST /api/auth/login/ HTTP/1.1" 200 1123
+INFO 2025-09-26 09:15:04,729 basehttp 1093715 140548567856896 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-26 09:15:04,733 basehttp 1093715 140548546451200 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-26 09:15:05,047 basehttp 1093715 140548546451200 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-26 09:15:05,048 basehttp 1093715 140548567856896 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+WARNING 2025-09-26 09:15:06,595 log 1093715 140548529665792 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 09:15:07,464 log 1093715 140548538058496 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 09:15:07,466 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 09:15:07,469 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 09:15:07,789 log 1093715 140548529665792 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 09:15:07,791 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 09:15:07,812 log 1093715 140548567856896 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 09:15:07,815 basehttp 1093715 140548567856896 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 09:33:11,241 log 1093715 140548529665792 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 09:33:11,303 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 09:33:11,306 log 1093715 140548546451200 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 09:33:11,307 basehttp 1093715 140548546451200 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+INFO 2025-09-26 17:55:49,279 basehttp 1093715 140548529665792 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-26 17:55:49,280 basehttp 1093715 140548546451200 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+WARNING 2025-09-26 17:55:50,059 log 1093715 140548546451200 Not Found: /api/accounts/profile/
+WARNING 2025-09-26 17:55:50,060 basehttp 1093715 140548546451200 "GET /api/accounts/profile/ HTTP/1.1" 404 4934
+WARNING 2025-09-26 17:55:50,117 log 1093715 140548529665792 Not Found: /api/accounts/profile/
+WARNING 2025-09-26 17:55:50,119 basehttp 1093715 140548529665792 "GET /api/accounts/profile/ HTTP/1.1" 404 4934
+INFO 2025-09-26 18:41:15,671 basehttp 1093715 140548529665792 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2025-09-26 18:41:18,478 basehttp 1093715 140548529665792 "POST /api/auth/login/ HTTP/1.1" 200 1123
+INFO 2025-09-26 18:41:21,230 basehttp 1093715 140548529665792 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-26 18:41:21,352 basehttp 1093715 140548529665792 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-26 18:41:21,353 basehttp 1093715 140548546451200 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-26 18:41:21,409 basehttp 1093715 140548567856896 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+WARNING 2025-09-26 18:41:21,446 log 1093715 140548529665792 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 18:41:21,483 log 1093715 140548538058496 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 18:41:21,483 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 18:41:21,484 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 18:41:21,538 log 1093715 140548567856896 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 18:41:21,544 basehttp 1093715 140548567856896 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 18:41:21,545 log 1093715 140548538058496 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 18:41:21,546 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 18:41:21,651 log 1093715 140548538058496 Not Found: /api/accounts/profile/
+WARNING 2025-09-26 18:41:21,652 basehttp 1093715 140548538058496 "GET /api/accounts/profile/ HTTP/1.1" 404 4934
+WARNING 2025-09-26 18:41:21,822 log 1093715 140548538058496 Not Found: /api/accounts/profile/
+WARNING 2025-09-26 18:41:21,823 basehttp 1093715 140548538058496 "GET /api/accounts/profile/ HTTP/1.1" 404 4934
+WARNING 2025-09-26 18:43:33,343 log 1093715 140548538058496 Bad Request: /api/auth/login/
+WARNING 2025-09-26 18:43:33,344 basehttp 1093715 140548538058496 "POST /api/auth/login/ HTTP/1.1" 400 50
+WARNING 2025-09-26 18:44:07,338 log 1093715 140548538058496 Bad Request: /api/auth/login/
+WARNING 2025-09-26 18:44:07,339 basehttp 1093715 140548538058496 "POST /api/auth/login/ HTTP/1.1" 400 50
+WARNING 2025-09-26 18:50:46,445 log 1093715 140548538058496 Bad Request: /api/auth/login/
+WARNING 2025-09-26 18:50:46,454 basehttp 1093715 140548538058496 "POST /api/auth/login/ HTTP/1.1" 400 50
+INFO 2025-09-26 18:59:40,976 basehttp 1093715 140548538058496 "POST /api/auth/login/ HTTP/1.1" 200 1123
+WARNING 2025-09-26 18:59:41,192 log 1093715 140548546451200 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 18:59:41,195 log 1093715 140548538058496 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 18:59:41,195 basehttp 1093715 140548546451200 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 18:59:41,196 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 18:59:41,322 log 1093715 140548538058496 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 18:59:41,326 log 1093715 140548529665792 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 18:59:41,335 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 18:59:41,336 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+INFO 2025-09-26 19:00:16,846 basehttp 1093715 140548538058496 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-26 19:00:16,908 basehttp 1093715 140548529665792 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-26 19:00:16,911 basehttp 1093715 140548546451200 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-26 19:00:17,363 basehttp 1093715 140548529665792 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 19:00:17,364 basehttp 1093715 140548538058496 "GET /api/trips/ HTTP/1.1" 200 52
+INFO 2025-09-26 19:00:17,548 basehttp 1093715 140548538058496 "GET /api/trips/ HTTP/1.1" 200 52
+INFO 2025-09-26 19:00:17,549 basehttp 1093715 140548529665792 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-26 19:00:27,450 log 1093715 140548529665792 Not Found: /api/accounts/profile/
+WARNING 2025-09-26 19:00:27,456 basehttp 1093715 140548529665792 "GET /api/accounts/profile/ HTTP/1.1" 404 4934
+WARNING 2025-09-26 19:00:27,481 log 1093715 140548538058496 Not Found: /api/accounts/profile/
+WARNING 2025-09-26 19:00:27,482 basehttp 1093715 140548538058496 "GET /api/accounts/profile/ HTTP/1.1" 404 4934
+INFO 2025-09-26 19:00:43,266 basehttp 1093715 140548538058496 "POST /api/auth/login/ HTTP/1.1" 200 1123
+WARNING 2025-09-26 19:00:43,809 log 1093715 140548529665792 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 19:00:43,816 log 1093715 140548538058496 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 19:00:43,817 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 19:00:43,819 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 19:00:43,915 log 1093715 140548546451200 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 19:00:43,933 basehttp 1093715 140548546451200 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 19:00:43,938 log 1093715 140548538058496 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 19:00:43,952 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 19:06:24,390 log 1093715 140548529665792 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 19:06:24,402 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 19:06:24,434 log 1093715 140548546451200 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 19:06:24,435 basehttp 1093715 140548546451200 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 19:06:24,488 log 1093715 140548529665792 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 19:06:24,503 basehttp 1093715 140548529665792 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 19:06:24,496 log 1093715 140548538058496 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 19:06:24,516 basehttp 1093715 140548538058496 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+INFO 2025-09-26 19:07:59,554 autoreload 1093715 140548723943232 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/views.py changed, reloading.
+INFO 2025-09-26 19:09:00,058 autoreload 1235809 140333822490432 Watching for file changes with StatReloader
+INFO 2025-09-26 19:11:45,448 autoreload 1236861 140168187856704 Watching for file changes with StatReloader
+INFO 2025-09-26 20:12:34,177 autoreload 1242846 140268791883584 Watching for file changes with StatReloader
+INFO 2025-09-26 20:13:13,424 basehttp 1242846 140268635956992 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-26 20:13:13,438 basehttp 1242846 140268627564288 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+WARNING 2025-09-26 20:13:14,449 log 1242846 140268635956992 Not Found: /api/accounts/profile/
+WARNING 2025-09-26 20:13:14,452 basehttp 1242846 140268635956992 "GET /api/accounts/profile/ HTTP/1.1" 404 4934
+WARNING 2025-09-26 20:13:14,557 log 1242846 140268627564288 Not Found: /api/accounts/profile/
+WARNING 2025-09-26 20:13:14,564 basehttp 1242846 140268627564288 "GET /api/accounts/profile/ HTTP/1.1" 404 4934
+INFO 2025-09-26 20:13:57,771 basehttp 1242846 140268627564288 "POST /api/auth/login/ HTTP/1.1" 200 1123
+WARNING 2025-09-26 20:13:58,061 log 1242846 140268635956992 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 20:13:58,079 basehttp 1242846 140268635956992 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+WARNING 2025-09-26 20:13:58,082 log 1242846 140268627564288 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 20:13:58,094 basehttp 1242846 140268627564288 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 20:13:58,122 log 1242846 140268635956992 Not Found: /api/trips/dashboard/stats/
+WARNING 2025-09-26 20:13:58,124 basehttp 1242846 140268635956992 "GET /api/trips/dashboard/stats/ HTTP/1.1" 404 7018
+WARNING 2025-09-26 20:13:58,131 log 1242846 140268531611392 Not Found: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 20:13:58,137 basehttp 1242846 140268531611392 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 404 7033
+INFO 2025-09-26 20:19:12,360 autoreload 1242846 140268791883584 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
+INFO 2025-09-26 20:19:13,492 autoreload 1243461 140393536739136 Watching for file changes with StatReloader
+INFO 2025-09-26 20:20:18,219 autoreload 1243461 140393536739136 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-26 20:20:19,429 autoreload 1243662 139889400612672 Watching for file changes with StatReloader
+INFO 2025-09-26 20:21:00,317 basehttp 1243662 139889232312064 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 83
+INFO 2025-09-26 20:21:00,340 basehttp 1243662 139889311934208 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 20:21:00,425 basehttp 1243662 139889311934208 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 20:21:00,432 basehttp 1243662 139889213089536 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 83
+INFO 2025-09-26 20:21:15,384 autoreload 1243662 139889400612672 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/views.py changed, reloading.
+INFO 2025-09-26 20:21:16,703 autoreload 1243928 140335224235840 Watching for file changes with StatReloader
+INFO 2025-09-26 20:21:30,484 autoreload 1243928 140335224235840 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/urls.py changed, reloading.
+INFO 2025-09-26 20:21:31,491 autoreload 1243982 139687890155328 Watching for file changes with StatReloader
+INFO 2025-09-26 20:21:47,202 autoreload 1243982 139687890155328 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/urls.py changed, reloading.
+INFO 2025-09-26 20:21:48,331 autoreload 1244054 139959472199488 Watching for file changes with StatReloader
+INFO 2025-09-26 20:22:11,762 basehttp 1244054 139959375128320 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 83
+INFO 2025-09-26 20:22:11,808 basehttp 1244054 139959375128320 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 83
+INFO 2025-09-26 20:22:11,813 basehttp 1244054 139959383521024 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 20:22:11,840 basehttp 1244054 139959383521024 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 20:38:48,904 basehttp 1244054 139959383521024 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+WARNING 2025-09-26 20:38:49,469 log 1244054 139959383521024 Not Found: /api/accounts/users/
+WARNING 2025-09-26 20:38:49,471 basehttp 1244054 139959383521024 "POST /api/accounts/users/ HTTP/1.1" 404 4921
+WARNING 2025-09-26 20:39:16,750 log 1244054 139959383521024 Not Found: /api/accounts/users/
+WARNING 2025-09-26 20:39:16,750 basehttp 1244054 139959383521024 "POST /api/accounts/users/ HTTP/1.1" 404 4921
+WARNING 2025-09-26 20:41:30,583 log 1244054 139959383521024 Unauthorized: /api/trips/dashboard/stats/
+WARNING 2025-09-26 20:41:30,604 basehttp 1244054 139959383521024 "GET /api/trips/dashboard/stats/ HTTP/1.1" 401 58
+WARNING 2025-09-26 20:41:30,617 log 1244054 139959375128320 Unauthorized: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 20:41:30,624 basehttp 1244054 139959375128320 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 401 58
+WARNING 2025-09-26 20:41:30,699 log 1244054 139959383521024 Unauthorized: /api/trips/dashboard/hos-status/
+WARNING 2025-09-26 20:41:30,700 basehttp 1244054 139959383521024 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 401 58
+WARNING 2025-09-26 20:41:30,716 log 1244054 139959148918528 Unauthorized: /api/trips/dashboard/stats/
+WARNING 2025-09-26 20:41:30,727 basehttp 1244054 139959148918528 "GET /api/trips/dashboard/stats/ HTTP/1.1" 401 58
+INFO 2025-09-26 20:41:47,271 basehttp 1244054 139959148918528 "OPTIONS /api/accounts/login/ HTTP/1.1" 200 0
+WARNING 2025-09-26 20:41:47,301 log 1244054 139959148918528 Not Found: /api/accounts/login/
+WARNING 2025-09-26 20:41:47,318 basehttp 1244054 139959148918528 "POST /api/accounts/login/ HTTP/1.1" 404 4921
+WARNING 2025-09-26 20:42:04,225 log 1244054 139959148918528 Not Found: /api/accounts/login/
+WARNING 2025-09-26 20:42:04,227 basehttp 1244054 139959148918528 "POST /api/accounts/login/ HTTP/1.1" 404 4921
+INFO 2025-09-26 20:44:28,318 autoreload 1244054 139959472199488 /home/sergeo/Documents/spotter-application/spotter-backend/spotter_project/urls.py changed, reloading.
+INFO 2025-09-26 20:44:30,479 autoreload 1246443 140310118913856 Watching for file changes with StatReloader
+INFO 2025-09-26 20:44:48,134 basehttp 1246443 140309963077376 "POST /api/accounts/login/ HTTP/1.1" 200 1123
+INFO 2025-09-26 20:44:48,423 basehttp 1246443 140309963077376 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-26 20:44:48,441 basehttp 1246443 140309870671616 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-26 20:44:48,485 basehttp 1246443 140309862278912 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-26 20:44:48,499 basehttp 1246443 140309870671616 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 83
+INFO 2025-09-26 20:44:48,516 basehttp 1246443 140309963077376 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 20:44:48,573 basehttp 1246443 140309870671616 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 83
+INFO 2025-09-26 20:44:48,584 basehttp 1246443 140309963077376 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 20:44:54,927 basehttp 1246443 140309963077376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 20:44:55,034 basehttp 1246443 140309963077376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 20:45:06,065 autoreload 1246443 140310118913856 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/serializers.py changed, reloading.
+INFO 2025-09-26 20:45:07,711 autoreload 1246667 139956870297408 Watching for file changes with StatReloader
+INFO 2025-09-26 20:45:15,891 basehttp 1246667 139956714481408 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 20:45:15,923 basehttp 1246667 139956693337856 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 20:45:16,868 basehttp 1246667 139956714481408 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 83
+INFO 2025-09-26 20:45:17,063 basehttp 1246667 139956693337856 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 20:45:17,086 basehttp 1246667 139956609611520 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 83
+INFO 2025-09-26 20:45:17,090 basehttp 1246667 139956714481408 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+WARNING 2025-09-26 20:51:00,204 log 1246667 139956609611520 Bad Request: /api/accounts/users/
+WARNING 2025-09-26 20:51:00,208 basehttp 1246667 139956609611520 "POST /api/accounts/users/ HTTP/1.1" 400 147
+WARNING 2025-09-26 20:52:53,540 log 1246667 139956609611520 Bad Request: /api/accounts/users/
+WARNING 2025-09-26 20:52:53,565 basehttp 1246667 139956609611520 "POST /api/accounts/users/ HTTP/1.1" 400 139
+INFO 2025-09-26 20:54:28,237 autoreload 1246667 139956870297408 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/views.py changed, reloading.
+INFO 2025-09-26 20:54:29,542 autoreload 1248180 140628419049280 Watching for file changes with StatReloader
+INFO 2025-09-26 20:54:54,847 autoreload 1248180 140628419049280 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/models.py changed, reloading.
+INFO 2025-09-26 20:54:56,942 autoreload 1248320 140496113596224 Watching for file changes with StatReloader
+INFO 2025-09-26 20:55:41,705 autoreload 1248320 140496113596224 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/serializers.py changed, reloading.
+INFO 2025-09-26 20:55:42,923 autoreload 1248889 140023996057408 Watching for file changes with StatReloader
+WARNING 2025-09-26 20:57:23,126 log 1248889 140023840241408 Bad Request: /api/accounts/users/
+WARNING 2025-09-26 20:57:23,129 basehttp 1248889 140023840241408 "POST /api/accounts/users/ HTTP/1.1" 400 41
+WARNING 2025-09-26 20:57:42,271 log 1248889 140023840241408 Bad Request: /api/accounts/users/
+WARNING 2025-09-26 20:57:42,272 basehttp 1248889 140023840241408 "POST /api/accounts/users/ HTTP/1.1" 400 41
+INFO 2025-09-26 20:58:01,459 basehttp 1248889 140023840241408 "POST /api/accounts/users/ HTTP/1.1" 201 298
+INFO 2025-09-26 20:58:02,099 basehttp 1248889 140023840241408 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 20:58:02,239 basehttp 1248889 140023812839168 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-26 20:58:02,268 basehttp 1248889 140023804446464 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 20:58:02,301 basehttp 1248889 140023812839168 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-26 20:58:43,348 basehttp 1248889 140023812839168 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 20:58:43,353 basehttp 1248889 140023804446464 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 20:59:49,321 basehttp 1248889 140023804446464 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 20:59:49,372 basehttp 1248889 140023804446464 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 20:59:49,535 basehttp 1248889 140023812839168 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-26 20:59:49,536 basehttp 1248889 140023804446464 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 20:59:49,565 basehttp 1248889 140023840241408 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-26 20:59:49,575 basehttp 1248889 140023804446464 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-26 21:00:44,279 basehttp 1248889 140023804446464 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-26 21:00:44,304 basehttp 1248889 140023804446464 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 21:00:44,368 basehttp 1248889 140023804446464 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 21:09:01,033 basehttp 1248889 140023840241408 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 21:09:01,073 basehttp 1248889 140023840241408 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 21:09:01,318 basehttp 1248889 140023840241408 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 21:09:01,380 basehttp 1248889 140023840241408 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 21:09:22,857 basehttp 1248889 140023840241408 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 21:09:22,888 basehttp 1248889 140023804446464 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-26 21:10:08,420 log 1248889 140023804446464 Bad Request: /api/trips/vehicles/
+WARNING 2025-09-26 21:10:08,424 basehttp 1248889 140023804446464 "POST /api/trips/vehicles/ HTTP/1.1" 400 46
+WARNING 2025-09-26 21:10:29,757 log 1248889 140023804446464 Bad Request: /api/trips/vehicles/
+WARNING 2025-09-26 21:10:29,798 basehttp 1248889 140023804446464 "POST /api/trips/vehicles/ HTTP/1.1" 400 46
+INFO 2025-09-26 21:19:29,312 basehttp 1248889 140023840241408 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 21:19:54,327 autoreload 1248889 140023996057408 /home/sergeo/Documents/spotter-application/spotter-backend/trips/models.py changed, reloading.
+INFO 2025-09-26 21:19:56,841 autoreload 1251915 140232981665600 Watching for file changes with StatReloader
+INFO 2025-09-26 21:22:16,017 autoreload 1251915 140232981665600 /home/sergeo/Documents/spotter-application/spotter-backend/trips/serializers.py changed, reloading.
+INFO 2025-09-26 21:22:17,661 autoreload 1253544 140319252563776 Watching for file changes with StatReloader
+INFO 2025-09-26 21:22:54,396 basehttp 1253544 140319096547072 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 21:22:54,471 basehttp 1253544 140319075559168 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-26 21:29:52,327 log 1253544 140319075559168 Bad Request: /api/trips/vehicles/
+WARNING 2025-09-26 21:29:52,331 basehttp 1253544 140319075559168 "POST /api/trips/vehicles/ HTTP/1.1" 400 269
+WARNING 2025-09-26 21:49:01,579 log 1253544 140319075559168 Unauthorized: /api/trips/vehicles/
+WARNING 2025-09-26 21:49:01,588 basehttp 1253544 140319075559168 "GET /api/trips/vehicles/ HTTP/1.1" 401 183
+INFO 2025-09-26 21:49:01,678 basehttp 1253544 140319075559168 "OPTIONS /api/accounts/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-26 21:49:02,338 basehttp 1253544 140319075559168 "POST /api/accounts/token/refresh/ HTTP/1.1" 200 582
+INFO 2025-09-26 21:49:02,416 basehttp 1253544 140319075559168 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-26 21:51:27,794 log 1253544 140319075559168 Bad Request: /api/trips/vehicles/
+WARNING 2025-09-26 21:51:27,803 basehttp 1253544 140319075559168 "POST /api/trips/vehicles/ HTTP/1.1" 400 311
+INFO 2025-09-26 21:52:07,753 basehttp 1253544 140319075559168 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 21:52:07,941 basehttp 1253544 140319075559168 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 21:52:22,966 basehttp 1253544 140319075559168 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-26 21:55:05,417 log 1253544 140319075559168 Bad Request: /api/trips/vehicles/
+WARNING 2025-09-26 21:55:05,418 basehttp 1253544 140319075559168 "POST /api/trips/vehicles/ HTTP/1.1" 400 311
+INFO 2025-09-26 21:55:25,254 autoreload 1253544 140319252563776 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/views.py changed, reloading.
+INFO 2025-09-26 21:55:48,803 autoreload 1260902 139795980363584 Watching for file changes with StatReloader
+INFO 2025-09-26 22:00:28,611 basehttp 1260902 139795816773376 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 22:00:28,866 basehttp 1260902 139795816773376 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 22:00:29,259 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 22:00:29,284 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-26 22:02:25,981 log 1260902 139795816773376 Bad Request: /api/trips/vehicles/
+WARNING 2025-09-26 22:02:26,004 basehttp 1260902 139795816773376 "POST /api/trips/vehicles/ HTTP/1.1" 400 269
+WARNING 2025-09-26 22:10:36,825 log 1260902 139795816773376 Bad Request: /api/trips/vehicles/
+WARNING 2025-09-26 22:10:36,828 basehttp 1260902 139795816773376 "POST /api/trips/vehicles/ HTTP/1.1" 400 269
+INFO 2025-09-26 22:14:51,073 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 22:14:51,125 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 22:15:20,837 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 22:15:20,858 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 22:16:22,546 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 22:16:22,577 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 22:26:18,539 basehttp 1260902 139795797550848 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-26 22:26:18,563 basehttp 1260902 139795816773376 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-26 22:26:18,572 basehttp 1260902 139795797550848 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 22:26:18,640 basehttp 1260902 139795797550848 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 22:26:18,780 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 22:26:18,792 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 22:42:19,556 basehttp 1260902 139795797550848 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 22:42:19,581 basehttp 1260902 139795797550848 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-26 22:42:19,918 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-26 22:42:19,933 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-26 22:44:31,873 log 1260902 139795797550848 Bad Request: /api/trips/vehicles/
+WARNING 2025-09-26 22:44:31,874 basehttp 1260902 139795797550848 "POST /api/trips/vehicles/ HTTP/1.1" 400 269
+INFO 2025-09-27 06:50:43,509 basehttp 1260902 139795816773376 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 06:50:43,513 basehttp 1260902 139795797550848 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+WARNING 2025-09-27 06:50:43,592 log 1260902 139795797550848 Unauthorized: /api/trips/vehicles/
+WARNING 2025-09-27 06:50:43,593 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 401 183
+WARNING 2025-09-27 06:50:43,644 log 1260902 139795816773376 Unauthorized: /api/trips/vehicles/
+WARNING 2025-09-27 06:50:43,645 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 401 183
+INFO 2025-09-27 06:50:43,678 basehttp 1260902 139795816773376 "OPTIONS /api/accounts/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-27 06:50:43,679 basehttp 1260902 139795797550848 "OPTIONS /api/accounts/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-27 06:50:44,110 basehttp 1260902 139795816773376 "POST /api/accounts/token/refresh/ HTTP/1.1" 200 582
+INFO 2025-09-27 06:50:44,116 basehttp 1260902 139795797550848 "POST /api/accounts/token/refresh/ HTTP/1.1" 200 582
+INFO 2025-09-27 06:50:44,410 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:50:44,459 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:50:58,312 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:50:58,564 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:51:07,646 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:51:07,651 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:51:23,088 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:51:23,129 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:53:21,352 basehttp 1260902 139795797550848 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 06:53:21,508 basehttp 1260902 139795797550848 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 06:53:21,638 basehttp 1260902 139795816773376 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-27 06:53:21,774 basehttp 1260902 139795816773376 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-27 06:53:22,033 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:53:22,098 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-27 06:53:54,825 log 1260902 139795816773376 Bad Request: /api/trips/vehicles/
+WARNING 2025-09-27 06:53:54,839 basehttp 1260902 139795816773376 "POST /api/trips/vehicles/ HTTP/1.1" 400 80
+INFO 2025-09-27 06:54:32,884 basehttp 1260902 139795816773376 "POST /api/trips/vehicles/ HTTP/1.1" 201 661
+INFO 2025-09-27 06:54:33,628 basehttp 1260902 139795772372736 "GET /media/vehicles/rear/centralized_architecture.png HTTP/1.1" 200 29590
+INFO 2025-09-27 06:54:33,630 basehttp 1260902 139795789158144 "GET /media/vehicles/front/olunteer-Computing-scheme_W640.jpg HTTP/1.1" 200 40992
+INFO 2025-09-27 06:54:33,631 basehttp 1260902 139795780765440 "GET /media/vehicles/side/workflow_volunteer_computing.png HTTP/1.1" 200 41968
+INFO 2025-09-27 06:56:34,075 basehttp 1260902 139795816773376 "POST /api/trips/vehicles/ HTTP/1.1" 201 654
+INFO 2025-09-27 06:56:34,289 basehttp 1260902 139795772372736 "GET /media/vehicles/front/user_frepik.png HTTP/1.1" 200 34108
+INFO 2025-09-27 06:56:34,299 basehttp 1260902 139795789158144 "GET /media/vehicles/rear/decentralizedpeer-2-peer0_architecture.png HTTP/1.1" 200 38593
+INFO 2025-09-27 06:56:34,301 basehttp 1260902 139795780765440 "GET /media/vehicles/side/Screenshot_20250304_210951.png HTTP/1.1" 200 1603785
+INFO 2025-09-27 06:56:34,671 basehttp 1260902 139795763980032 "GET /media/vehicles/side/Screenshot_20250304_210951.png HTTP/1.1" 200 1603785
+INFO 2025-09-27 06:56:56,409 basehttp 1260902 139795816773376 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 06:56:56,440 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:56:56,444 basehttp 1260902 139795816773376 "GET /api/trips/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:56:56,477 basehttp 1260902 139795797550848 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:56:56,504 basehttp 1260902 139795816773376 "GET /api/trips/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:57:00,177 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:57:00,218 basehttp 1260902 139795816773376 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 06:57:41,983 basehttp 1260902 139795780765440 "GET /admin HTTP/1.1" 301 0
+INFO 2025-09-27 06:57:42,266 basehttp 1260902 139795789158144 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-09-27 06:57:43,266 basehttp 1260902 139795789158144 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4183
+INFO 2025-09-27 06:57:43,626 basehttp 1260902 139795789158144 "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2025-09-27 06:57:43,834 basehttp 1260902 139795789158144 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-09-27 06:57:43,905 basehttp 1260902 139795772372736 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-09-27 06:57:43,908 basehttp 1260902 139795780765440 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-09-27 06:57:43,982 basehttp 1260902 139795414120192 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+INFO 2025-09-27 06:57:44,052 basehttp 1260902 139795772372736 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-09-27 06:57:44,058 basehttp 1260902 139795780765440 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+WARNING 2025-09-27 06:57:44,556 log 1260902 139795772372736 Not Found: /favicon.ico
+WARNING 2025-09-27 06:57:44,568 basehttp 1260902 139795772372736 "GET /favicon.ico HTTP/1.1" 404 2938
+INFO 2025-09-27 06:58:39,675 basehttp 1260902 139795772372736 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-09-27 06:58:39,919 basehttp 1260902 139795772372736 "GET /admin/ HTTP/1.1" 200 8158
+INFO 2025-09-27 06:58:40,070 basehttp 1260902 139795772372736 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-09-27 06:58:40,183 basehttp 1260902 139795780765440 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-09-27 06:58:40,184 basehttp 1260902 139795772372736 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-09-27 06:59:21,669 autoreload 1260902 139795980363584 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 06:59:54,095 autoreload 1299769 139859519059776 Watching for file changes with StatReloader
+INFO 2025-09-27 07:00:38,268 autoreload 1299769 139859519059776 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 07:00:39,062 autoreload 1299998 140514075404096 Watching for file changes with StatReloader
+INFO 2025-09-27 07:00:51,745 autoreload 1299998 140514075404096 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 07:00:52,702 autoreload 1300066 139693601994560 Watching for file changes with StatReloader
+INFO 2025-09-27 07:01:14,418 autoreload 1300066 139693601994560 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 07:01:15,173 autoreload 1300155 139708660287296 Watching for file changes with StatReloader
+INFO 2025-09-27 07:01:18,028 autoreload 1300155 139708660287296 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 07:01:18,965 autoreload 1300195 140703505635136 Watching for file changes with StatReloader
+INFO 2025-09-27 07:01:21,436 autoreload 1300195 140703505635136 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 07:01:22,500 autoreload 1300220 140475871070016 Watching for file changes with StatReloader
+INFO 2025-09-27 07:02:16,701 autoreload 1300552 140676445165376 Watching for file changes with StatReloader
+INFO 2025-09-27 07:02:19,782 basehttp 1300552 140676285069056 "GET /admin/ HTTP/1.1" 200 8804
+INFO 2025-09-27 07:02:24,254 basehttp 1300552 140676285069056 "GET /admin/trips/vehicle/ HTTP/1.1" 200 11003
+INFO 2025-09-27 07:02:24,342 basehttp 1300552 140676285069056 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO 2025-09-27 07:02:24,347 basehttp 1300552 140676259890944 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-09-27 07:02:24,348 basehttp 1300552 140676251498240 "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2025-09-27 07:02:24,369 basehttp 1300552 140676276676352 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 07:02:24,403 basehttp 1300552 140676276676352 "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2025-09-27 07:02:24,410 basehttp 1300552 140676243105536 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2025-09-27 07:02:24,468 basehttp 1300552 140676259890944 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-09-27 07:02:24,512 basehttp 1300552 140676285069056 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-09-27 07:02:24,746 basehttp 1300552 140676268283648 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2025-09-27 07:02:24,811 basehttp 1300552 140676268283648 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-09-27 07:02:24,824 basehttp 1300552 140676243105536 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2025-09-27 07:02:24,897 basehttp 1300552 140676243105536 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-09-27 07:02:37,544 basehttp 1300552 140676243105536 "GET /admin/trips/vehicle/7f4a3445-d135-4fd3-bf95-44051a6e0c1b/change/ HTTP/1.1" 200 19522
+INFO 2025-09-27 07:02:37,612 basehttp 1300552 140676268283648 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 07:02:37,618 basehttp 1300552 140676243105536 "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+INFO 2025-09-27 07:02:37,646 basehttp 1300552 140676285069056 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-09-27 07:02:37,653 basehttp 1300552 140676243105536 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+INFO 2025-09-27 07:02:37,708 basehttp 1300552 140676268283648 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-09-27 07:02:41,057 basehttp 1300552 140676268283648 "GET /media/vehicles/front/user_frepik.png HTTP/1.1" 200 34108
+INFO 2025-09-27 07:02:44,027 basehttp 1300552 140676268283648 "GET /admin/trips/vehicle/7f4a3445-d135-4fd3-bf95-44051a6e0c1b/change/ HTTP/1.1" 200 19522
+INFO 2025-09-27 07:04:41,540 basehttp 1300552 140676268283648 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 07:05:28,723 autoreload 1300552 140676445165376 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 07:05:29,581 autoreload 1301042 139713896658752 Watching for file changes with StatReloader
+INFO 2025-09-27 07:05:34,400 autoreload 1301042 139713896658752 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 07:05:35,446 autoreload 1301087 139947820635968 Watching for file changes with StatReloader
+INFO 2025-09-27 07:05:48,835 basehttp 1301087 139947664733952 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 07:05:50,024 basehttp 1301087 139947664733952 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 07:05:50,508 basehttp 1301087 139947664733952 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 07:05:50,910 basehttp 1301087 139947664733952 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 07:05:51,409 basehttp 1301087 139947664733952 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 07:05:51,463 autoreload 1301087 139947820635968 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 07:05:52,311 autoreload 1301186 140279563867968 Watching for file changes with StatReloader
+INFO 2025-09-27 07:05:53,954 basehttp 1301186 140279403247360 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 07:06:07,066 autoreload 1301186 140279563867968 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 07:06:07,922 autoreload 1301276 140658967889728 Watching for file changes with StatReloader
+INFO 2025-09-27 07:15:10,847 autoreload 1301276 140658967889728 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 07:15:12,357 autoreload 1302013 140435882161984 Watching for file changes with StatReloader
+INFO 2025-09-27 07:15:25,714 basehttp 1302013 140435726313216 "GET /api/trips/vehicles/ HTTP/1.1" 200 1368
+INFO 2025-09-27 07:15:44,598 basehttp 1302013 140435717134080 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-27 07:15:44,618 basehttp 1302013 140435717134080 "GET /api/accounts/profile/ HTTP/1.1" 200 533
+INFO 2025-09-27 07:15:45,255 basehttp 1302013 140435717134080 "GET /api/trips/vehicles/ HTTP/1.1" 200 1368
+INFO 2025-09-27 07:15:45,277 basehttp 1302013 140435621852928 "GET /api/trips/vehicles/ HTTP/1.1" 200 1368
+INFO 2025-09-27 07:15:45,591 basehttp 1302013 140435613460224 "GET /media/vehicles/front/user_frepik.png HTTP/1.1" 304 0
+INFO 2025-09-27 07:15:45,848 basehttp 1302013 140435605067520 "GET /media/vehicles/side/workflow_volunteer_computing.png HTTP/1.1" 200 41968
+INFO 2025-09-27 07:15:45,849 basehttp 1302013 140435726313216 "GET /media/vehicles/rear/centralized_architecture.png HTTP/1.1" 200 29590
+INFO 2025-09-27 07:15:45,854 basehttp 1302013 140435613460224 "GET /media/vehicles/front/olunteer-Computing-scheme_W640.jpg HTTP/1.1" 200 40992
+INFO 2025-09-27 07:15:45,898 basehttp 1302013 140435596674816 "GET /media/vehicles/rear/decentralizedpeer-2-peer0_architecture.png HTTP/1.1" 200 38593
+INFO 2025-09-27 07:15:47,003 basehttp 1302013 140435596674816 "GET /media/vehicles/side/Screenshot_20250304_210951.png HTTP/1.1" 200 1603785
+INFO 2025-09-27 07:15:47,659 basehttp 1302013 140435588282112 "GET /media/vehicles/side/Screenshot_20250304_210951.png HTTP/1.1" 304 0
+INFO 2025-09-27 07:17:01,594 basehttp 1302013 140435621852928 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-27 07:17:01,596 basehttp 1302013 140435717134080 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 07:17:01,625 basehttp 1302013 140435717134080 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 07:17:01,652 basehttp 1302013 140435621852928 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 07:17:01,706 basehttp 1302013 140435579889408 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 07:17:01,981 basehttp 1302013 140435621852928 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 07:17:01,984 basehttp 1302013 140435579889408 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 07:25:34,830 basehttp 1302013 140435605067520 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 07:25:36,020 basehttp 1302013 140435621852928 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 07:25:36,335 basehttp 1302013 140435579889408 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 07:25:36,341 basehttp 1302013 140435717134080 "GET /api/trips/vehicles/ HTTP/1.1" 200 1368
+INFO 2025-09-27 07:25:36,359 basehttp 1302013 140435605067520 "GET /api/accounts/users/ HTTP/1.1" 200 3032
+INFO 2025-09-27 07:25:36,724 basehttp 1302013 140435613460224 "GET /media/vehicles/front/user_frepik.png HTTP/1.1" 304 0
+INFO 2025-09-27 07:25:37,135 basehttp 1302013 140435613460224 "GET /media/vehicles/front/olunteer-Computing-scheme_W640.jpg HTTP/1.1" 304 0
+INFO 2025-09-27 07:25:38,616 basehttp 1302013 140435726313216 "GET /media/avatars/moi-1.jpg HTTP/1.1" 200 1841547
+INFO 2025-09-27 07:25:39,784 basehttp 1302013 140435596674816 "GET /media/avatars/moi-1.jpg HTTP/1.1" 200 1841547
+INFO 2025-09-27 07:36:43,117 autoreload 1302013 140435882161984 /home/sergeo/Documents/spotter-application/spotter-backend/trips/models.py changed, reloading.
+INFO 2025-09-27 07:36:58,875 autoreload 1304063 140552550491968 Watching for file changes with StatReloader
+INFO 2025-09-27 07:40:38,776 autoreload 1304063 140552550491968 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/models.py changed, reloading.
+INFO 2025-09-27 07:40:40,111 autoreload 1306163 139763020433216 Watching for file changes with StatReloader
+INFO 2025-09-27 07:41:02,197 autoreload 1306163 139763020433216 /home/sergeo/Documents/spotter-application/spotter-backend/trips/serializers.py changed, reloading.
+INFO 2025-09-27 07:41:03,217 autoreload 1306221 140162296276800 Watching for file changes with StatReloader
+INFO 2025-09-27 07:41:29,360 autoreload 1306221 140162296276800 /home/sergeo/Documents/spotter-application/spotter-backend/accounts/serializers.py changed, reloading.
+INFO 2025-09-27 07:41:30,283 autoreload 1306292 140483037673280 Watching for file changes with StatReloader
+INFO 2025-09-27 07:42:18,652 autoreload 1306292 140483037673280 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 07:42:19,625 autoreload 1306418 140540290570048 Watching for file changes with StatReloader
+INFO 2025-09-27 07:42:42,837 autoreload 1306418 140540290570048 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
+INFO 2025-09-27 07:42:43,647 autoreload 1306506 140256388212544 Watching for file changes with StatReloader
+INFO 2025-09-27 07:43:04,502 basehttp 1306506 140256232339200 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 07:43:04,522 basehttp 1306506 140256223946496 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 07:43:04,546 basehttp 1306506 140256215553792 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 07:43:04,625 basehttp 1306506 140255982253824 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 07:43:04,694 basehttp 1306506 140256223946496 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 07:43:04,706 basehttp 1306506 140256232339200 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 07:43:04,754 basehttp 1306506 140256207161088 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+INFO 2025-09-27 07:43:04,898 basehttp 1306506 140256232339200 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+INFO 2025-09-27 07:47:46,493 basehttp 1306506 140256223946496 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 07:47:46,514 basehttp 1306506 140256232339200 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 07:47:46,523 basehttp 1306506 140256207161088 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 07:47:46,630 basehttp 1306506 140255982253824 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+INFO 2025-09-27 07:48:42,774 basehttp 1306506 140255982253824 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 07:48:42,779 basehttp 1306506 140256207161088 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 07:48:42,824 basehttp 1306506 140256232339200 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 07:48:42,877 basehttp 1306506 140256215553792 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 07:48:42,903 basehttp 1306506 140256207161088 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 07:48:42,939 basehttp 1306506 140256232339200 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 07:48:42,992 basehttp 1306506 140256223946496 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+INFO 2025-09-27 07:48:43,218 basehttp 1306506 140256207161088 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+WARNING 2025-09-27 07:50:55,171 log 1306506 140256207161088 Unauthorized: /api/trips/
+WARNING 2025-09-27 07:50:55,172 basehttp 1306506 140256207161088 "GET /api/trips/ HTTP/1.1" 401 183
+WARNING 2025-09-27 07:50:55,428 log 1306506 140256207161088 Unauthorized: /api/trips/vehicles/
+WARNING 2025-09-27 07:50:55,432 log 1306506 140256223946496 Unauthorized: /api/trips/
+WARNING 2025-09-27 07:50:55,438 basehttp 1306506 140256207161088 "GET /api/trips/vehicles/ HTTP/1.1" 401 183
+WARNING 2025-09-27 07:50:55,454 log 1306506 140256232339200 Unauthorized: /api/trips/vehicles/
+WARNING 2025-09-27 07:50:55,458 basehttp 1306506 140256232339200 "GET /api/trips/vehicles/ HTTP/1.1" 401 183
+WARNING 2025-09-27 07:50:55,465 basehttp 1306506 140256223946496 "GET /api/trips/ HTTP/1.1" 401 183
+INFO 2025-09-27 07:50:56,181 basehttp 1306506 140256223946496 "POST /api/accounts/token/refresh/ HTTP/1.1" 200 582
+INFO 2025-09-27 07:50:56,181 basehttp 1306506 140256232339200 "POST /api/accounts/token/refresh/ HTTP/1.1" 200 582
+INFO 2025-09-27 07:50:56,356 basehttp 1306506 140256232339200 "POST /api/accounts/token/refresh/ HTTP/1.1" 200 582
+INFO 2025-09-27 07:50:56,362 basehttp 1306506 140256223946496 "POST /api/accounts/token/refresh/ HTTP/1.1" 200 582
+INFO 2025-09-27 07:50:56,402 basehttp 1306506 140256207161088 "GET /api/trips/ HTTP/1.1" 200 52
+INFO 2025-09-27 07:50:56,437 basehttp 1306506 140256215553792 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 07:50:56,755 basehttp 1306506 140256215553792 "GET /api/trips/ HTTP/1.1" 200 52
+INFO 2025-09-27 07:50:56,769 basehttp 1306506 140256207161088 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 07:52:27,339 basehttp 1306506 140256215553792 "GET /api/accounts/profile/ HTTP/1.1" 200 796
+INFO 2025-09-27 07:52:27,363 basehttp 1306506 140256215553792 "GET /api/accounts/profile/ HTTP/1.1" 200 796
+INFO 2025-09-27 07:52:28,160 basehttp 1306506 140256215553792 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 07:52:28,167 basehttp 1306506 140256223946496 "OPTIONS /api/trips/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-09-27 07:52:28,169 basehttp 1306506 140256207161088 "OPTIONS /api/trips/available-drivers/ HTTP/1.1" 200 0
+ERROR 2025-09-27 07:52:28,175 views 1306506 140256223946496 Error getting available drivers: name 'User' is not defined
+ERROR 2025-09-27 07:52:28,190 log 1306506 140256223946496 Internal Server Error: /api/trips/available-drivers/
+ERROR 2025-09-27 07:52:28,191 basehttp 1306506 140256223946496 "GET /api/trips/available-drivers/ HTTP/1.1" 500 62
+INFO 2025-09-27 07:52:28,195 basehttp 1306506 140256215553792 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+ERROR 2025-09-27 07:52:28,241 views 1306506 140256223946496 Error getting available drivers: name 'User' is not defined
+ERROR 2025-09-27 07:52:28,242 log 1306506 140256223946496 Internal Server Error: /api/trips/available-drivers/
+ERROR 2025-09-27 07:52:28,242 basehttp 1306506 140256223946496 "GET /api/trips/available-drivers/ HTTP/1.1" 500 62
+INFO 2025-09-27 08:00:38,726 autoreload 1306506 140256388212544 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:00:39,862 autoreload 1309048 140201112590144 Watching for file changes with StatReloader
+INFO 2025-09-27 08:01:36,224 autoreload 1309048 140201112590144 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:01:37,536 autoreload 1309261 139747502991168 Watching for file changes with StatReloader
+INFO 2025-09-27 08:01:40,343 autoreload 1309261 139747502991168 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:01:41,530 autoreload 1309301 140164748990272 Watching for file changes with StatReloader
+INFO 2025-09-27 08:01:44,059 autoreload 1309301 140164748990272 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:01:46,889 autoreload 1309326 140051799656256 Watching for file changes with StatReloader
+INFO 2025-09-27 08:01:50,857 autoreload 1309326 140051799656256 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:01:52,544 autoreload 1309360 139861903279936 Watching for file changes with StatReloader
+INFO 2025-09-27 08:01:57,198 autoreload 1309360 139861903279936 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:01:57,761 autoreload 1309409 140593504061248 Watching for file changes with StatReloader
+INFO 2025-09-27 08:02:01,199 autoreload 1309409 140593504061248 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:02:02,173 autoreload 1309442 140305824552768 Watching for file changes with StatReloader
+INFO 2025-09-27 08:02:04,813 autoreload 1309442 140305824552768 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:02:05,592 autoreload 1309467 140069559019328 Watching for file changes with StatReloader
+INFO 2025-09-27 08:02:08,571 autoreload 1309467 140069559019328 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:02:09,671 autoreload 1309492 139727751059264 Watching for file changes with StatReloader
+INFO 2025-09-27 08:02:12,416 autoreload 1309492 139727751059264 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:02:13,454 autoreload 1309510 140371708430144 Watching for file changes with StatReloader
+INFO 2025-09-27 08:02:17,976 autoreload 1309510 140371708430144 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:02:19,000 autoreload 1309537 140099931670336 Watching for file changes with StatReloader
+INFO 2025-09-27 08:02:23,456 autoreload 1309537 140099931670336 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:02:24,267 autoreload 1309571 139629103896384 Watching for file changes with StatReloader
+INFO 2025-09-27 08:02:28,089 basehttp 1309571 139628947941120 "GET /api/accounts/profile/ HTTP/1.1" 200 796
+INFO 2025-09-27 08:02:28,141 basehttp 1309571 139628947941120 "GET /api/accounts/profile/ HTTP/1.1" 200 796
+INFO 2025-09-27 08:02:28,250 basehttp 1309571 139628947941120 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:02:28,318 basehttp 1309571 139628947941120 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:02:28,347 basehttp 1309571 139628926691072 "GET /api/trips/available-drivers/ HTTP/1.1" 200 2501
+INFO 2025-09-27 08:02:28,451 basehttp 1309571 139628849919744 "GET /api/trips/available-drivers/ HTTP/1.1" 200 2501
+INFO 2025-09-27 08:16:31,195 autoreload 1314750 139809873147712 Watching for file changes with StatReloader
+INFO 2025-09-27 08:19:19,327 basehttp 1314750 139809784469248 "GET /api/accounts/profile/ HTTP/1.1" 200 796
+INFO 2025-09-27 08:19:19,384 basehttp 1314750 139809784469248 "GET /api/accounts/profile/ HTTP/1.1" 200 796
+INFO 2025-09-27 08:19:19,531 basehttp 1314750 139809695602432 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 08:19:19,553 basehttp 1314750 139809784469248 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 08:19:19,561 basehttp 1314750 139809687209728 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:19:19,598 basehttp 1314750 139809678817024 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+INFO 2025-09-27 08:19:19,839 basehttp 1314750 139809695602432 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 08:19:19,872 basehttp 1314750 139809784469248 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 08:19:19,872 basehttp 1314750 139809678817024 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:19:19,893 basehttp 1314750 139809687209728 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+INFO 2025-09-27 08:19:20,375 basehttp 1314750 139809669637888 "GET /media/vehicles/front/olunteer-Computing-scheme_W640.jpg HTTP/1.1" 304 0
+INFO 2025-09-27 08:19:20,521 basehttp 1314750 139809669637888 "GET /media/vehicles/front/user_frepik.png HTTP/1.1" 304 0
+INFO 2025-09-27 08:22:06,813 autoreload 1314750 139809873147712 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:22:08,605 autoreload 1316347 139997339002688 Watching for file changes with StatReloader
+INFO 2025-09-27 08:22:22,918 autoreload 1316347 139997339002688 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
+INFO 2025-09-27 08:22:23,670 autoreload 1316440 140294762190656 Watching for file changes with StatReloader
+INFO 2025-09-27 08:22:39,997 basehttp 1316440 140294606300928 "GET /api/accounts/profile/ HTTP/1.1" 200 796
+INFO 2025-09-27 08:22:40,021 basehttp 1316440 140294606300928 "GET /api/accounts/profile/ HTTP/1.1" 200 796
+INFO 2025-09-27 08:22:40,419 basehttp 1316440 140294606300928 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:22:40,441 basehttp 1316440 140294606300928 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:22:40,469 basehttp 1316440 140294584370944 "GET /api/trips/available-drivers/ HTTP/1.1" 200 2501
+INFO 2025-09-27 08:22:40,510 basehttp 1316440 140294584370944 "GET /api/trips/available-drivers/ HTTP/1.1" 200 2501
+INFO 2025-09-27 08:22:55,086 basehttp 1316440 140294584370944 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 08:22:55,108 basehttp 1316440 140294606300928 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 08:22:55,148 basehttp 1316440 140294584370944 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 08:22:55,156 basehttp 1316440 140294502741760 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:22:55,209 basehttp 1316440 140294606300928 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 08:22:55,219 basehttp 1316440 140294502741760 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:22:55,270 basehttp 1316440 140294494349056 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+INFO 2025-09-27 08:22:55,333 basehttp 1316440 140294494349056 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+INFO 2025-09-27 08:22:57,672 basehttp 1316440 140294494349056 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:22:57,698 basehttp 1316440 140294502741760 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:22:58,107 basehttp 1316440 140294485956352 "GET /media/vehicles/side/Screenshot_20250304_210951.png HTTP/1.1" 304 0
+INFO 2025-09-27 08:22:58,117 basehttp 1316440 140294477563648 "GET /media/vehicles/side/workflow_volunteer_computing.png HTTP/1.1" 304 0
+INFO 2025-09-27 08:22:58,121 basehttp 1316440 140294477563648 "GET /media/vehicles/rear/centralized_architecture.png HTTP/1.1" 304 0
+INFO 2025-09-27 08:22:58,138 basehttp 1316440 140294485956352 "GET /media/vehicles/rear/decentralizedpeer-2-peer0_architecture.png HTTP/1.1" 304 0
+INFO 2025-09-27 08:23:00,479 basehttp 1316440 140294469170944 "GET /media/vehicles/side/Screenshot_20250304_210951.png HTTP/1.1" 304 0
+INFO 2025-09-27 08:23:03,744 basehttp 1316440 140294494349056 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:23:03,746 basehttp 1316440 140294502741760 "GET /api/trips/ HTTP/1.1" 200 52
+INFO 2025-09-27 08:23:04,577 basehttp 1316440 140294494349056 "GET /api/trips/ HTTP/1.1" 200 52
+INFO 2025-09-27 08:23:04,590 basehttp 1316440 140294502741760 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:23:06,698 basehttp 1316440 140294494349056 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 08:23:06,713 basehttp 1316440 140294502741760 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 08:23:06,726 basehttp 1316440 140294606300928 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:23:06,789 basehttp 1316440 140294502741760 "GET /api/trips/vehicles/ HTTP/1.1" 200 1926
+INFO 2025-09-27 08:23:06,791 basehttp 1316440 140294494349056 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 08:23:06,810 basehttp 1316440 140294460778240 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 08:23:06,813 basehttp 1316440 140294584370944 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+INFO 2025-09-27 08:23:06,854 basehttp 1316440 140294584370944 "GET /api/accounts/users/ HTTP/1.1" 200 4150
+INFO 2025-09-27 08:24:31,168 basehttp 1316440 140294485956352 "GET /admin/trips/vehicle/7f4a3445-d135-4fd3-bf95-44051a6e0c1b/change/ HTTP/1.1" 200 24583
+INFO 2025-09-27 08:24:34,499 basehttp 1316440 140294485956352 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 08:24:35,219 basehttp 1316440 140294477563648 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2025-09-27 08:24:35,270 basehttp 1316440 140294452385536 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-09-27 08:24:50,028 basehttp 1316440 140294452385536 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-09-27 08:24:50,032 basehttp 1316440 140294477563648 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-09-27 08:25:24,191 basehttp 1316440 140294477563648 "POST /admin/trips/vehicle/7f4a3445-d135-4fd3-bf95-44051a6e0c1b/change/ HTTP/1.1" 302 0
+INFO 2025-09-27 08:25:25,623 basehttp 1316440 140294477563648 "POST /admin/trips/vehicle/7f4a3445-d135-4fd3-bf95-44051a6e0c1b/change/ HTTP/1.1" 302 0
+INFO 2025-09-27 08:25:27,016 basehttp 1316440 140294477563648 "GET /admin/trips/vehicle/ HTTP/1.1" 200 11446
+INFO 2025-09-27 08:25:27,091 basehttp 1316440 140294477563648 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 08:25:28,373 basehttp 1316440 140294477563648 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-09-27 08:25:39,011 basehttp 1316440 140294477563648 "GET /admin/trips/vehicle/3fad4c4a-05c2-4151-8363-fa3f1bcafcd7/change/ HTTP/1.1" 200 24597
+INFO 2025-09-27 08:25:39,057 basehttp 1316440 140294477563648 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 08:25:52,532 basehttp 1316440 140294477563648 "POST /admin/trips/vehicle/3fad4c4a-05c2-4151-8363-fa3f1bcafcd7/change/ HTTP/1.1" 302 0
+INFO 2025-09-27 08:25:52,575 basehttp 1316440 140294477563648 "GET /admin/trips/vehicle/ HTTP/1.1" 200 11251
+INFO 2025-09-27 08:25:52,669 basehttp 1316440 140294477563648 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 08:28:08,304 basehttp 1316440 140294460778240 "OPTIONS /api/accounts/login/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:28:09,259 basehttp 1316440 140294460778240 "POST /api/accounts/login/ HTTP/1.1" 200 1627
+INFO 2025-09-27 08:28:09,384 basehttp 1316440 140294460778240 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:28:09,394 basehttp 1316440 140294460778240 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:28:09,412 basehttp 1316440 140294494349056 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:28:09,418 basehttp 1316440 140294502741760 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:28:09,451 basehttp 1316440 140294584370944 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:28:09,453 basehttp 1316440 140294606300928 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 93
+INFO 2025-09-27 08:28:09,454 basehttp 1316440 140294469170944 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:28:09,472 basehttp 1316440 140294494349056 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:28:09,511 basehttp 1316440 140294460778240 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 319
+INFO 2025-09-27 08:28:09,516 basehttp 1316440 140294469170944 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 08:28:09,522 basehttp 1316440 140294584370944 "GET /api/accounts/users/ HTTP/1.1" 200 1089
+INFO 2025-09-27 08:28:09,545 basehttp 1316440 140294460778240 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 319
+INFO 2025-09-27 08:28:09,594 basehttp 1316440 140294494349056 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 93
+INFO 2025-09-27 08:28:09,597 basehttp 1316440 140294606300928 "GET /api/accounts/users/ HTTP/1.1" 200 1089
+INFO 2025-09-27 08:28:09,608 basehttp 1316440 140294584370944 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 08:28:35,583 basehttp 1316440 140294584370944 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:28:35,587 basehttp 1316440 140294494349056 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:28:35,642 basehttp 1316440 140294494349056 "GET /api/accounts/profile/ HTTP/1.1" 200 1037
+INFO 2025-09-27 08:28:35,759 basehttp 1316440 140294584370944 "GET /api/accounts/profile/ HTTP/1.1" 200 1037
+INFO 2025-09-27 08:28:48,751 basehttp 1316440 140294584370944 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+WARNING 2025-09-27 08:28:48,791 log 1316440 140294584370944 Bad Request: /api/trips/
+WARNING 2025-09-27 08:28:48,792 basehttp 1316440 140294584370944 "POST /api/trips/ HTTP/1.1" 400 38
+INFO 2025-09-27 08:29:03,269 basehttp 1316440 140294584370944 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+WARNING 2025-09-27 08:29:03,287 log 1316440 140294584370944 Bad Request: /api/trips/
+WARNING 2025-09-27 08:29:03,287 basehttp 1316440 140294584370944 "POST /api/trips/ HTTP/1.1" 400 38
+INFO 2025-09-27 08:30:36,106 autoreload 1316440 140294762190656 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:30:37,118 autoreload 1318199 140584973449024 Watching for file changes with StatReloader
+INFO 2025-09-27 08:30:40,326 autoreload 1318199 140584973449024 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
+INFO 2025-09-27 08:30:41,207 autoreload 1318242 140328655677248 Watching for file changes with StatReloader
+INFO 2025-09-27 08:33:16,849 autoreload 1318242 140328655677248 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:33:19,102 autoreload 1318527 140458809259840 Watching for file changes with StatReloader
+INFO 2025-09-27 08:33:23,539 autoreload 1318527 140458809259840 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 08:33:24,526 autoreload 1318582 139693566224192 Watching for file changes with StatReloader
+INFO 2025-09-27 08:33:28,527 basehttp 1318582 139693408646912 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+WARNING 2025-09-27 08:33:28,979 log 1318582 139693408646912 Bad Request: /api/trips/
+WARNING 2025-09-27 08:33:28,980 basehttp 1318582 139693408646912 "POST /api/trips/ HTTP/1.1" 400 38
+INFO 2025-09-27 08:34:49,806 autoreload 1318582 139693566224192 /home/sergeo/Documents/spotter-application/spotter-backend/trips/serializers.py changed, reloading.
+INFO 2025-09-27 08:34:50,925 autoreload 1318778 140345277642560 Watching for file changes with StatReloader
+INFO 2025-09-27 08:38:01,053 autoreload 1319274 139689650669376 Watching for file changes with StatReloader
+INFO 2025-09-27 08:38:06,071 basehttp 1319274 139689494656768 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+WARNING 2025-09-27 08:38:06,175 log 1319274 139689494656768 Bad Request: /api/trips/
+WARNING 2025-09-27 08:38:06,177 basehttp 1319274 139689494656768 "POST /api/trips/ HTTP/1.1" 400 76
+INFO 2025-09-27 08:39:35,357 autoreload 1319274 139689650669376 /home/sergeo/Documents/spotter-application/spotter-backend/trips/serializers.py changed, reloading.
+INFO 2025-09-27 08:39:36,323 autoreload 1319436 139749709145920 Watching for file changes with StatReloader
+INFO 2025-09-27 08:39:54,650 basehttp 1319436 139749553325824 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:39:55,131 basehttp 1319436 139749553325824 "POST /api/trips/ HTTP/1.1" 201 481
+INFO 2025-09-27 08:40:48,269 autoreload 1319436 139749709145920 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 08:40:49,102 autoreload 1319744 140065439471424 Watching for file changes with StatReloader
+INFO 2025-09-27 08:40:50,799 autoreload 1319744 140065439471424 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 08:40:51,807 autoreload 1319783 140176163067712 Watching for file changes with StatReloader
+INFO 2025-09-27 08:40:55,261 autoreload 1319783 140176163067712 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 08:40:56,337 autoreload 1319809 140622205327168 Watching for file changes with StatReloader
+INFO 2025-09-27 08:40:57,760 autoreload 1319809 140622205327168 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 08:40:58,695 autoreload 1319813 140695732164416 Watching for file changes with StatReloader
+INFO 2025-09-27 08:41:00,246 autoreload 1319813 140695732164416 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 08:41:01,095 autoreload 1319836 139736146437952 Watching for file changes with StatReloader
+INFO 2025-09-27 08:41:04,577 autoreload 1319836 139736146437952 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 08:41:05,322 autoreload 1319858 139860745856832 Watching for file changes with StatReloader
+INFO 2025-09-27 08:41:11,716 autoreload 1319858 139860745856832 /home/sergeo/Documents/spotter-application/spotter-backend/trips/admin.py changed, reloading.
+INFO 2025-09-27 08:41:12,993 autoreload 1319915 139668536063808 Watching for file changes with StatReloader
+INFO 2025-09-27 08:41:18,477 basehttp 1319915 139668377040640 "GET /admin/trips/vehicle/ HTTP/1.1" 200 11805
+INFO 2025-09-27 08:41:18,962 basehttp 1319915 139668377040640 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 08:41:24,292 basehttp 1319915 139668377040640 "GET /admin/accounts/user/ HTTP/1.1" 200 12712
+INFO 2025-09-27 08:41:24,461 basehttp 1319915 139668377040640 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 08:41:31,095 basehttp 1319915 139668377040640 "GET /admin/trips/trip/ HTTP/1.1" 200 11523
+INFO 2025-09-27 08:41:31,152 basehttp 1319915 139668377040640 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 08:41:33,516 basehttp 1319915 139668377040640 "GET /admin/trips/trip/8c85086c-71db-4151-90cd-95926dfe285f/change/ HTTP/1.1" 200 30360
+INFO 2025-09-27 08:41:33,570 basehttp 1319915 139668377040640 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 08:41:33,854 basehttp 1319915 139668377040640 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-09-27 08:46:19,439 autoreload 1319915 139668536063808 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-09-27 08:46:20,684 autoreload 1320633 140281231386432 Watching for file changes with StatReloader
+INFO 2025-09-27 08:51:25,412 autoreload 1320633 140281231386432 /home/sergeo/Documents/spotter-application/spotter-backend/trips/serializers.py changed, reloading.
+INFO 2025-09-27 08:51:27,595 autoreload 1321426 139749610567488 Watching for file changes with StatReloader
+INFO 2025-09-27 08:51:39,273 basehttp 1321426 139749521364736 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:51:42,358 basehttp 1321426 139749521364736 "POST /api/trips/ HTTP/1.1" 201 482
+INFO 2025-09-27 08:52:00,629 basehttp 1321426 139749521364736 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:52:00,637 basehttp 1321426 139749521364736 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:52:00,694 basehttp 1321426 139749432669952 "GET /api/accounts/profile/ HTTP/1.1" 200 1037
+INFO 2025-09-27 08:52:00,706 basehttp 1321426 139749521364736 "GET /api/accounts/profile/ HTTP/1.1" 200 1037
+INFO 2025-09-27 08:52:03,481 basehttp 1321426 139749521364736 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:52:03,481 basehttp 1321426 139749415622400 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:52:03,482 basehttp 1321426 139749424015104 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:52:03,483 basehttp 1321426 139749432669952 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+ERROR 2025-09-27 08:52:03,586 views 1321426 139749424015104 Error getting vehicle positions: float() argument must be a string or a number, not 'NoneType'
+ERROR 2025-09-27 08:52:03,587 log 1321426 139749424015104 Internal Server Error: /api/trips/vehicles/positions/
+ERROR 2025-09-27 08:52:03,589 views 1321426 139749432669952 Error getting vehicle positions: float() argument must be a string or a number, not 'NoneType'
+ERROR 2025-09-27 08:52:03,591 log 1321426 139749432669952 Internal Server Error: /api/trips/vehicles/positions/
+ERROR 2025-09-27 08:52:03,591 basehttp 1321426 139749424015104 "GET /api/trips/vehicles/positions/ HTTP/1.1" 500 62
+ERROR 2025-09-27 08:52:03,596 basehttp 1321426 139749432669952 "GET /api/trips/vehicles/positions/ HTTP/1.1" 500 62
+WARNING 2025-09-27 08:52:05,989 log 1321426 139749521364736 Not Found: /api/eld/hos/current-status/
+WARNING 2025-09-27 08:52:05,997 log 1321426 139749415622400 Not Found: /api/eld/hos/current-status/
+WARNING 2025-09-27 08:52:05,998 basehttp 1321426 139749521364736 "GET /api/eld/hos/current-status/ HTTP/1.1" 404 2986
+WARNING 2025-09-27 08:52:06,001 basehttp 1321426 139749415622400 "GET /api/eld/hos/current-status/ HTTP/1.1" 404 2986
+INFO 2025-09-27 08:52:16,110 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:52:17,429 basehttp 1321426 139749415622400 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 163
+INFO 2025-09-27 08:52:24,397 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:52:25,353 basehttp 1321426 139749415622400 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 164
+INFO 2025-09-27 08:52:32,511 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:52:32,538 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:53:02,511 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:53:02,545 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:53:32,515 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:53:32,537 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:54:02,507 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:54:02,529 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:54:32,503 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:54:32,518 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:55:02,518 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:55:02,576 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:55:32,502 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:55:32,518 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:56:02,503 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:56:02,523 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:56:32,506 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:56:32,524 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:57:02,513 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:57:02,552 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:57:32,800 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:57:32,891 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:58:15,288 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:58:15,535 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:58:35,640 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:58:35,666 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:59:06,958 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:59:08,900 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 08:59:33,003 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 08:59:33,019 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:00:51,716 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:00:52,989 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:01:50,325 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:01:50,405 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:02:53,685 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:02:53,748 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:04:07,485 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:04:07,701 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:05:37,685 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:05:37,721 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:05:51,105 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:05:51,230 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:06:50,006 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:06:50,532 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:07:50,019 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:07:50,035 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:08:52,595 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:09:02,389 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:09:52,202 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:09:55,421 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:11:40,710 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:11:41,099 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:11:49,998 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:11:50,039 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:12:49,999 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:12:50,025 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:13:59,299 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:13:59,624 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:14:50,695 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:14:51,147 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 09:15:49,998 basehttp 1321426 139749415622400 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 09:16:04,607 basehttp 1321426 139749415622400 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:00:33,896 autoreload 13406 139763204286272 Watching for file changes with StatReloader
+INFO 2025-09-27 10:05:13,553 basehttp 13406 139763048236800 "GET /admin/trips/trip/8c85086c-71db-4151-90cd-95926dfe285f/change/ HTTP/1.1" 200 30360
+INFO 2025-09-27 10:05:13,935 basehttp 13406 139763048236800 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+WARNING 2025-09-27 10:05:27,558 log 13406 139763048236800 Not Found: /favicon.ico
+WARNING 2025-09-27 10:05:27,579 basehttp 13406 139763048236800 "GET /favicon.ico HTTP/1.1" 404 2938
+INFO 2025-09-27 10:12:34,057 basehttp 13406 139763048236800 "OPTIONS /api/accounts/login/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:12:43,387 basehttp 13406 139763048236800 "POST /api/accounts/login/ HTTP/1.1" 200 1648
+INFO 2025-09-27 10:12:43,507 basehttp 13406 139763048236800 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:12:43,530 basehttp 13406 139763048236800 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:12:43,531 basehttp 13406 139763024471808 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:12:43,533 basehttp 13406 139763016079104 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:12:43,545 basehttp 13406 139762799212288 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:12:43,549 basehttp 13406 139762782426880 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:12:43,549 basehttp 13406 139762790819584 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:12:43,582 basehttp 13406 139762799212288 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 319
+INFO 2025-09-27 10:12:43,593 basehttp 13406 139762782426880 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 93
+INFO 2025-09-27 10:12:43,597 basehttp 13406 139762790819584 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 10:12:43,635 basehttp 13406 139763048236800 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 319
+INFO 2025-09-27 10:12:43,648 basehttp 13406 139762799212288 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 93
+INFO 2025-09-27 10:12:43,665 basehttp 13406 139763048236800 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 10:12:43,828 basehttp 13406 139763048236800 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:12:43,841 basehttp 13406 139763048236800 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:13:19,387 basehttp 13406 139762799212288 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 319
+INFO 2025-09-27 10:13:19,391 basehttp 13406 139763016079104 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 319
+INFO 2025-09-27 10:13:19,419 basehttp 13406 139762790819584 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:13:19,443 basehttp 13406 139763048236800 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 93
+INFO 2025-09-27 10:13:19,466 basehttp 13406 139763016079104 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:13:19,468 basehttp 13406 139762790819584 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 93
+INFO 2025-09-27 10:13:19,474 basehttp 13406 139762782426880 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 10:13:19,520 basehttp 13406 139763048236800 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 10:13:28,211 basehttp 13406 139763048236800 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:13:28,215 basehttp 13406 139762790819584 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:13:28,474 basehttp 13406 139762790819584 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 10:13:28,505 basehttp 13406 139763048236800 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 10:13:29,372 basehttp 13406 139762782426880 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:13:29,373 basehttp 13406 139763016079104 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:13:29,374 basehttp 13406 139763048236800 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:13:29,374 basehttp 13406 139762790819584 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+WARNING 2025-09-27 10:13:30,094 log 13406 139763048236800 Not Found: /api/eld/hos/current-status/
+WARNING 2025-09-27 10:13:30,095 basehttp 13406 139763048236800 "GET /api/eld/hos/current-status/ HTTP/1.1" 404 2986
+WARNING 2025-09-27 10:13:30,116 log 13406 139762790819584 Not Found: /api/eld/hos/current-status/
+WARNING 2025-09-27 10:13:30,120 basehttp 13406 139762790819584 "GET /api/eld/hos/current-status/ HTTP/1.1" 404 2986
+INFO 2025-09-27 10:13:30,122 basehttp 13406 139763048236800 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:13:30,178 basehttp 13406 139762790819584 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:13:51,625 basehttp 13406 139762790819584 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:13:52,366 basehttp 13406 139762790819584 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 163
+INFO 2025-09-27 10:13:53,054 basehttp 13406 139762790819584 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 163
+INFO 2025-09-27 10:13:59,241 basehttp 13406 139762790819584 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:14:29,309 basehttp 13406 139762790819584 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:14:59,251 basehttp 13406 139762790819584 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:15:14,150 basehttp 13406 139762790819584 "OPTIONS /api/eld/hos/status-change/ HTTP/1.1" 200 0
+WARNING 2025-09-27 10:15:14,169 log 13406 139762790819584 Not Found: /api/eld/hos/status-change/
+WARNING 2025-09-27 10:15:14,170 basehttp 13406 139762790819584 "POST /api/eld/hos/status-change/ HTTP/1.1" 404 2984
+INFO 2025-09-27 10:15:29,252 basehttp 13406 139762790819584 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:15:29,307 basehttp 13406 139762790819584 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:15:59,246 basehttp 13406 139762790819584 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:15:59,313 basehttp 13406 139762790819584 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:16:09,130 basehttp 13406 139762790819584 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:16:09,145 basehttp 13406 139762790819584 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:16:09,173 basehttp 13406 139763048236800 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 10:16:09,266 basehttp 13406 139762790819584 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 10:16:09,593 basehttp 13406 139762790819584 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:16:09,594 basehttp 13406 139763016079104 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:16:09,595 basehttp 13406 139763048236800 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:16:09,598 basehttp 13406 139762782426880 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:16:09,671 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+WARNING 2025-09-27 10:16:09,726 log 13406 139762799212288 Not Found: /api/eld/hos/current-status/
+WARNING 2025-09-27 10:16:09,743 basehttp 13406 139762799212288 "GET /api/eld/hos/current-status/ HTTP/1.1" 404 2986
+INFO 2025-09-27 10:16:09,730 basehttp 13406 139763048236800 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+WARNING 2025-09-27 10:16:09,737 log 13406 139762790819584 Not Found: /api/eld/hos/current-status/
+INFO 2025-09-27 10:16:09,729 basehttp 13406 139763016079104 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+WARNING 2025-09-27 10:16:09,747 basehttp 13406 139762790819584 "GET /api/eld/hos/current-status/ HTTP/1.1" 404 2986
+INFO 2025-09-27 10:16:10,101 basehttp 13406 139762782426880 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 163
+INFO 2025-09-27 10:16:11,442 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:16:11,911 basehttp 13406 139762782426880 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 163
+INFO 2025-09-27 10:16:39,445 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:16:39,484 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:17:09,431 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:17:09,452 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:17:39,458 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:17:39,491 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:18:09,432 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:18:09,449 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:18:39,443 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:18:39,494 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:19:09,431 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:19:09,450 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:19:39,442 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:19:39,488 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:20:09,453 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:20:09,471 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:20:39,531 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:20:39,576 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:21:09,602 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:21:09,801 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:22:33,642 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:22:33,669 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:23:33,649 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:23:33,683 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:24:33,570 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:24:33,634 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:25:33,626 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:25:33,653 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:26:33,627 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:26:33,669 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:27:33,618 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:27:33,655 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:28:33,642 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:28:33,714 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:29:33,674 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:29:33,722 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:30:33,628 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:30:33,673 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:31:33,646 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:31:33,675 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:32:33,621 basehttp 13406 139762782426880 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:32:33,661 basehttp 13406 139762782426880 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:32:39,144 autoreload 13406 139763204286272 /home/sergeo/Documents/spotter-application/spotter-backend/spotter_project/urls.py changed, reloading.
+INFO 2025-09-27 10:32:55,614 autoreload 17991 140060243171136 Watching for file changes with StatReloader
+INFO 2025-09-27 10:33:33,668 basehttp 17991 140060086814464 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:33:43,338 basehttp 17991 140060086814464 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:34:33,666 basehttp 17991 140060086814464 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:34:33,762 basehttp 17991 140060086814464 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:35:03,881 autoreload 17991 140060243171136 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 10:35:04,769 autoreload 18354 140563496523584 Watching for file changes with StatReloader
+INFO 2025-09-27 10:35:18,322 autoreload 18354 140563496523584 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
+INFO 2025-09-27 10:35:19,368 autoreload 18395 140302810163008 Watching for file changes with StatReloader
+INFO 2025-09-27 10:35:33,653 basehttp 18395 140302654088960 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:35:33,809 basehttp 18395 140302654088960 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:36:33,592 basehttp 18395 140302654088960 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:36:33,756 basehttp 18395 140302654088960 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:37:33,618 basehttp 18395 140302654088960 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:37:33,693 basehttp 18395 140302654088960 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:38:33,644 basehttp 18395 140302654088960 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:38:33,688 basehttp 18395 140302654088960 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:39:33,709 basehttp 18395 140302654088960 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:39:33,850 basehttp 18395 140302654088960 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:40:33,660 basehttp 18395 140302654088960 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:40:33,693 basehttp 18395 140302654088960 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:40:49,951 basehttp 18395 140302654088960 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:40:49,993 basehttp 18395 140302654088960 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:40:51,100 basehttp 18395 140302654088960 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:40:52,540 basehttp 18395 140302632158976 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:40:53,032 basehttp 18395 140302654088960 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 163
+INFO 2025-09-27 10:40:55,086 basehttp 18395 140302632158976 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 163
+INFO 2025-09-27 10:40:56,575 basehttp 18395 140302632158976 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:40:56,740 basehttp 18395 140302632158976 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 163
+INFO 2025-09-27 10:41:09,449 basehttp 18395 140302632158976 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:41:09,485 basehttp 18395 140302632158976 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:41:09,553 basehttp 18395 140302632158976 "OPTIONS /api/eld/hos/status-change/ HTTP/1.1" 200 0
+ERROR 2025-09-27 10:41:09,606 views 18395 140302632158976 Error creating HOS status change: Cannot resolve keyword 'end_time' into field. Choices are: certified_at, created_at, cycle_hours_available, cycle_hours_used, driver, driver_id, driving_hours, duty_entries, has_violations, id, is_certified, log_date, odometer_end, odometer_start, off_duty_hours, on_duty_not_driving_hours, shipping_document, signature, sleeper_berth_hours, total_miles, trailer_number, trip, trip_id, updated_at, vehicle_number, violation_notes, violations
+ERROR 2025-09-27 10:41:09,607 log 18395 140302632158976 Internal Server Error: /api/eld/hos/status-change/
+ERROR 2025-09-27 10:41:09,608 basehttp 18395 140302632158976 "POST /api/eld/hos/status-change/ HTTP/1.1" 500 59
+INFO 2025-09-27 10:41:39,445 basehttp 18395 140302632158976 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:41:39,511 basehttp 18395 140302632158976 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:42:09,441 basehttp 18395 140302632158976 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:09,496 basehttp 18395 140302632158976 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:42:39,443 basehttp 18395 140302632158976 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:39,496 basehttp 18395 140302632158976 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 398
+INFO 2025-09-27 10:42:45,092 basehttp 18395 140302632158976 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:45,109 basehttp 18395 140302654088960 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:45,234 basehttp 18395 140302632158976 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 10:42:45,237 basehttp 18395 140302654088960 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 10:42:45,388 basehttp 18395 140302654088960 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:45,394 basehttp 18395 140302654088960 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:45,398 basehttp 18395 140302632158976 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:45,420 basehttp 18395 140302632158976 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:45,427 basehttp 18395 140302555805440 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:45,442 basehttp 18395 140302539020032 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:45,454 basehttp 18395 140302530627328 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:45,455 basehttp 18395 140302547412736 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:42:45,501 basehttp 18395 140302539020032 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 93
+INFO 2025-09-27 10:42:45,525 basehttp 18395 140302530627328 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 319
+INFO 2025-09-27 10:42:45,526 basehttp 18395 140302654088960 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 93
+INFO 2025-09-27 10:42:45,546 basehttp 18395 140302632158976 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 319
+INFO 2025-09-27 10:42:45,547 basehttp 18395 140302555805440 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:42:45,552 basehttp 18395 140302547412736 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:42:45,674 basehttp 18395 140302530627328 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 10:42:45,687 basehttp 18395 140302539020032 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 10:43:01,968 basehttp 18395 140302539020032 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:43:01,973 basehttp 18395 140302539020032 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:43:02,061 basehttp 18395 140302530627328 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 10:43:02,073 basehttp 18395 140302539020032 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 10:43:16,370 basehttp 18395 140302539020032 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:43:16,811 basehttp 18395 140302539020032 "POST /api/trips/ HTTP/1.1" 201 481
+INFO 2025-09-27 10:43:42,593 basehttp 18395 140302539020032 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:43:42,596 basehttp 18395 140302530627328 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:43:42,606 basehttp 18395 140302547412736 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:43:42,619 basehttp 18395 140302539020032 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:43:42,699 basehttp 18395 140302539020032 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:43:42,723 basehttp 18395 140302654088960 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:43:42,756 basehttp 18395 140302547412736 "GET /api/trips/ HTTP/1.1" 200 2767
+INFO 2025-09-27 10:43:42,764 basehttp 18395 140302530627328 "GET /api/trips/ HTTP/1.1" 200 2767
+INFO 2025-09-27 10:44:18,616 basehttp 18395 140302547412736 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:44:18,620 basehttp 18395 140302539020032 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:44:18,621 basehttp 18395 140302530627328 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:44:18,630 basehttp 18395 140302547412736 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:44:18,646 basehttp 18395 140302539020032 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:44:18,669 basehttp 18395 140302632158976 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:44:18,673 basehttp 18395 140302654088960 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:44:18,675 basehttp 18395 140302555805440 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:44:18,704 basehttp 18395 140302530627328 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 93
+INFO 2025-09-27 10:44:18,718 basehttp 18395 140302632158976 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 319
+INFO 2025-09-27 10:44:18,756 basehttp 18395 140302547412736 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:44:18,789 basehttp 18395 140302539020032 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 319
+INFO 2025-09-27 10:44:18,815 basehttp 18395 140302555805440 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:44:18,822 basehttp 18395 140302654088960 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 93
+INFO 2025-09-27 10:44:18,844 basehttp 18395 140302530627328 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 10:44:18,858 basehttp 18395 140302547412736 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 10:46:27,734 autoreload 18395 140302810163008 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-09-27 10:46:28,855 autoreload 20091 140096872707904 Watching for file changes with StatReloader
+INFO 2025-09-27 10:47:56,229 autoreload 20091 140096872707904 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 10:47:59,818 autoreload 20297 139906666370880 Watching for file changes with StatReloader
+INFO 2025-09-27 10:48:15,565 autoreload 20297 139906666370880 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
+INFO 2025-09-27 10:48:16,417 autoreload 20349 140009536186176 Watching for file changes with StatReloader
+INFO 2025-09-27 10:49:01,993 autoreload 20349 140009536186176 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-09-27 10:49:02,820 autoreload 20413 140330596140864 Watching for file changes with StatReloader
+INFO 2025-09-27 10:54:08,817 autoreload 20413 140330596140864 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
+INFO 2025-09-27 10:54:10,215 autoreload 21056 140093893502784 Watching for file changes with StatReloader
+INFO 2025-09-27 10:56:10,177 autoreload 21056 140093893502784 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 10:56:11,402 autoreload 21258 140646356735808 Watching for file changes with StatReloader
+INFO 2025-09-27 10:56:53,061 autoreload 21258 140646356735808 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 10:56:54,297 autoreload 21343 139872842946368 Watching for file changes with StatReloader
+INFO 2025-09-27 10:58:10,242 basehttp 21343 139872686831360 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:58:10,246 basehttp 21343 139872686831360 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:58:10,692 basehttp 21343 139872686831360 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 10:58:10,728 basehttp 21343 139872678438656 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 10:58:10,827 basehttp 21343 139872686831360 "OPTIONS /api/api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:58:10,836 basehttp 21343 139872686831360 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:58:10,838 basehttp 21343 139872678438656 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:58:10,860 basehttp 21343 139872589313792 "OPTIONS /api/api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:58:10,886 basehttp 21343 139872580921088 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:58:10,934 basehttp 21343 139872572528384 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:58:10,988 basehttp 21343 139872580921088 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:58:10,998 basehttp 21343 139872686831360 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:58:11,115 basehttp 21343 139872572528384 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 10:58:11,134 basehttp 21343 139872564135680 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+WARNING 2025-09-27 10:58:11,575 log 21343 139872678438656 Not Found: /api/api/trips/dashboard-data/
+WARNING 2025-09-27 10:58:11,576 basehttp 21343 139872678438656 "GET /api/api/trips/dashboard-data/ HTTP/1.1" 404 2987
+WARNING 2025-09-27 10:58:11,577 log 21343 139872589313792 Not Found: /api/api/trips/dashboard-data/
+WARNING 2025-09-27 10:58:11,578 basehttp 21343 139872589313792 "GET /api/api/trips/dashboard-data/ HTTP/1.1" 404 2987
+INFO 2025-09-27 10:59:43,354 basehttp 21343 139872678438656 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:59:43,358 basehttp 21343 139872589313792 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:59:43,367 basehttp 21343 139872572528384 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:59:43,368 basehttp 21343 139872678438656 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:59:43,438 basehttp 21343 139872564135680 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:59:43,441 basehttp 21343 139872589313792 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:59:43,448 basehttp 21343 139872572528384 "GET /api/trips/ HTTP/1.1" 200 2767
+INFO 2025-09-27 10:59:43,468 basehttp 21343 139872678438656 "GET /api/trips/ HTTP/1.1" 200 2767
+INFO 2025-09-27 10:59:48,581 basehttp 21343 139872678438656 "OPTIONS /api/api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:59:48,587 basehttp 21343 139872572528384 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:59:48,591 basehttp 21343 139872589313792 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:59:48,601 basehttp 21343 139872678438656 "OPTIONS /api/api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:59:48,605 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 10:59:48,611 basehttp 21343 139872580921088 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+WARNING 2025-09-27 10:59:48,665 log 21343 139872580921088 Not Found: /api/api/trips/dashboard-data/
+WARNING 2025-09-27 10:59:48,673 basehttp 21343 139872580921088 "GET /api/api/trips/dashboard-data/ HTTP/1.1" 404 2987
+WARNING 2025-09-27 10:59:48,698 log 21343 139872678438656 Not Found: /api/api/trips/dashboard-data/
+WARNING 2025-09-27 10:59:48,709 basehttp 21343 139872678438656 "GET /api/api/trips/dashboard-data/ HTTP/1.1" 404 2987
+INFO 2025-09-27 10:59:48,728 basehttp 21343 139872589313792 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:59:48,728 basehttp 21343 139872564135680 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 10:59:48,747 basehttp 21343 139872572528384 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 10:59:48,749 basehttp 21343 139872686831360 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 11:00:31,813 basehttp 21343 139872564135680 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:31,817 basehttp 21343 139872686831360 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:31,911 basehttp 21343 139872686831360 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:00:31,914 basehttp 21343 139872564135680 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:00:32,150 basehttp 21343 139872686831360 "OPTIONS /api/api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:32,152 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:32,157 basehttp 21343 139872686831360 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:32,167 basehttp 21343 139872678438656 "OPTIONS /api/api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:32,187 basehttp 21343 139872589313792 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:32,188 basehttp 21343 139872580921088 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+WARNING 2025-09-27 11:00:32,267 log 21343 139872564135680 Not Found: /api/api/trips/dashboard-data/
+INFO 2025-09-27 11:00:32,267 basehttp 21343 139872572528384 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-27 11:00:32,277 log 21343 139872678438656 Not Found: /api/api/trips/dashboard-data/
+WARNING 2025-09-27 11:00:32,301 basehttp 21343 139872564135680 "GET /api/api/trips/dashboard-data/ HTTP/1.1" 404 2987
+WARNING 2025-09-27 11:00:32,318 basehttp 21343 139872678438656 "GET /api/api/trips/dashboard-data/ HTTP/1.1" 404 2987
+INFO 2025-09-27 11:00:32,332 basehttp 21343 139872686831360 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:00:32,403 basehttp 21343 139872580921088 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 11:00:32,412 basehttp 21343 139872589313792 "GET /api/accounts/users/ HTTP/1.1" 200 1110
+INFO 2025-09-27 11:00:35,047 basehttp 21343 139872589313792 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:35,051 basehttp 21343 139872580921088 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:35,056 basehttp 21343 139872589313792 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:35,065 basehttp 21343 139872580921088 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:35,119 basehttp 21343 139872678438656 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:00:35,154 basehttp 21343 139872686831360 "GET /api/trips/ HTTP/1.1" 200 2767
+INFO 2025-09-27 11:00:35,159 basehttp 21343 139872678438656 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:00:35,166 basehttp 21343 139872589313792 "GET /api/trips/ HTTP/1.1" 200 2767
+INFO 2025-09-27 11:00:49,514 basehttp 21343 139872589313792 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:49,516 basehttp 21343 139872678438656 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:00:49,603 basehttp 21343 139872589313792 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:00:49,604 basehttp 21343 139872678438656 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:01:24,632 basehttp 21343 139872678438656 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:01:25,038 basehttp 21343 139872678438656 "POST /api/trips/ HTTP/1.1" 201 515
+INFO 2025-09-27 11:06:40,227 basehttp 21343 139872678438656 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:06:40,244 basehttp 21343 139872580921088 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:06:40,296 basehttp 21343 139872678438656 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:06:40,304 basehttp 21343 139872580921088 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:08:37,604 basehttp 21343 139872580921088 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:08:37,623 basehttp 21343 139872580921088 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:08:37,989 basehttp 21343 139872678438656 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:08:37,997 basehttp 21343 139872580921088 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:08:50,908 basehttp 21343 139872580921088 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:08:50,913 basehttp 21343 139872678438656 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:08:50,988 basehttp 21343 139872678438656 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:08:50,992 basehttp 21343 139872580921088 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:08:51,135 basehttp 21343 139872580921088 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:08:51,142 basehttp 21343 139872580921088 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:08:51,166 basehttp 21343 139872678438656 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:08:51,199 basehttp 21343 139872589313792 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:08:51,263 basehttp 21343 139872572528384 "GET /api/trips/ HTTP/1.1" 200 3706
+INFO 2025-09-27 11:08:51,270 basehttp 21343 139872580921088 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:08:51,283 basehttp 21343 139872589313792 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:08:51,291 basehttp 21343 139872678438656 "GET /api/trips/ HTTP/1.1" 200 3706
+INFO 2025-09-27 11:10:29,223 basehttp 21343 139872678438656 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:10:29,225 basehttp 21343 139872589313792 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:10:29,296 basehttp 21343 139872589313792 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:10:29,307 basehttp 21343 139872678438656 "GET /api/accounts/profile/ HTTP/1.1" 200 1058
+INFO 2025-09-27 11:10:29,526 basehttp 21343 139872589313792 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:10:29,529 basehttp 21343 139872580921088 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:10:29,531 basehttp 21343 139872678438656 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:10:29,534 basehttp 21343 139872572528384 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:10:29,592 basehttp 21343 139872572528384 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:10:29,599 basehttp 21343 139872678438656 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:10:29,639 basehttp 21343 139872589313792 "GET /api/trips/ HTTP/1.1" 200 3706
+INFO 2025-09-27 11:10:29,640 basehttp 21343 139872580921088 "GET /api/trips/ HTTP/1.1" 200 3706
+INFO 2025-09-27 11:14:29,802 basehttp 21343 139872580921088 "OPTIONS /api/trips/6c584d38-4eb9-4cee-a1a8-4cba1f4323df/start/ HTTP/1.1" 200 0
+WARNING 2025-09-27 11:14:29,812 log 21343 139872580921088 Unauthorized: /api/trips/6c584d38-4eb9-4cee-a1a8-4cba1f4323df/start/
+WARNING 2025-09-27 11:14:29,813 basehttp 21343 139872580921088 "POST /api/trips/6c584d38-4eb9-4cee-a1a8-4cba1f4323df/start/ HTTP/1.1" 401 183
+INFO 2025-09-27 11:14:29,972 basehttp 21343 139872580921088 "OPTIONS /api/accounts/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:14:30,089 basehttp 21343 139872580921088 "POST /api/accounts/token/refresh/ HTTP/1.1" 200 582
+INFO 2025-09-27 11:14:30,139 basehttp 21343 139872580921088 "OPTIONS /api/trips/6c584d38-4eb9-4cee-a1a8-4cba1f4323df/start/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:14:30,374 basehttp 21343 139872580921088 "POST /api/trips/6c584d38-4eb9-4cee-a1a8-4cba1f4323df/start/ HTTP/1.1" 200 1000
+INFO 2025-09-27 11:14:56,442 basehttp 21343 139872580921088 "OPTIONS /api/api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:14:56,446 basehttp 21343 139872589313792 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:14:56,463 basehttp 21343 139872589313792 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:14:56,466 basehttp 21343 139872580921088 "OPTIONS /api/api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:14:56,468 basehttp 21343 139872572528384 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:14:56,471 basehttp 21343 139872678438656 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:14:56,554 basehttp 21343 139872678438656 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:14:56,563 basehttp 21343 139872572528384 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-27 11:14:56,589 log 21343 139872580921088 Not Found: /api/api/trips/dashboard-data/
+WARNING 2025-09-27 11:14:56,590 basehttp 21343 139872580921088 "GET /api/api/trips/dashboard-data/ HTTP/1.1" 404 2987
+WARNING 2025-09-27 11:14:56,610 log 21343 139872554432256 Not Found: /api/api/trips/dashboard-data/
+INFO 2025-09-27 11:14:56,611 basehttp 21343 139872589313792 "GET /api/accounts/users/ HTTP/1.1" 200 1113
+WARNING 2025-09-27 11:14:56,617 basehttp 21343 139872554432256 "GET /api/api/trips/dashboard-data/ HTTP/1.1" 404 2987
+INFO 2025-09-27 11:14:56,625 basehttp 21343 139872564135680 "GET /api/accounts/users/ HTTP/1.1" 200 1113
+INFO 2025-09-27 11:19:56,450 basehttp 21343 139872589313792 "OPTIONS /api/api/trips/dashboard-data/ HTTP/1.1" 200 0
+WARNING 2025-09-27 11:19:56,495 log 21343 139872589313792 Not Found: /api/api/trips/dashboard-data/
+WARNING 2025-09-27 11:19:56,496 basehttp 21343 139872589313792 "GET /api/api/trips/dashboard-data/ HTTP/1.1" 404 2987
+INFO 2025-09-27 11:22:06,547 basehttp 21343 139872589313792 "OPTIONS /api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:06,555 basehttp 21343 139872589313792 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:06,635 basehttp 21343 139872678438656 "OPTIONS /api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:06,644 basehttp 21343 139872564135680 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:06,645 basehttp 21343 139872589313792 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:22:06,679 basehttp 21343 139872572528384 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:06,695 basehttp 21343 139872554432256 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:06,764 basehttp 21343 139872572528384 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:22:06,776 basehttp 21343 139872580921088 "GET /api/trips/dashboard-data/ HTTP/1.1" 200 1549
+INFO 2025-09-27 11:22:06,802 basehttp 21343 139872678438656 "GET /api/trips/dashboard-data/ HTTP/1.1" 200 1549
+INFO 2025-09-27 11:22:06,804 basehttp 21343 139872564135680 "GET /api/accounts/users/ HTTP/1.1" 200 1113
+INFO 2025-09-27 11:22:06,809 basehttp 21343 139872554432256 "GET /api/accounts/users/ HTTP/1.1" 200 1113
+INFO 2025-09-27 11:22:23,869 basehttp 21343 139872554432256 "OPTIONS /api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:23,878 basehttp 21343 139872554432256 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:23,890 basehttp 21343 139872564135680 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:23,896 basehttp 21343 139872678438656 "OPTIONS /api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:23,923 basehttp 21343 139872580921088 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:23,931 basehttp 21343 139872589313792 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:22:24,001 basehttp 21343 139872554432256 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:22:24,030 basehttp 21343 139872580921088 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:22:24,045 basehttp 21343 139872564135680 "GET /api/trips/dashboard-data/ HTTP/1.1" 200 1549
+INFO 2025-09-27 11:22:24,055 basehttp 21343 139872572528384 "GET /api/trips/dashboard-data/ HTTP/1.1" 200 1549
+INFO 2025-09-27 11:22:24,063 basehttp 21343 139872589313792 "GET /api/accounts/users/ HTTP/1.1" 200 1113
+INFO 2025-09-27 11:22:24,066 basehttp 21343 139872678438656 "GET /api/accounts/users/ HTTP/1.1" 200 1113
+INFO 2025-09-27 11:27:23,893 basehttp 21343 139872678438656 "OPTIONS /api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:27:23,970 basehttp 21343 139872678438656 "GET /api/trips/dashboard-data/ HTTP/1.1" 200 1549
+INFO 2025-09-27 11:32:23,874 basehttp 21343 139872678438656 "OPTIONS /api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:32:23,922 basehttp 21343 139872678438656 "GET /api/trips/dashboard-data/ HTTP/1.1" 200 1549
+INFO 2025-09-27 11:37:23,872 basehttp 21343 139872678438656 "OPTIONS /api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:37:23,912 basehttp 21343 139872678438656 "GET /api/trips/dashboard-data/ HTTP/1.1" 200 1549
+INFO 2025-09-27 11:42:23,873 basehttp 21343 139872678438656 "OPTIONS /api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:42:23,917 basehttp 21343 139872678438656 "GET /api/trips/dashboard-data/ HTTP/1.1" 200 1549
+INFO 2025-09-27 11:45:10,825 basehttp 21343 139872678438656 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:10,826 basehttp 21343 139872580921088 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:10,843 basehttp 21343 139872580921088 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:10,845 basehttp 21343 139872678438656 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:10,900 basehttp 21343 139872564135680 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:45:10,925 basehttp 21343 139872678438656 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:45:10,948 basehttp 21343 139872580921088 "GET /api/trips/ HTTP/1.1" 200 3740
+INFO 2025-09-27 11:45:10,959 basehttp 21343 139872589313792 "GET /api/trips/ HTTP/1.1" 200 3740
+INFO 2025-09-27 11:45:15,723 basehttp 21343 139872580921088 "OPTIONS /api/trips/ddc4e721-1e2f-43f3-95d9-271ceb11d0f5/start/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:16,356 basehttp 21343 139872580921088 "POST /api/trips/ddc4e721-1e2f-43f3-95d9-271ceb11d0f5/start/ HTTP/1.1" 200 1034
+INFO 2025-09-27 11:45:28,565 basehttp 21343 139872580921088 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:28,588 basehttp 21343 139872580921088 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:28,975 basehttp 21343 139872580921088 "GET /api/accounts/profile/ HTTP/1.1" 200 1061
+INFO 2025-09-27 11:45:28,997 basehttp 21343 139872678438656 "GET /api/accounts/profile/ HTTP/1.1" 200 1061
+INFO 2025-09-27 11:45:29,081 basehttp 21343 139872678438656 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:29,093 basehttp 21343 139872678438656 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:29,098 basehttp 21343 139872580921088 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:29,124 basehttp 21343 139872580921088 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:45:29,163 basehttp 21343 139872564135680 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 11:45:29,165 basehttp 21343 139872589313792 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 11:45:29,230 basehttp 21343 139872678438656 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:45:29,242 basehttp 21343 139872580921088 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:46:08,122 basehttp 21343 139872572528384 "GET /admin/trips/trip/ HTTP/1.1" 200 12490
+INFO 2025-09-27 11:46:08,890 basehttp 21343 139872572528384 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 11:46:08,920 basehttp 21343 139872554432256 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:08,921 basehttp 21343 139872546039552 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:08,921 basehttp 21343 139872537646848 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:08,926 basehttp 21343 139872119551744 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:08,940 basehttp 21343 139872119551744 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,055 basehttp 21343 139872572528384 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,070 basehttp 21343 139872572528384 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,081 basehttp 21343 139872537646848 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,150 basehttp 21343 139872119551744 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,177 basehttp 21343 139872572528384 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,182 basehttp 21343 139872572528384 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,189 basehttp 21343 139872537646848 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,322 basehttp 21343 139872572528384 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,526 basehttp 21343 139872572528384 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,551 basehttp 21343 139872572528384 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,632 basehttp 21343 139872119551744 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,653 basehttp 21343 139872572528384 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:09,653 basehttp 21343 139872119551744 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:19,415 basehttp 21343 139872119551744 "GET /admin/trips/trip/ddc4e721-1e2f-43f3-95d9-271ceb11d0f5/change/ HTTP/1.1" 200 30430
+INFO 2025-09-27 11:46:19,814 basehttp 21343 139872119551744 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 11:46:19,913 basehttp 21343 139872572528384 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:19,997 basehttp 21343 139872119551744 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:20,048 basehttp 21343 139872119551744 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:20,379 basehttp 21343 139872119551744 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:46:20,667 basehttp 21343 139872119551744 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-09-27 11:48:07,210 basehttp 21343 139872580921088 "OPTIONS /api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:07,214 basehttp 21343 139872678438656 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:07,226 basehttp 21343 139872580921088 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:07,229 basehttp 21343 139872589313792 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:07,230 basehttp 21343 139872678438656 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:07,231 basehttp 21343 139872564135680 "OPTIONS /api/trips/dashboard-data/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:07,272 basehttp 21343 139872589313792 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:48:07,279 basehttp 21343 139872564135680 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:48:07,378 basehttp 21343 139872678438656 "GET /api/accounts/users/ HTTP/1.1" 200 1113
+INFO 2025-09-27 11:48:07,387 basehttp 21343 139872102766336 "GET /api/trips/dashboard-data/ HTTP/1.1" 200 1576
+INFO 2025-09-27 11:48:07,390 basehttp 21343 139872111159040 "GET /api/trips/dashboard-data/ HTTP/1.1" 200 1576
+INFO 2025-09-27 11:48:07,396 basehttp 21343 139872580921088 "GET /api/accounts/users/ HTTP/1.1" 200 1113
+INFO 2025-09-27 11:48:25,694 basehttp 21343 139872094373632 "OPTIONS /api/accounts/login/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:26,518 basehttp 21343 139872094373632 "POST /api/accounts/login/ HTTP/1.1" 200 1386
+INFO 2025-09-27 11:48:27,269 basehttp 21343 139872094373632 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:27,279 basehttp 21343 139872077588224 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:27,302 basehttp 21343 139872094373632 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:27,324 basehttp 21343 139872069195520 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:27,324 basehttp 21343 139872077588224 "OPTIONS /api/accounts/users/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:27,327 basehttp 21343 139871515571968 "OPTIONS /api/trips/dashboard/stats/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:27,336 basehttp 21343 139871507179264 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:27,337 basehttp 21343 139872085980928 "OPTIONS /api/trips/dashboard/hos-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:48:27,431 basehttp 21343 139872069195520 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 11:48:27,444 basehttp 21343 139872085980928 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 11:48:27,513 basehttp 21343 139871515571968 "GET /api/trips/vehicles/ HTTP/1.1" 200 2491
+INFO 2025-09-27 11:48:27,528 basehttp 21343 139871507179264 "GET /api/accounts/users/ HTTP/1.1" 200 4630
+INFO 2025-09-27 11:48:27,832 basehttp 21343 139872069195520 "GET /api/trips/dashboard/stats/ HTTP/1.1" 200 142
+INFO 2025-09-27 11:48:27,848 basehttp 21343 139872085980928 "GET /api/trips/dashboard/hos-status/ HTTP/1.1" 200 316
+INFO 2025-09-27 11:48:27,897 basehttp 21343 139871507179264 "GET /api/accounts/users/ HTTP/1.1" 200 4630
+INFO 2025-09-27 11:48:27,899 basehttp 21343 139871515571968 "GET /api/trips/vehicles/ HTTP/1.1" 200 2491
+INFO 2025-09-27 11:48:28,463 basehttp 21343 139872119551744 "GET /media/avatars/moi-1.jpg HTTP/1.1" 304 0
+INFO 2025-09-27 11:48:28,532 basehttp 21343 139872119551744 "GET /media/vehicles/front/olunteer-Computing-scheme_W640.jpg HTTP/1.1" 304 0
+INFO 2025-09-27 11:48:28,545 basehttp 21343 139872119551744 "GET /media/vehicles/front/user_frepik.png HTTP/1.1" 304 0
+INFO 2025-09-27 11:49:04,869 basehttp 21343 139872119551744 "GET /admin/trips/vehicle/ HTTP/1.1" 200 11805
+INFO 2025-09-27 11:49:04,903 basehttp 21343 139872119551744 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 11:49:07,029 basehttp 21343 139872119551744 "GET /admin/trips/vehicle/3fad4c4a-05c2-4151-8363-fa3f1bcafcd7/change/ HTTP/1.1" 200 26581
+INFO 2025-09-27 11:49:07,068 basehttp 21343 139872119551744 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 11:49:07,284 basehttp 21343 139872572528384 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2025-09-27 11:49:27,706 basehttp 21343 139872572528384 "GET /admin/trips/vehicle/ HTTP/1.1" 200 11805
+INFO 2025-09-27 11:49:29,776 basehttp 21343 139872572528384 "GET /admin/trips/vehicle/7f4a3445-d135-4fd3-bf95-44051a6e0c1b/change/ HTTP/1.1" 200 26638
+INFO 2025-09-27 11:49:29,804 basehttp 21343 139872572528384 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-09-27 11:49:40,631 basehttp 21343 139872580921088 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:49:40,634 basehttp 21343 139872678438656 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:49:40,638 basehttp 21343 139872580921088 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:49:40,644 basehttp 21343 139872678438656 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:49:40,672 basehttp 21343 139872102766336 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:49:40,716 basehttp 21343 139872111159040 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 11:49:40,719 basehttp 21343 139872678438656 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 11:49:40,738 basehttp 21343 139872580921088 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 11:50:18,997 basehttp 21343 139872580921088 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:50:19,005 basehttp 21343 139872678438656 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:50:19,067 basehttp 21343 139872580921088 "GET /api/accounts/profile/ HTTP/1.1" 200 1061
+INFO 2025-09-27 11:50:19,068 basehttp 21343 139872678438656 "GET /api/accounts/profile/ HTTP/1.1" 200 1061
+INFO 2025-09-27 11:50:19,494 basehttp 21343 139872678438656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:50:19,496 basehttp 21343 139872102766336 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:50:19,497 basehttp 21343 139872111159040 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:50:19,498 basehttp 21343 139872580921088 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:50:19,613 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:50:19,615 basehttp 21343 139872678438656 "GET /api/eld/hos/current-status/ HTTP/1.1" 200 309
+INFO 2025-09-27 11:50:19,648 basehttp 21343 139872111159040 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 397
+INFO 2025-09-27 11:50:19,657 basehttp 21343 139872580921088 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 397
+INFO 2025-09-27 11:50:19,659 basehttp 21343 139872102766336 "GET /api/eld/hos/current-status/ HTTP/1.1" 200 309
+INFO 2025-09-27 11:50:19,832 basehttp 21343 139872564135680 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 163
+INFO 2025-09-27 11:50:21,508 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:50:21,668 basehttp 21343 139872564135680 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 163
+INFO 2025-09-27 11:50:35,674 basehttp 21343 139872564135680 "OPTIONS /api/eld/hos/status-change/ HTTP/1.1" 200 0
+ERROR 2025-09-27 11:50:35,692 views 21343 139872564135680 Error creating HOS status change: ELDLog() got unexpected keyword arguments: 'duty_status', 'start_time', 'location', 'notes', 'vehicle'
+ERROR 2025-09-27 11:50:35,693 log 21343 139872564135680 Internal Server Error: /api/eld/hos/status-change/
+ERROR 2025-09-27 11:50:35,694 basehttp 21343 139872564135680 "POST /api/eld/hos/status-change/ HTTP/1.1" 500 163
+INFO 2025-09-27 11:50:49,355 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:50:49,393 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:51:19,366 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:51:19,427 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:51:49,348 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:51:49,365 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:52:19,362 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:52:19,427 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:52:49,376 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:52:49,448 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:53:19,368 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:53:19,424 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:53:49,373 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:53:49,432 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:54:19,358 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:54:19,424 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:54:49,365 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:54:49,404 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:55:19,375 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:55:19,432 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:55:49,365 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:55:49,435 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:56:19,358 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:56:19,418 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:56:49,364 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:56:49,413 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:57:19,356 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:57:19,406 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:57:49,359 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:57:49,410 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:58:19,362 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:58:19,410 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:58:49,361 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:58:49,437 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:59:19,369 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:59:19,408 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 11:59:49,359 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 11:59:49,404 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 12:00:19,357 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 12:00:19,373 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 12:00:49,556 basehttp 21343 139872564135680 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 12:00:49,595 basehttp 21343 139872564135680 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 12:01:04,225 autoreload 21343 139872842946368 /home/sergeo/Documents/spotter-application/spotter-backend/trips/services.py changed, reloading.
+INFO 2025-09-27 12:01:13,300 autoreload 29929 139897486522176 Watching for file changes with StatReloader
+INFO 2025-09-27 12:01:19,557 basehttp 29929 139897330546432 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 12:01:20,287 basehttp 29929 139897330546432 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 12:02:33,609 basehttp 29929 139897330546432 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 12:02:33,676 basehttp 29929 139897330546432 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 12:03:33,576 basehttp 29929 139897330546432 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 12:03:33,621 basehttp 29929 139897330546432 "GET /api/trips/vehicles/positions/ HTTP/1.1" 200 394
+INFO 2025-09-27 12:04:05,405 autoreload 29929 139897486522176 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 12:04:06,377 autoreload 30248 140582432528192 Watching for file changes with StatReloader
+INFO 2025-09-27 12:51:19,531 autoreload 30248 140582432528192 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 12:51:47,993 autoreload 34695 140180960900928 Watching for file changes with StatReloader
+INFO 2025-09-27 14:35:39,491 autoreload 46466 140390961854272 Watching for file changes with StatReloader
+INFO 2025-09-27 14:39:05,996 autoreload 46466 140390961854272 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 14:39:08,687 autoreload 47102 140536200288064 Watching for file changes with StatReloader
+INFO 2025-09-27 14:40:15,599 basehttp 47102 140536111085312 "OPTIONS /api/accounts/login/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:40:16,169 log 47102 140536111085312 Bad Request: /api/accounts/login/
+WARNING 2025-09-27 14:40:16,170 basehttp 47102 140536111085312 "POST /api/accounts/login/ HTTP/1.1" 400 50
+INFO 2025-09-27 14:40:53,877 basehttp 47102 140536111085312 "OPTIONS /api/accounts/login/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:40:59,454 basehttp 47102 140536111085312 "POST /api/accounts/login/ HTTP/1.1" 200 1647
+INFO 2025-09-27 14:40:59,866 basehttp 47102 140536111085312 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:40:59,913 basehttp 47102 140536111085312 "OPTIONS /api/eld/logs/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:40:59,917 basehttp 47102 140536008320768 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:40:59,936 basehttp 47102 140535999928064 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:40:59,949 basehttp 47102 140535991535360 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:41:00,009 basehttp 47102 140535983142656 "OPTIONS /api/eld/logs/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:41:00,181 basehttp 47102 140536008320768 "GET /api/eld/logs/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:41:00,187 basehttp 47102 140535999928064 "GET /api/eld/logs/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:41:00,187 basehttp 47102 140535991535360 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:41:00,197 basehttp 47102 140535983142656 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+WARNING 2025-09-27 14:41:00,302 log 47102 140535557781248 Not Found: /ws/vehicles/
+WARNING 2025-09-27 14:41:00,315 log 47102 140536016713472 Not Found: /ws/vehicles/
+WARNING 2025-09-27 14:41:00,342 basehttp 47102 140535557781248 "GET /ws/vehicles/ HTTP/1.1" 404 2936
+INFO 2025-09-27 14:41:00,364 basehttp 47102 140536111085312 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 14:41:00,369 basehttp 47102 140535974749952 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 14:44:23,030 basehttp 47102 140535974749952 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:23,042 basehttp 47102 140536111085312 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:23,086 basehttp 47102 140535974749952 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:44:23,125 basehttp 47102 140536111085312 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:44:23,236 basehttp 47102 140535974749952 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:23,247 basehttp 47102 140536111085312 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:23,247 basehttp 47102 140536008320768 "OPTIONS /api/eld/logs/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:44:23,250 log 47102 140535557781248 Not Found: /ws/vehicles/
+INFO 2025-09-27 14:44:23,248 basehttp 47102 140535983142656 "OPTIONS /api/eld/logs/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:23,252 basehttp 47102 140535999928064 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:23,253 basehttp 47102 140535991535360 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:44:23,254 basehttp 47102 140535557781248 "GET /ws/vehicles/ HTTP/1.1" 404 2936
+INFO 2025-09-27 14:44:23,388 basehttp 47102 140536008320768 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:44:23,399 basehttp 47102 140535999928064 "GET /api/eld/logs/ HTTP/1.1" 200 52
+WARNING 2025-09-27 14:44:23,407 log 47102 140535557781248 Not Found: /ws/vehicles/
+WARNING 2025-09-27 14:44:23,424 basehttp 47102 140535557781248 "GET /ws/vehicles/ HTTP/1.1" 404 2936
+INFO 2025-09-27 14:44:23,428 basehttp 47102 140536111085312 "GET /api/eld/logs/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:44:23,432 basehttp 47102 140535983142656 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 14:44:23,446 basehttp 47102 140535974749952 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:44:23,458 basehttp 47102 140535991535360 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 14:44:37,713 basehttp 47102 140535991535360 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:37,722 basehttp 47102 140535974749952 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:37,728 basehttp 47102 140535991535360 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:37,730 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:37,763 basehttp 47102 140535974749952 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:44:37,779 basehttp 47102 140536111085312 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:44:37,820 basehttp 47102 140535983142656 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 14:44:37,845 basehttp 47102 140535991535360 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 14:44:41,132 basehttp 47102 140535991535360 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:41,146 basehttp 47102 140535991535360 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:41,160 basehttp 47102 140535983142656 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:44:41,215 basehttp 47102 140535991535360 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:44:56,458 basehttp 47102 140535991535360 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:56,469 basehttp 47102 140535991535360 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:56,471 basehttp 47102 140535983142656 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:56,474 basehttp 47102 140535974749952 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:44:56,527 basehttp 47102 140535991535360 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:44:56,531 basehttp 47102 140535983142656 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 14:44:56,553 basehttp 47102 140536111085312 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 14:44:56,564 basehttp 47102 140535974749952 "GET /api/trips/ HTTP/1.1" 200 3774
+INFO 2025-09-27 14:45:03,996 basehttp 47102 140535974749952 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:04,002 basehttp 47102 140535983142656 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:04,078 basehttp 47102 140535974749952 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:45:04,080 basehttp 47102 140535983142656 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:45:09,500 basehttp 47102 140535983142656 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:09,503 basehttp 47102 140535974749952 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:09,563 basehttp 47102 140535983142656 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:45:09,567 basehttp 47102 140535974749952 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:45:09,924 basehttp 47102 140535974749952 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:09,933 basehttp 47102 140535983142656 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:09,934 basehttp 47102 140536111085312 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:09,937 basehttp 47102 140535991535360 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:10,041 basehttp 47102 140536111085312 "GET /api/eld/hos/current-status/ HTTP/1.1" 200 309
+INFO 2025-09-27 14:45:10,043 basehttp 47102 140535991535360 "GET /api/eld/hos/current-status/ HTTP/1.1" 200 309
+WARNING 2025-09-27 14:45:10,082 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:45:10,083 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+WARNING 2025-09-27 14:45:10,089 log 47102 140535974749952 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:45:10,090 basehttp 47102 140535974749952 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:45:12,269 basehttp 47102 140535974749952 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:12,482 basehttp 47102 140535974749952 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 147
+INFO 2025-09-27 14:45:20,286 basehttp 47102 140535974749952 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:20,518 basehttp 47102 140535974749952 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 148
+INFO 2025-09-27 14:45:29,113 basehttp 47102 140535974749952 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:29,118 basehttp 47102 140535974749952 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:29,146 basehttp 47102 140536111085312 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:45:29,184 basehttp 47102 140535974749952 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:45:42,460 basehttp 47102 140535974749952 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:42,610 basehttp 47102 140535974749952 "POST /api/trips/ HTTP/1.1" 201 478
+INFO 2025-09-27 14:45:55,259 basehttp 47102 140535974749952 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:55,267 basehttp 47102 140535974749952 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:55,309 basehttp 47102 140536111085312 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:45:55,332 basehttp 47102 140536111085312 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:45:58,503 basehttp 47102 140536111085312 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:58,509 basehttp 47102 140536111085312 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:45:58,546 basehttp 47102 140535974749952 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:45:58,599 basehttp 47102 140536111085312 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:46:00,003 basehttp 47102 140535974749952 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:46:00,011 basehttp 47102 140535983142656 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:46:00,058 basehttp 47102 140535983142656 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:46:00,086 basehttp 47102 140535974749952 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:46:01,487 basehttp 47102 140535983142656 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:46:01,498 basehttp 47102 140535983142656 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:46:01,536 basehttp 47102 140535974749952 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:46:01,571 basehttp 47102 140535983142656 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 14:46:01,829 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:46:01,830 basehttp 47102 140535974749952 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:46:01,834 basehttp 47102 140535991535360 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:46:01,834 basehttp 47102 140535999928064 "OPTIONS /api/eld/hos/current-status/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:46:01,860 log 47102 140535999928064 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:46:01,861 basehttp 47102 140535999928064 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+WARNING 2025-09-27 14:46:01,864 log 47102 140535991535360 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:46:01,864 basehttp 47102 140535991535360 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:46:01,888 basehttp 47102 140536008320768 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:46:01,889 basehttp 47102 140535983142656 "GET /api/eld/hos/current-status/ HTTP/1.1" 200 309
+INFO 2025-09-27 14:46:01,890 basehttp 47102 140535974749952 "GET /api/eld/hos/current-status/ HTTP/1.1" 200 309
+INFO 2025-09-27 14:46:01,987 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:46:02,059 basehttp 47102 140536008320768 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 148
+INFO 2025-09-27 14:46:02,259 basehttp 47102 140535983142656 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 148
+INFO 2025-09-27 14:46:03,711 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:46:03,914 basehttp 47102 140535983142656 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 148
+INFO 2025-09-27 14:46:13,693 basehttp 47102 140535983142656 "OPTIONS /api/eld/hos/status-change/ HTTP/1.1" 200 0
+ERROR 2025-09-27 14:46:13,711 views 47102 140535983142656 Error creating HOS status change: ELDLog() got unexpected keyword arguments: 'duty_status', 'start_time', 'location', 'notes', 'vehicle'
+ERROR 2025-09-27 14:46:13,711 log 47102 140535983142656 Internal Server Error: /api/eld/hos/status-change/
+ERROR 2025-09-27 14:46:13,712 basehttp 47102 140535983142656 "POST /api/eld/hos/status-change/ HTTP/1.1" 500 163
+INFO 2025-09-27 14:46:31,683 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:46:31,711 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:46:31,713 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:47:01,683 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:47:01,725 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:47:01,728 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:47:31,687 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:47:31,740 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:47:31,741 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:48:01,689 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:48:01,735 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:48:01,737 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:48:12,837 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/update-position/ HTTP/1.1" 200 0
+INFO 2025-09-27 14:48:13,076 basehttp 47102 140535983142656 "POST /api/trips/vehicles/update-position/ HTTP/1.1" 200 148
+INFO 2025-09-27 14:48:31,683 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:48:31,711 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:48:31,712 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:49:01,681 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:49:01,702 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:49:01,705 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:49:31,679 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:49:31,692 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:49:31,693 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:50:01,684 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:50:01,705 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:50:01,706 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:50:31,685 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:50:31,713 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:50:31,715 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:51:01,678 basehttp 47102 140535983142656 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:51:01,691 log 47102 140535983142656 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:51:01,692 basehttp 47102 140535983142656 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:51:26,772 autoreload 47102 140536200288064 /home/sergeo/Documents/spotter-application/spotter-backend/trips/services.py changed, reloading.
+INFO 2025-09-27 14:51:27,867 autoreload 49344 140621204346688 Watching for file changes with StatReloader
+INFO 2025-09-27 14:51:31,678 basehttp 49344 140621048178432 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:51:31,745 log 49344 140621048178432 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:51:31,745 basehttp 49344 140621048178432 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:52:01,677 basehttp 49344 140621048178432 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:52:01,695 log 49344 140621048178432 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:52:01,696 basehttp 49344 140621048178432 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:52:31,682 basehttp 49344 140621048178432 "OPTIONS /api/trips/vehicles/positions/ HTTP/1.1" 200 0
+WARNING 2025-09-27 14:52:31,699 log 49344 140621048178432 Forbidden: /api/trips/vehicles/positions/
+WARNING 2025-09-27 14:52:31,701 basehttp 49344 140621048178432 "GET /api/trips/vehicles/positions/ HTTP/1.1" 403 31
+INFO 2025-09-27 14:52:51,858 autoreload 49344 140621204346688 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 14:52:52,593 autoreload 49582 140009176020800 Watching for file changes with StatReloader
+INFO 2025-09-27 14:53:27,016 autoreload 49582 140009176020800 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
+INFO 2025-09-27 14:53:27,733 autoreload 49648 140505471080256 Watching for file changes with StatReloader
+INFO 2025-09-27 15:03:14,554 autoreload 51327 139748897167168 Watching for file changes with StatReloader
+INFO 2025-09-27 15:06:24,597 autoreload 51327 139748897167168 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 15:06:26,538 autoreload 51992 140254164424512 Watching for file changes with StatReloader
+INFO 2025-09-27 15:10:13,761 autoreload 52838 139978006615872 Watching for file changes with StatReloader
+INFO 2025-09-27 15:13:16,566 autoreload 52838 139978006615872 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-09-27 15:13:17,536 autoreload 53054 139938149095232 Watching for file changes with StatReloader
+INFO 2025-09-27 15:18:22,130 basehttp 53054 139937992898304 "OPTIONS /api/accounts/login/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:25,586 basehttp 53054 139937992898304 "POST /api/accounts/login/ HTTP/1.1" 200 1647
+INFO 2025-09-27 15:18:25,837 basehttp 53054 139937992898304 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:25,865 basehttp 53054 139937992898304 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:25,876 basehttp 53054 139937752020736 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:25,878 basehttp 53054 139937962837760 "OPTIONS /api/eld/logs/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:25,897 basehttp 53054 139937743628032 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:25,900 basehttp 53054 139937735235328 "OPTIONS /api/eld/logs/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:25,954 basehttp 53054 139937752020736 "GET /api/eld/logs/ HTTP/1.1" 200 52
+INFO 2025-09-27 15:18:25,982 basehttp 53054 139937735235328 "GET /api/eld/logs/ HTTP/1.1" 200 52
+INFO 2025-09-27 15:18:25,997 basehttp 53054 139937962837760 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 15:18:26,024 basehttp 53054 139937718449920 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 15:18:26,076 basehttp 53054 139937992898304 "GET /api/trips/ HTTP/1.1" 200 4676
+INFO 2025-09-27 15:18:26,076 basehttp 53054 139937743628032 "GET /api/trips/ HTTP/1.1" 200 4676
+WARNING 2025-09-27 15:18:26,460 log 53054 139937726842624 Not Found: /ws/vehicles/
+WARNING 2025-09-27 15:18:26,462 log 53054 139937971230464 Not Found: /ws/vehicles/
+WARNING 2025-09-27 15:18:26,468 basehttp 53054 139937726842624 "GET /ws/vehicles/ HTTP/1.1" 404 2936
+INFO 2025-09-27 15:18:33,157 basehttp 53054 139937992898304 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:33,161 basehttp 53054 139937743628032 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:33,195 basehttp 53054 139937743628032 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 15:18:33,222 basehttp 53054 139937992898304 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 15:18:37,409 basehttp 53054 139937992898304 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:37,419 basehttp 53054 139937992898304 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:37,421 basehttp 53054 139937743628032 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:37,425 basehttp 53054 139937718449920 "OPTIONS /api/trips/vehicles/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:18:37,503 basehttp 53054 139937992898304 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 15:18:37,511 basehttp 53054 139937743628032 "GET /api/trips/vehicles/ HTTP/1.1" 200 52
+INFO 2025-09-27 15:18:37,542 basehttp 53054 139937735235328 "GET /api/trips/ HTTP/1.1" 200 4676
+INFO 2025-09-27 15:18:37,560 basehttp 53054 139937718449920 "GET /api/trips/ HTTP/1.1" 200 4676
+INFO 2025-09-27 15:19:10,620 basehttp 53054 139937718449920 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:19:10,622 basehttp 53054 139937992898304 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:19:10,857 basehttp 53054 139937992898304 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 15:19:10,870 basehttp 53054 139937718449920 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
+INFO 2025-09-27 15:19:31,574 basehttp 53054 139937718449920 "OPTIONS /api/trips/ HTTP/1.1" 200 0
+INFO 2025-09-27 15:19:31,718 basehttp 53054 139937718449920 "POST /api/trips/ HTTP/1.1" 201 481
