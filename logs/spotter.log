@@ -1540,3 +1540,5 @@ INFO 2025-09-27 15:19:10,857 basehttp 53054 139937992898304 "GET /api/accounts/p
 INFO 2025-09-27 15:19:10,870 basehttp 53054 139937718449920 "GET /api/accounts/profile/ HTTP/1.1" 200 1057
 INFO 2025-09-27 15:19:31,574 basehttp 53054 139937718449920 "OPTIONS /api/trips/ HTTP/1.1" 200 0
 INFO 2025-09-27 15:19:31,718 basehttp 53054 139937718449920 "POST /api/trips/ HTTP/1.1" 201 481
+INFO 2025-09-27 17:15:37,191 autoreload 53054 139938149095232 /home/sergeo/Documents/spotter-application/spotter-backend/spotter_project/settings.py changed, reloading.
+INFO 2025-09-27 17:15:41,196 autoreload 68377 140032387471168 Watching for file changes with StatReloader
