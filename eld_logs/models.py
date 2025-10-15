@@ -50,6 +50,23 @@ class ELDLog(models.Model):
     certified_at = models.DateTimeField(null=True, blank=True)
     signature = models.TextField(blank=True)  # Digital signature data
     
+    # Champs d'audit
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='eld_logs_created',
+        help_text="Utilisateur qui a créé ce journal ELD"
+    )
+    updated_by = models.ForeignKey(
+        User, 
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='eld_logs_updated',
+        help_text="Dernier utilisateur qui a modifié ce journal ELD"
+    )
     # Timestamps
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -136,13 +153,20 @@ class DutyStatusEntry(models.Model):
     ]
     
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    trip = models.ForeignKey(
+        Trip,
+        on_delete=models.CASCADE,
+        related_name='duty_entries',
+        null=True,
+        blank=True
+    )  # Ajout de null=True, blank=True selon conception
     eld_log = models.ForeignKey(
         ELDLog,
         on_delete=models.CASCADE,
         related_name='duty_entries'
     )
     
-    # Time and status
+    # Time and status - Garder DateTimeField (plus correct que TimeField de la conception)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     status = models.CharField(max_length=25, choices=STATUS_CHOICES)
@@ -169,6 +193,23 @@ class DutyStatusEntry(models.Model):
     )
     edited_at = models.DateTimeField(null=True, blank=True)
     
+    # Champs d'audit
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='duty_entries_created',
+        help_text="Utilisateur qui a créé cette entrée de statut"
+    )
+    updated_by = models.ForeignKey(
+        User, 
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='duty_entries_updated',
+        help_text="Dernier utilisateur qui a modifié cette entrée de statut"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -265,7 +306,25 @@ class HOSViolation(models.Model):
     )
     resolved_at = models.DateTimeField(null=True, blank=True)
     
+    # Champs d'audit
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='violations_created',
+        help_text="Utilisateur qui a créé cette violation"
+    )
+    updated_by = models.ForeignKey(
+        User, 
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='violations_updated',
+        help_text="Dernier utilisateur qui a modifié cette violation"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
     class Meta:
         ordering = ['-violation_time']
@@ -321,7 +380,25 @@ class ELDExport(models.Model):
     completion_time = models.DateTimeField(null=True, blank=True)
     error_message = models.TextField(blank=True)
     
+    # Champs d'audit
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='exports_created',
+        help_text="Utilisateur qui a créé cet export"
+    )
+    updated_by = models.ForeignKey(
+        User, 
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='exports_updated',
+        help_text="Dernier utilisateur qui a modifié cet export"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
     class Meta:
         ordering = ['-created_at']

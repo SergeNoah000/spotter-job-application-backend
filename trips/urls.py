@@ -14,32 +14,61 @@ urlpatterns = [
     path('locations/reverse-geocode/', views.get_current_location_address, name='reverse_geocode'),
     path('navigation/calculate-route/', views.calculate_route_with_navigation, name='calculate_route'),
     
-    # Vehicles
+    # Vehicles - Routes spécifiques AVANT les routes avec paramètres
     path('vehicles/', views.VehicleListCreateView.as_view(), name='vehicle_list_create'),
-    path('vehicles/<uuid:pk>/', views.VehicleDetailView.as_view(), name='vehicle_detail'),
     
-    # Assignation véhicules-conducteurs
+    # Export des véhicules (DOIT être avant vehicles/<uuid:pk>/)
+    path('vehicles/export/', views.export_vehicles, name='export_vehicles'),
+    
+    # Statistiques dashboard admin
+    path('vehicles/dashboard-stats/', views.dashboard_vehicle_stats, name='dashboard_vehicle_stats'),
+    path('vehicles/statistics/', views.vehicle_statistics, name='vehicle_statistics'),
+    
+    # Ancienne assignation véhicules-conducteurs (à supprimer après migration)
     path('vehicles/assign-driver/', views.assign_driver_to_vehicle, name='assign_driver_to_vehicle'),
     path('vehicles/unassign-driver/', views.unassign_driver_from_vehicle, name='unassign_driver_from_vehicle'),
-    path('available-drivers/', views.get_available_drivers, name='available_drivers'),
-    path('available-vehicles/', views.get_available_vehicles, name='available_vehicles'),
     
     # Géolocalisation temps réel
     path('vehicles/update-position/', views.update_vehicle_position, name='update_vehicle_position'),
     path('vehicles/positions/', views.get_vehicle_positions, name='get_vehicle_positions'),
     
-    # Voyage conducteur
-    path('driver/current-trip/', views.get_driver_current_trip, name='get_driver_current_trip'),
+    # Routes avec paramètres UUID (APRÈS les routes spécifiques)
+    path('vehicles/<uuid:pk>/', views.VehicleDetailView.as_view(), name='vehicle_detail'),
     
-    # Trips
+    # Nouvelle gestion d'attribution véhicules-conducteurs
+    path('vehicles/<uuid:vehicle_id>/assign-driver/', views.VehicleAssignDriverView.as_view(), name='vehicle_assign_driver'),
+    path('vehicles/<uuid:vehicle_id>/unassign-driver/', views.VehicleUnassignDriverView.as_view(), name='vehicle_unassign_driver'),
+    path('vehicles/<uuid:vehicle_id>/assignment-history/', views.VehicleAssignmentHistoryView.as_view(), name='vehicle_assignment_history'),
+    path('vehicles/<uuid:vehicle_id>/available-drivers/', views.AvailableDriversForVehicleView.as_view(), name='vehicle_available_drivers'),
+    
+    # APIs générales
+    path('available-drivers/', views.get_available_drivers, name='available_drivers'),
+    path('available-vehicles/', views.get_available_vehicles, name='available_vehicles'),
+    
+    # Voyage conducteur - Interface principale de navigation
+    path('driver/current-trip/', views.get_driver_current_trip, name='get_driver_current_trip'),
+    path('driver/active-trip/', views.get_driver_active_trip, name='get_driver_active_trip'),
+    path('driver/trips/', views.get_driver_trips, name='get_driver_trips'),
+    
+    # Trips - Liste et création
     path('', views.TripListCreateView.as_view(), name='trip_list_create'),
     path('<uuid:pk>/', views.TripDetailView.as_view(), name='trip_detail'),
     
-    # Trip actions avec navigation
+    # Workflow complet : Ramassage → Transit → Livraison
+    path('<uuid:trip_id>/start-pickup/', views.start_pickup, name='start_pickup'),
+    path('<uuid:trip_id>/complete-delivery/', views.complete_delivery, name='complete_delivery'),
+    path('<uuid:trip_id>/update-position/', views.update_trip_position, name='update_trip_position'),
+    path('<uuid:trip_id>/timeline/', views.get_trip_timeline, name='get_trip_timeline'),
+    
+    # Trip actions - Nouvelles vues pour le cycle de vie complet
+    path('<uuid:trip_id>/start/', views.TripStartView.as_view(), name='trip_start'),
+    path('<uuid:trip_id>/complete/', views.TripCompleteView.as_view(), name='trip_complete'),
+    path('<uuid:trip_id>/cancel/', views.TripCancelView.as_view(), name='trip_cancel'),
+    path('<uuid:trip_id>/update-position/', views.TripUpdatePositionView.as_view(), name='trip_update_position'),
+    
+    # Trip actions avec navigation GPS complète
     path('<uuid:trip_id>/start-navigation/', views.start_trip_with_navigation, name='start_trip_navigation'),
-    path('<uuid:trip_id>/update-position/', views.update_navigation_position, name='update_navigation_position'),
-    path('<uuid:trip_id>/start/', views.start_trip, name='start_trip'),
-    path('<uuid:trip_id>/complete/', views.complete_trip, name='complete_trip'),
+    path('<uuid:trip_id>/update-navigation/', views.update_navigation_position, name='update_navigation_position'),
     
     # Trip planning and routing
     path('plan/', views.TripPlanningView.as_view(), name='trip_planning'),
@@ -55,4 +84,8 @@ urlpatterns = [
     # Trip tracking endpoints
     path('<uuid:trip_id>/start-tracking/', views.start_trip_tracking, name='start_trip_tracking'),
     path('<uuid:trip_id>/tracking-status/', views.get_trip_tracking_status, name='get_trip_tracking_status'),
+    
+    # Compatibilité avec anciennes routes (pour éviter les erreurs)
+    path('<uuid:trip_id>/start-old/', views.start_trip, name='start_trip_old'),
+    path('<uuid:trip_id>/complete-old/', views.complete_trip, name='complete_trip_old'),
 ]

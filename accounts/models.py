@@ -25,7 +25,26 @@ class Company(models.Model):
         choices=OPERATION_SCHEDULE_CHOICES,
         default='8_DAY'
     )
+    logo = models.CharField(max_length=500, blank=True)  # Ajout selon conception
     is_active = models.BooleanField(default=True)
+    
+    # Champs d'audit
+    created_by = models.ForeignKey(
+        'User',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='companies_created',
+        help_text="Utilisateur qui a créé cette entreprise"
+    )
+    updated_by = models.ForeignKey(
+        'User', 
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='companies_updated',
+        help_text="Dernier utilisateur qui a modifié cette entreprise"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -105,13 +124,36 @@ class User(AbstractUser):
     
     # Profile fields
     avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
+    profile_image = models.CharField(max_length=500, blank=True)  # Ajout selon conception
     date_of_birth = models.DateField(blank=True, null=True)
     emergency_contact_name = models.CharField(max_length=100, blank=True)
     emergency_contact_phone = models.CharField(max_length=15, blank=True)
     
     # Status fields
     is_verified = models.BooleanField(default=False)
+    must_change_password = models.BooleanField(default=True, help_text="Forcer le changement de mot de passe à la première connexion")
+    email_verification_token = models.CharField(max_length=64, blank=True, null=True)
+    password_reset_token = models.CharField(max_length=64, blank=True, null=True)
+    password_reset_token_expires = models.DateTimeField(blank=True, null=True)
     last_login_ip = models.GenericIPAddressField(blank=True, null=True)
+    
+    # Champs d'audit
+    created_by = models.ForeignKey(
+        'self',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='users_created',
+        help_text="Utilisateur qui a créé ce compte"
+    )
+    updated_by = models.ForeignKey(
+        'self', 
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='users_updated',
+        help_text="Dernier utilisateur qui a modifié ce compte"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -203,18 +245,46 @@ class User(AbstractUser):
         if not self.is_driver():
             return 0
         
-        # TODO: Calculer les vraies heures HOS depuis les logs ELD
-        # Pour l'instant, on retourne une valeur par défaut
-        current_trip = self.current_trip
-        if current_trip:
-            return float(current_trip.current_cycle_hours)
-        return 0
+        try:
+            # Calculer les heures HOS depuis les logs ELD
+            from eld_logs.models import DutyStatusEntry
+            from datetime import timedelta
+            from django.utils import timezone
+            
+            # Calculer sur les 8 derniers jours (70h/8 jours)
+            eight_days_ago = timezone.now() - timedelta(days=8)
+            
+            # Récupérer tous les statuts de conduite sur cette période
+            # Le conducteur est accessible via eld_log__driver
+            driving_entries = DutyStatusEntry.objects.filter(
+                eld_log__driver=self,
+                status='DRIVING',
+                start_time__gte=eight_days_ago
+            )
+            
+            total_hours = 0
+            for entry in driving_entries:
+                if entry.duration:
+                    total_hours += entry.duration.total_seconds() / 3600
+            
+            return round(total_hours, 2)
+        except Exception as e:
+            # En cas d'erreur, retourner 0 pour ne pas bloquer l'authentification
+            print(f"Erreur lors du calcul des heures HOS: {e}")
+            return 0
     
     def get_available_driving_hours(self):
         """Calcule les heures de conduite disponibles"""
-        max_hours = 70  # Maximum selon FMCSA 70h/8 jours
+        if not self.is_driver():
+            return 0
+        
+        # Récupérer le cycle de la compagnie (70h/8 jours par défaut)
+        max_hours = 70
+        if self.company and self.company.operation_schedule == '7_DAY':
+            max_hours = 60
+        
         used_hours = self.get_current_hos_hours()
-        return max(0, max_hours - used_hours)
+        return max(0, round(max_hours - used_hours, 2))
 
 class UserProfile(models.Model):
     """Profil étendu pour les utilisateurs"""
@@ -239,6 +309,23 @@ class UserProfile(models.Model):
     total_trips = models.IntegerField(default=0)
     total_miles = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     
+    # Champs d'audit
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='profiles_created',
+        help_text="Utilisateur qui a créé ce profil"
+    )
+    updated_by = models.ForeignKey(
+        User, 
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='profiles_updated',
+        help_text="Dernier utilisateur qui a modifié ce profil"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     

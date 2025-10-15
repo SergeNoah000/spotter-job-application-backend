@@ -9,6 +9,11 @@ urlpatterns = [
     path('logout/', views.LogoutView.as_view(), name='logout'),
     path('token/refresh/', views.RefreshTokenView.as_view(), name='token_refresh'),
     
+    # Réinitialisation de mot de passe
+    path('password-reset/', views.PasswordResetRequestView.as_view(), name='password_reset_request'),
+    path('password-reset/confirm/', views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('first-login/change-password/', views.FirstLoginPasswordChangeView.as_view(), name='first_login_password_change'),
+    
     # Profil utilisateur
     path('profile/', views.UserProfileView.as_view(), name='user_profile'),
     path('change-password/', views.ChangePasswordView.as_view(), name='change_password'),

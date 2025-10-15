@@ -21,6 +21,9 @@ class NominatimService:
         self.headers = {
             'User-Agent': 'SpotterApp/1.0 (contact@spotter.com)'
         }
+        # OpenRouteService pour le calcul d'itinéraires
+        self.ors_api_key = settings.OPENROUTE_API_KEY if hasattr(settings, 'OPENROUTE_API_KEY') else None
+        self.ors_base_url = "https://api.openrouteservice.org/v2"
     
     def search_address(self, query: str, limit: int = 5) -> List[Dict]:
         """
@@ -32,7 +35,7 @@ class NominatimService:
                 'format': 'json',
                 'limit': limit,
                 'addressdetails': 1,
-                'countrycodes': 'us,ca',  # Limiter aux US et Canada pour le transport
+                # 'countrycodes': 'us,ca',  # Limiter aux US et Canada pour le transport
                 'extratags': 1
             }
             
@@ -142,13 +145,25 @@ class NominatimService:
         Calculer un itinéraire avec OpenRouteService
         """
         try:
-            # Pour cette démo, on utilise une route simple entre origin et destination
-            # En production, utiliser OpenRouteService ou Google Maps
+            # Extraire les coordonnées
+            if isinstance(origin, dict) and 'lng' in origin and 'lat' in origin:
+                origin_coords = [origin['lng'], origin['lat']]
+            else:
+                origin_coords = origin
             
-            origin_coords = [origin['lng'], origin['lat']] if isinstance(origin, dict) else origin
-            dest_coords = [destination['lng'], destination['lat']] if isinstance(destination, dict) else destination
+            if isinstance(destination, dict) and 'lng' in destination and 'lat' in destination:
+                dest_coords = [destination['lng'], destination['lat']]
+            else:
+                dest_coords = destination
             
-            # Calculer la distance et durée estimée
+            # Si on a une clé API OpenRouteService, utiliser le service
+            if self.ors_api_key:
+                try:
+                    return self._calculate_route_with_ors(origin_coords, dest_coords, waypoints)
+                except Exception as ors_error:
+                    logger.warning(f"OpenRouteService error, falling back to simple calculation: {str(ors_error)}")
+            
+            # Sinon, calculer une route simple
             distance_km = self.calculate_distance(
                 origin_coords[1], origin_coords[0],
                 dest_coords[1], dest_coords[0]
@@ -167,7 +182,7 @@ class NominatimService:
                 'route_points': route_points,
                 'instructions': [
                     {
-                        'instruction': f"Dirigez-vous vers {destination.get('address', '') if isinstance(destination, dict) else 'destination'}",
+                        'instruction': f"Dirigez-vous vers la destination",
                         'distance_km': distance_km,
                         'duration_minutes': duration_minutes
                     }
@@ -183,6 +198,126 @@ class NominatimService:
         except Exception as e:
             logger.error(f"Error calculating route: {str(e)}")
             return None
+    
+    def _calculate_route_with_ors(self, origin_coords: List[float], dest_coords: List[float], waypoints: List[Dict] = None) -> Optional[Dict]:
+        """
+        Calculer un itinéraire avec OpenRouteService (vraies routes)
+        """
+        try:
+            # Construire la liste des coordonnées
+            coordinates = [origin_coords]
+            
+            if waypoints:
+                for wp in waypoints:
+                    if isinstance(wp, dict) and 'lng' in wp and 'lat' in wp:
+                        coordinates.append([wp['lng'], wp['lat']])
+            
+            coordinates.append(dest_coords)
+            
+            # Appel à l'API OpenRouteService
+            url = f"{self.ors_base_url}/directions/driving-car/geojson"  # Utiliser le format geojson
+            headers = {
+                'Authorization': self.ors_api_key,
+                'Content-Type': 'application/json; charset=utf-8',
+                'Accept': 'application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8'
+            }
+            
+            payload = {
+                'coordinates': coordinates,
+                'instructions': True,
+                'units': 'km',
+                'geometry': True  # S'assurer que la géométrie est incluse
+            }
+            
+            logger.info(f"Calling OpenRouteService with {len(coordinates)} coordinates")
+            response = requests.post(url, json=payload, headers=headers, timeout=10)
+            
+            if response.status_code == 200:
+                data = response.json()
+                logger.info(f"ORS Response keys: {data.keys()}")
+                
+                # OpenRouteService retourne un GeoJSON
+                if 'features' not in data or len(data['features']) == 0:
+                    raise ValueError("No features found in ORS GeoJSON response")
+                
+                feature = data['features'][0]
+                properties = feature.get('properties', {})
+                geometry = feature.get('geometry', {})
+                
+                # Extraire les coordonnées de la géométrie GeoJSON
+                if geometry.get('type') == 'LineString' and 'coordinates' in geometry:
+                    route_coords = geometry['coordinates']
+                    logger.info(f"Extracted {len(route_coords)} route points")
+                else:
+                    logger.warning("No LineString geometry found, using fallback")
+                    route_coords = [origin_coords, dest_coords]
+                
+                # Extraire les segments et instructions
+                instructions = []
+                segments = properties.get('segments', [])
+                
+                for segment in segments:
+                    for step in segment.get('steps', []):
+                        instructions.append({
+                            'instruction': step.get('instruction', ''),
+                            'distance_km': step.get('distance', 0) / 1000,  # Convertir mètres en km
+                            'duration_minutes': step.get('duration', 0) / 60,  # Convertir secondes en minutes
+                            'name': step.get('name', ''),
+                            'type': step.get('type', 0)
+                        })
+                
+                # Extraire le résumé (summary)
+                summary = properties.get('summary', {})
+                distance_km = summary.get('distance', 0) / 1000  # Convertir de mètres en km
+                duration_minutes = summary.get('duration', 0) / 60  # Convertir de secondes en minutes
+                
+                # Calculer la bounding box
+                lats = [coord[1] for coord in route_coords]
+                lngs = [coord[0] for coord in route_coords]
+                
+                result = {
+                    'distance_km': round(distance_km, 2),
+                    'duration_minutes': int(duration_minutes),
+                    'polyline': self._encode_polyline(route_coords),
+                    'route_points': route_coords,
+                    'instructions': instructions if instructions else [{
+                        'instruction': 'Suivez l\'itinéraire',
+                        'distance_km': distance_km,
+                        'duration_minutes': duration_minutes
+                    }],
+                    'bbox': [
+                        min(lats),  # min lat
+                        min(lngs),  # min lng
+                        max(lats),  # max lat
+                        max(lngs)   # max lng
+                    ]
+                }
+                
+                logger.info(f"Route calculated: {distance_km:.2f} km, {int(duration_minutes)} min, {len(route_coords)} points")
+                return result
+                
+            else:
+                error_text = response.text
+                logger.error(f"OpenRouteService API error: {response.status_code}")
+                logger.error(f"Error details: {error_text}")
+                
+                # Si l'erreur est due à la clé API, afficher un message clair
+                if response.status_code == 401 or response.status_code == 403:
+                    logger.error("API Key issue - Please check your OPENROUTE_API_KEY in .env")
+                
+                raise ValueError(f"ORS API returned status {response.status_code}: {error_text}")
+                
+        except requests.exceptions.Timeout:
+            logger.error("OpenRouteService request timeout")
+            raise ValueError("Timeout while contacting OpenRouteService")
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Request error in OpenRouteService: {str(e)}")
+            raise ValueError(f"Network error: {str(e)}")
+        except Exception as e:
+            logger.error(f"Error in OpenRouteService calculation: {str(e)}")
+            import traceback
+            logger.error(traceback.format_exc())
+            raise
     
     def _generate_route_points(self, origin: List[float], destination: List[float], num_points: int = 10) -> List[List[float]]:
         """
