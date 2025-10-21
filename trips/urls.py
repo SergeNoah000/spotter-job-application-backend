@@ -45,20 +45,13 @@ urlpatterns = [
     path('available-drivers/', views.get_available_drivers, name='available_drivers'),
     path('available-vehicles/', views.get_available_vehicles, name='available_vehicles'),
     
-    # Voyage conducteur - Interface principale de navigation
+    # Voyage conducteur
     path('driver/current-trip/', views.get_driver_current_trip, name='get_driver_current_trip'),
-    path('driver/active-trip/', views.get_driver_active_trip, name='get_driver_active_trip'),
     path('driver/trips/', views.get_driver_trips, name='get_driver_trips'),
     
     # Trips - Liste et création
     path('', views.TripListCreateView.as_view(), name='trip_list_create'),
     path('<uuid:pk>/', views.TripDetailView.as_view(), name='trip_detail'),
-    
-    # Workflow complet : Ramassage → Transit → Livraison
-    path('<uuid:trip_id>/start-pickup/', views.start_pickup, name='start_pickup'),
-    path('<uuid:trip_id>/complete-delivery/', views.complete_delivery, name='complete_delivery'),
-    path('<uuid:trip_id>/update-position/', views.update_trip_position, name='update_trip_position'),
-    path('<uuid:trip_id>/timeline/', views.get_trip_timeline, name='get_trip_timeline'),
     
     # Trip actions - Nouvelles vues pour le cycle de vie complet
     path('<uuid:trip_id>/start/', views.TripStartView.as_view(), name='trip_start'),
@@ -88,4 +81,23 @@ urlpatterns = [
     # Compatibilité avec anciennes routes (pour éviter les erreurs)
     path('<uuid:trip_id>/start-old/', views.start_trip, name='start_trip_old'),
     path('<uuid:trip_id>/complete-old/', views.complete_trip, name='complete_trip_old'),
+    
+    # ============================================================
+    # ROUTES POUR LES SEGMENTS DE VOYAGE (TripSegment) - ELD CONTINU
+    # ============================================================
+    
+    # Liste et création de segments pour un voyage
+    path('<uuid:trip_id>/segments/', views.TripSegmentListCreateView.as_view(), name='trip_segment_list_create'),
+    
+    # Détails d'un segment spécifique
+    path('segments/<uuid:pk>/', views.TripSegmentDetailView.as_view(), name='trip_segment_detail'),
+    
+    # Actions sur les segments
+    path('<uuid:trip_id>/segments/start/', views.start_trip_segment, name='start_trip_segment'),
+    path('segments/<uuid:segment_id>/end/', views.end_trip_segment, name='end_trip_segment'),
+    path('<uuid:trip_id>/segments/switch/', views.switch_segment_type, name='switch_segment_type'),
+    
+    # Récupération d'informations sur les segments
+    path('<uuid:trip_id>/segments/active/', views.get_active_segment, name='get_active_segment'),
+    path('<uuid:trip_id>/segments/summary/', views.trip_segment_summary, name='trip_segment_summary'),
 ]

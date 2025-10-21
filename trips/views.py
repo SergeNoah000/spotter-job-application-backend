@@ -10,11 +10,12 @@ from django.db import models
 import requests
 import json
 import math
-from .models import Vehicle, Trip, RestStop, TripWaypoint, VehicleAssignment
+from .models import Vehicle, Trip, RestStop, TripWaypoint, VehicleAssignment, TripSegment
 from .serializers import (
     VehicleSerializer, TripSerializer, TripCreateSerializer, TripUpdateSerializer,
     RestStopSerializer, TripWaypointSerializer, TripPlanningSerializer,
-    RouteCalculationSerializer, VehicleAssignmentSerializer
+    RouteCalculationSerializer, VehicleAssignmentSerializer, TripSegmentSerializer,
+    TripSegmentCreateSerializer, TripSegmentUpdateSerializer
 )
 from .services import HOSCalculator, NominatimService
 from accounts.views import IsFleetManagerOrAdmin
@@ -1941,16 +1942,87 @@ def dashboard_vehicle_stats(request):
             'error': 'Erreur lors de la récupération des statistiques'
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+# ============================================================
+# VUES POUR LES SEGMENTS DE VOYAGE (TripSegment) - ELD CONTINU
+# ============================================================
+
+class TripSegmentListCreateView(generics.ListCreateAPIView):
+    """Vue pour lister et créer les segments d'un voyage"""
+    
+    serializer_class = TripSegmentSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_queryset(self):
+        trip_id = self.kwargs.get('trip_id')
+        user = self.request.user
+        
+        try:
+            trip = Trip.objects.get(id=trip_id)
+            
+            # Vérifier les permissions
+            if not (user.is_admin() or trip.driver == user or 
+                    (user.is_fleet_manager() and trip.driver.company == user.company)):
+                return TripSegment.objects.none()
+            
+            return TripSegment.objects.filter(trip=trip).order_by('start_time')
+            
+        except Trip.DoesNotExist:
+            return TripSegment.objects.none()
+    
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return TripSegmentCreateSerializer
+        return TripSegmentSerializer
+    
+    def perform_create(self, serializer):
+        trip_id = self.kwargs.get('trip_id')
+        try:
+            trip = Trip.objects.get(id=trip_id)
+            
+            # Vérifier les permissions
+            user = self.request.user
+            if not (user.is_admin() or trip.driver == user or 
+                    (user.is_fleet_manager() and trip.driver.company == user.company)):
+                raise permissions.PermissionDenied("Non autorisé à créer un segment pour ce voyage")
+            
+            serializer.save(trip=trip)
+            
+        except Trip.DoesNotExist:
+            raise generics.Http404("Voyage non trouvé")
+
+class TripSegmentDetailView(generics.RetrieveUpdateDestroyAPIView):
+    """Vue pour consulter, modifier et supprimer un segment de voyage"""
+    
+    queryset = TripSegment.objects.all()
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_serializer_class(self):
+        if self.request.method in ['PUT', 'PATCH']:
+            return TripSegmentUpdateSerializer
+        return TripSegmentSerializer
+    
+    def get_object(self):
+        obj = super().get_object()
+        user = self.request.user
+        
+        # Vérifier les permissions
+        if (user.is_admin() or obj.trip.driver == user or 
+            (user.is_fleet_manager() and obj.trip.driver.company == user.company)):
+            return obj
+        else:
+            raise permissions.PermissionDenied("Non autorisé à accéder à ce segment")
+
 @api_view(['POST'])
 @permission_classes([permissions.IsAuthenticated])
-def start_pickup(request, trip_id):
-    """Démarrer le ramassage (début du voyage)"""
+def start_trip_segment(request, trip_id):
+    """Démarrer un nouveau segment de voyage"""
     try:
         user = request.user
         
+        # Seuls les conducteurs peuvent démarrer un segment
         if not user.is_driver():
             return Response({
-                'error': 'Seuls les conducteurs peuvent démarrer un ramassage'
+                'error': 'Seuls les conducteurs peuvent démarrer un segment'
             }, status=status.HTTP_403_FORBIDDEN)
         
         try:
@@ -1960,310 +2032,146 @@ def start_pickup(request, trip_id):
                 'error': 'Voyage non trouvé ou non assigné'
             }, status=status.HTTP_404_NOT_FOUND)
         
-        if trip.status != 'PLANNED':
+        if trip.status not in ['PLANNED', 'IN_PROGRESS']:
             return Response({
-                'error': f'Impossible de démarrer le ramassage avec le statut: {trip.get_status_display()}'
+                'error': f'Impossible de démarrer un segment avec le statut du voyage: {trip.get_status_display()}'
             }, status=status.HTTP_400_BAD_REQUEST)
         
-        # Récupérer la position actuelle
-        current_latitude = request.data.get('latitude')
-        current_longitude = request.data.get('longitude')
-        
-        with transaction.atomic():
-            # Démarrer le voyage au point de ramassage
-            trip.status = 'IN_PROGRESS'
-            trip.pickup_actual_time = timezone.now()
-            
-            if current_latitude and current_longitude:
-                trip.current_lat = float(current_latitude)
-                trip.current_lng = float(current_longitude)
-            
-            trip.save()
-            
-            # Créer un log ELD pour le début du ramassage
-            from eld_logs.models import ELDLog
-            ELDLog.objects.create(
-                driver=user,
-                vehicle=trip.vehicle,
-                trip=trip,
-                status='DRIVING',
-                location_lat=trip.current_lat if hasattr(trip, 'current_lat') else None,
-                location_lng=trip.current_lng if hasattr(trip, 'current_lng') else None,
-                location_description=trip.pickup_address,
-                notes=f'Début du ramassage - Voyage #{trip.id}'
-            )
-        
-        return Response({
-            'success': True,
-            'message': 'Ramassage démarré avec succès',
-            'trip': TripSerializer(trip).data,
-            'next_action': 'TRANSIT',
-            'instructions': 'Vous êtes maintenant en route vers la destination'
-        })
-        
-    except Exception as e:
-        logger.error(f"Erreur lors du démarrage du ramassage: {str(e)}")
-        return Response({
-            'error': 'Erreur lors du démarrage du ramassage'
-        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-@api_view(['POST'])
-@permission_classes([permissions.IsAuthenticated])
-def complete_delivery(request, trip_id):
-    """Terminer la livraison (fin du voyage)"""
-    try:
-        user = request.user
-        
-        if not user.is_driver():
-            return Response({
-                'error': 'Seuls les conducteurs peuvent terminer une livraison'
-            }, status=status.HTTP_403_FORBIDDEN)
-        
-        try:
-            trip = Trip.objects.get(id=trip_id, driver=user)
-        except Trip.DoesNotExist:
-            return Response({
-                'error': 'Voyage non trouvé ou non assigné'
-            }, status=status.HTTP_404_NOT_FOUND)
-        
-        if trip.status != 'IN_PROGRESS':
-            return Response({
-                'error': f'Impossible de terminer la livraison avec le statut: {trip.get_status_display()}'
-            }, status=status.HTTP_400_BAD_REQUEST)
-        
-        # Récupérer la position finale
-        final_latitude = request.data.get('latitude')
-        final_longitude = request.data.get('longitude')
-        delivery_notes = request.data.get('notes', '')
-        signature = request.data.get('signature')  # Pour la signature de livraison
-        
-        with transaction.atomic():
-            # Terminer le voyage à la livraison
-            trip.status = 'COMPLETED'
-            trip.delivery_actual_time = timezone.now()
-            trip.end_time = timezone.now()
-            
-            if final_latitude and final_longitude:
-                trip.current_lat = float(final_latitude)
-                trip.current_lng = float(final_longitude)
-            
-            if delivery_notes:
-                trip.driver_notes = f"{trip.driver_notes}\n\nNotes de livraison: {delivery_notes}".strip()
-            
-            trip.save()
-            
-            # Créer un log ELD pour la fin de la livraison
-            from eld_logs.models import ELDLog
-            ELDLog.objects.create(
-                driver=user,
-                vehicle=trip.vehicle,
-                trip=trip,
-                status='OFF_DUTY',
-                location_lat=trip.current_lat if hasattr(trip, 'current_lat') else None,
-                location_lng=trip.current_lng if hasattr(trip, 'current_lng') else None,
-                location_description=trip.delivery_address,
-                notes=f'Livraison terminée - Voyage #{trip.id}. {delivery_notes}'
-            )
-            
-            # Mettre à jour le statut du véhicule
-            if trip.vehicle:
-                trip.vehicle.operational_status = 'AVAILABLE'
-                trip.vehicle.save()
-        
-        return Response({
-            'success': True,
-            'message': 'Livraison terminée avec succès',
-            'trip': TripSerializer(trip).data,
-            'completion_summary': {
-                'pickup_time': trip.pickup_actual_time.isoformat() if trip.pickup_actual_time else None,
-                'delivery_time': trip.delivery_actual_time.isoformat() if trip.delivery_actual_time else None,
-                'total_duration': str(trip.delivery_actual_time - trip.pickup_actual_time) if trip.pickup_actual_time and trip.delivery_actual_time else None
-            }
-        })
-        
-    except Exception as e:
-        logger.error(f"Erreur lors de la finalisation de la livraison: {str(e)}")
-        return Response({
-            'error': 'Erreur lors de la finalisation de la livraison'
-        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-@api_view(['GET'])
-@permission_classes([permissions.IsAuthenticated])
-def get_driver_active_trip(request):
-    """Récupérer le voyage actif du conducteur avec toutes les informations de navigation"""
-    try:
-        user = request.user
-        
-        if not user.is_driver():
-            return Response({
-                'error': 'Seuls les conducteurs ont des voyages actifs'
-            }, status=status.HTTP_403_FORBIDDEN)
-        
-        # Récupérer le voyage en cours
-        active_trip = Trip.objects.filter(
-            driver=user,
-            status='IN_PROGRESS'
-        ).select_related('vehicle', 'created_by').first()
-        
-        if not active_trip:
-            return Response({
-                'has_active_trip': False,
-                'message': 'Aucun voyage actif'
-            })
-        
-        # Calculer les informations de navigation
-        navigation_data = None
-        if hasattr(active_trip, 'current_lat') and active_trip.current_lat:
-            nominatim_service = NominatimService()
-            
-            # Calculer la distance restante
-            if hasattr(active_trip, 'delivery_lat') and active_trip.delivery_lat:
-                remaining_distance = nominatim_service.calculate_distance(
-                    active_trip.current_lat, active_trip.current_lng,
-                    active_trip.delivery_lat, active_trip.delivery_lng
-                )
-                
-                navigation_data = {
-                    'current_position': {
-                        'lat': active_trip.current_lat,
-                        'lng': active_trip.current_lng
-                    },
-                    'destination': {
-                        'lat': active_trip.delivery_lat,
-                        'lng': active_trip.delivery_lng,
-                        'address': active_trip.delivery_address
-                    },
-                    'remaining_distance_km': round(remaining_distance, 2),
-                    'is_near_destination': remaining_distance < 0.5,  # Moins de 500m
-                    'progress_percentage': active_trip.progress_percentage if hasattr(active_trip, 'progress_percentage') else 0
-                }
-        
-        return Response({
-            'has_active_trip': True,
-            'trip': TripSerializer(active_trip).data,
-            'navigation': navigation_data,
-            'workflow': {
-                'current_stage': 'TRANSIT',  # PICKUP, TRANSIT, ou DELIVERY
-                'pickup_completed': active_trip.pickup_actual_time is not None,
-                'delivery_pending': active_trip.delivery_actual_time is None
-            }
-        })
-        
-    except Exception as e:
-        logger.error(f"Erreur lors de la récupération du voyage actif: {str(e)}")
-        return Response({
-            'error': 'Erreur lors de la récupération du voyage actif'
-        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-@api_view(['POST'])
-@permission_classes([permissions.IsAuthenticated])
-def update_trip_position(request, trip_id):
-    """Mettre à jour la position GPS pendant le voyage (logs ELD continus)"""
-    try:
-        user = request.user
-        
-        if not user.is_driver():
-            return Response({
-                'error': 'Seuls les conducteurs peuvent mettre à jour la position'
-            }, status=status.HTTP_403_FORBIDDEN)
-        
-        try:
-            trip = Trip.objects.get(id=trip_id, driver=user, status='IN_PROGRESS')
-        except Trip.DoesNotExist:
-            return Response({
-                'error': 'Voyage actif non trouvé'
-            }, status=status.HTTP_404_NOT_FOUND)
-        
-        latitude = request.data.get('latitude')
-        longitude = request.data.get('longitude')
-        bearing = request.data.get('bearing', 0)
-        speed = request.data.get('speed', 0)
-        
-        if not latitude or not longitude:
-            return Response({
-                'error': 'Latitude et longitude requises'
-            }, status=status.HTTP_400_BAD_REQUEST)
-        
-        try:
-            lat = float(latitude)
-            lng = float(longitude)
-        except (ValueError, TypeError):
-            return Response({
-                'error': 'Coordonnées GPS invalides'
-            }, status=status.HTTP_400_BAD_REQUEST)
-        
-        # Mettre à jour la position du voyage
-        trip.current_lat = lat
-        trip.current_lng = lng
-        trip.save()
-        
-        # Mettre à jour la position du véhicule
-        if trip.vehicle:
-            trip.vehicle.current_latitude = lat
-            trip.vehicle.current_longitude = lng
-            trip.vehicle.last_location_update = timezone.now()
-            trip.vehicle.save()
-        
-        # Calculer la distance restante et l'ETA
-        nominatim_service = NominatimService()
-        remaining_distance = 0
-        is_near_destination = False
-        
-        if hasattr(trip, 'delivery_lat') and trip.delivery_lat:
-            remaining_distance = nominatim_service.calculate_distance(
-                lat, lng, trip.delivery_lat, trip.delivery_lng
-            )
-            is_near_destination = remaining_distance < 0.5  # 500 mètres
-        
-        # Créer un log ELD continu (tracking)
-        from eld_logs.models import ELDLog
-        ELDLog.objects.create(
-            driver=user,
-            vehicle=trip.vehicle,
+        # Vérifier qu'il n'y a pas déjà un segment actif
+        active_segment = TripSegment.objects.filter(
             trip=trip,
-            status='DRIVING',
-            location_lat=lat,
-            location_lng=lng,
-            notes=f'Position mise à jour - Distance restante: {remaining_distance:.2f} km'
-        )
+            end_time__isnull=True
+        ).first()
         
-        response_data = {
+        if active_segment:
+            return Response({
+                'error': 'Un segment est déjà actif. Veuillez le terminer avant d\'en démarrer un nouveau.',
+                'active_segment': TripSegmentSerializer(active_segment).data
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Récupérer les données du segment
+        segment_type = request.data.get('segment_type')
+        if not segment_type:
+            return Response({
+                'error': 'Le type de segment est requis (DRIVING, ON_DUTY, SLEEPER_BERTH, OFF_DUTY, YARD_MOVE, PERSONAL_CONVEYANCE, WAITING)'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Valider le type de segment
+        valid_types = ['DRIVING', 'ON_DUTY', 'SLEEPER_BERTH', 'OFF_DUTY', 'YARD_MOVE', 'PERSONAL_CONVEYANCE', 'WAITING']
+        if segment_type not in valid_types:
+            return Response({
+                'error': f'Type de segment invalide. Valeurs acceptées: {", ".join(valid_types)}'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Créer le nouveau segment
+        with transaction.atomic():
+            # Si le voyage n'est pas encore démarré, le démarrer
+            if trip.status == 'PLANNED':
+                trip.status = 'IN_PROGRESS'
+                trip.start_time = timezone.now()
+                trip.save()
+            
+            # Créer le segment
+            segment = TripSegment.objects.create(
+                trip=trip,
+                segment_type=segment_type,
+                start_time=timezone.now(),
+                start_location=request.data.get('start_location', ''),
+                start_latitude=request.data.get('start_latitude'),
+                start_longitude=request.data.get('start_longitude'),
+                notes=request.data.get('notes', '')
+            )
+        
+        return Response({
             'success': True,
-            'position_updated': True,
-            'current_position': {
-                'lat': lat,
-                'lng': lng,
-                'bearing': bearing,
-                'speed_kmh': speed,
-                'timestamp': timezone.now().isoformat()
-            },
-            'navigation': {
-                'remaining_distance_km': round(remaining_distance, 2),
-                'is_near_destination': is_near_destination,
-                'can_complete_delivery': is_near_destination
-            }
-        }
-        
-        # Notifier si proche de la destination
-        if is_near_destination:
-            response_data['notification'] = {
-                'type': 'ARRIVAL',
-                'message': 'Vous êtes proche de votre destination. Vous pouvez compléter la livraison.',
-                'action': 'COMPLETE_DELIVERY'
-            }
-        
-        return Response(response_data)
+            'message': f'Segment {segment.get_segment_type_display()} démarré avec succès',
+            'segment': TripSegmentSerializer(segment).data,
+            'trip': TripSerializer(trip).data
+        })
         
     except Exception as e:
-        logger.error(f"Erreur lors de la mise à jour de position: {str(e)}")
+        logger.error(f"Erreur lors du démarrage du segment: {str(e)}")
         return Response({
-            'error': 'Erreur lors de la mise à jour de la position'
+            'error': 'Erreur interne lors du démarrage du segment'
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(['POST'])
+@permission_classes([permissions.IsAuthenticated])
+def end_trip_segment(request, segment_id):
+    """Terminer un segment de voyage en cours"""
+    try:
+        user = request.user
+        
+        # Seuls les conducteurs peuvent terminer un segment
+        if not user.is_driver():
+            return Response({
+                'error': 'Seuls les conducteurs peuvent terminer un segment'
+            }, status=status.HTTP_403_FORBIDDEN)
+        
+        try:
+            segment = TripSegment.objects.select_related('trip').get(id=segment_id)
+        except TripSegment.DoesNotExist:
+            return Response({
+                'error': 'Segment non trouvé'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        # Vérifier les permissions
+        if segment.trip.driver != user:
+            return Response({
+                'error': 'Non autorisé à modifier ce segment'
+            }, status=status.HTTP_403_FORBIDDEN)
+        
+        if segment.end_time is not None:
+            return Response({
+                'error': 'Ce segment est déjà terminé',
+                'segment': TripSegmentSerializer(segment).data
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Terminer le segment
+        segment.end_time = timezone.now()
+        segment.end_location = request.data.get('end_location', segment.start_location)
+        segment.end_latitude = request.data.get('end_latitude', segment.start_latitude)
+        segment.end_longitude = request.data.get('end_longitude', segment.start_longitude)
+        
+        # Ajouter des notes supplémentaires si fournies
+        additional_notes = request.data.get('notes', '')
+        if additional_notes:
+            segment.notes = f"{segment.notes}\n{additional_notes}".strip()
+        
+        # Calculer la durée
+        duration = segment.end_time - segment.start_time
+        segment.duration_minutes = int(duration.total_seconds() / 60)
+        
+        # Calculer la distance si les coordonnées sont disponibles
+        if (segment.start_latitude and segment.start_longitude and 
+            segment.end_latitude and segment.end_longitude):
+            nominatim_service = NominatimService()
+            distance = nominatim_service.calculate_distance(
+                segment.start_latitude, segment.start_longitude,
+                segment.end_latitude, segment.end_longitude
+            )
+            segment.distance_km = distance
+        
+        segment.save()
+        
+        return Response({
+            'success': True,
+            'message': f'Segment {segment.get_segment_type_display()} terminé avec succès',
+            'segment': TripSegmentSerializer(segment).data,
+            'duration_minutes': segment.duration_minutes,
+            'distance_km': segment.distance_km
+        })
+        
+    except Exception as e:
+        logger.error(f"Erreur lors de la fin du segment: {str(e)}")
+        return Response({
+            'error': 'Erreur interne lors de la fin du segment'
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(['GET'])
 @permission_classes([permissions.IsAuthenticated])
-def get_trip_timeline(request, trip_id):
-    """Récupérer la timeline complète du voyage avec tous les événements ELD"""
+def get_active_segment(request, trip_id):
+    """Récupérer le segment actif d'un voyage"""
     try:
         user = request.user
         
@@ -2278,62 +2186,228 @@ def get_trip_timeline(request, trip_id):
         if not (user.is_admin() or trip.driver == user or 
                 (user.is_fleet_manager() and trip.driver.company == user.company)):
             return Response({
-                'error': 'Permission refusée'
+                'error': 'Non autorisé à accéder à ce voyage'
             }, status=status.HTTP_403_FORBIDDEN)
         
-        # Récupérer tous les logs ELD du voyage
-        from eld_logs.models import ELDLog
-        from eld_logs.serializers import ELDLogSerializer
+        # Récupérer le segment actif
+        active_segment = TripSegment.objects.filter(
+            trip=trip,
+            end_time__isnull=True
+        ).first()
         
-        eld_logs = ELDLog.objects.filter(trip=trip).order_by('timestamp')
-        
-        timeline = {
-            'trip': TripSerializer(trip).data,
-            'events': [
-                {
-                    'timestamp': trip.created_at.isoformat(),
-                    'type': 'TRIP_CREATED',
-                    'description': 'Voyage créé',
-                    'location': trip.pickup_address
-                }
-            ]
-        }
-        
-        # Ajouter le début du ramassage
-        if trip.pickup_actual_time:
-            timeline['events'].append({
-                'timestamp': trip.pickup_actual_time.isoformat(),
-                'type': 'PICKUP_START',
-                'description': 'Début du ramassage',
-                'location': trip.pickup_address
+        if active_segment:
+            return Response({
+                'has_active_segment': True,
+                'segment': TripSegmentSerializer(active_segment).data,
+                'duration_so_far': int((timezone.now() - active_segment.start_time).total_seconds() / 60)
             })
-        
-        # Ajouter tous les logs ELD (continus)
-        for log in eld_logs:
-            timeline['events'].append({
-                'timestamp': log.timestamp.isoformat(),
-                'type': f'ELD_{log.status}',
-                'description': f'Statut ELD: {log.get_status_display()}',
-                'location': log.location_description or f'Lat: {log.location_lat}, Lng: {log.location_lng}',
-                'notes': log.notes
+        else:
+            return Response({
+                'has_active_segment': False,
+                'segment': None,
+                'message': 'Aucun segment actif pour ce voyage'
             })
-        
-        # Ajouter la fin de la livraison
-        if trip.delivery_actual_time:
-            timeline['events'].append({
-                'timestamp': trip.delivery_actual_time.isoformat(),
-                'type': 'DELIVERY_COMPLETE',
-                'description': 'Livraison terminée',
-                'location': trip.delivery_address
-            })
-        
-        # Trier par timestamp
-        timeline['events'].sort(key=lambda x: x['timestamp'])
-        
-        return Response(timeline)
         
     except Exception as e:
-        logger.error(f"Erreur lors de la récupération de la timeline: {str(e)}")
+        logger.error(f"Erreur lors de la récupération du segment actif: {str(e)}")
         return Response({
-            'error': 'Erreur lors de la récupération de la timeline du voyage'
+            'error': 'Erreur lors de la récupération du segment actif'
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(['GET'])
+@permission_classes([permissions.IsAuthenticated])
+def trip_segment_summary(request, trip_id):
+    """Résumé des segments d'un voyage avec statistiques HOS"""
+    try:
+        user = request.user
+        
+        try:
+            trip = Trip.objects.get(id=trip_id)
+        except Trip.DoesNotExist:
+            return Response({
+                'error': 'Voyage non trouvé'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        # Vérifier les permissions
+        if not (user.is_admin() or trip.driver == user or 
+                (user.is_fleet_manager() and trip.driver.company == user.company)):
+            return Response({
+                'error': 'Non autorisé à accéder à ce voyage'
+            }, status=status.HTTP_403_FORBIDDEN)
+        
+        # Récupérer tous les segments du voyage
+        segments = TripSegment.objects.filter(trip=trip).order_by('start_time')
+        
+        # Calculer les statistiques par type de segment
+        summary = {
+            'trip_id': str(trip.id),
+            'trip_status': trip.status,
+            'total_segments': segments.count(),
+            'active_segment': None,
+            'segments_by_type': {},
+            'total_driving_time_minutes': 0,
+            'total_on_duty_time_minutes': 0,
+            'total_off_duty_time_minutes': 0,
+            'total_distance_km': 0,
+            'segments': TripSegmentSerializer(segments, many=True).data
+        }
+        
+        # Segment actif
+        active_segment = segments.filter(end_time__isnull=True).first()
+        if active_segment:
+            summary['active_segment'] = TripSegmentSerializer(active_segment).data
+        
+        # Calculer les statistiques par type
+        for segment in segments:
+            segment_type = segment.segment_type
+            
+            if segment_type not in summary['segments_by_type']:
+                summary['segments_by_type'][segment_type] = {
+                    'count': 0,
+                    'total_duration_minutes': 0,
+                    'total_distance_km': 0
+                }
+            
+            # Calculer la durée
+            if segment.end_time:
+                duration = int((segment.end_time - segment.start_time).total_seconds() / 60)
+            else:
+                # Segment actif
+                duration = int((timezone.now() - segment.start_time).total_seconds() / 60)
+            
+            summary['segments_by_type'][segment_type]['count'] += 1
+            summary['segments_by_type'][segment_type]['total_duration_minutes'] += duration
+            
+            if segment.distance_km:
+                summary['segments_by_type'][segment_type]['total_distance_km'] += segment.distance_km
+                summary['total_distance_km'] += segment.distance_km
+            
+            # Cumuler pour les totaux HOS
+            if segment_type == 'DRIVING':
+                summary['total_driving_time_minutes'] += duration
+                summary['total_on_duty_time_minutes'] += duration
+            elif segment_type in ['ON_DUTY', 'YARD_MOVE', 'WAITING']:
+                summary['total_on_duty_time_minutes'] += duration
+            elif segment_type in ['OFF_DUTY', 'SLEEPER_BERTH']:
+                summary['total_off_duty_time_minutes'] += duration
+        
+        # Calculer les limites HOS restantes (règles FMCSA)
+        summary['hos_limits'] = {
+            'driving_limit_minutes': 11 * 60,  # 11 heures de conduite
+            'driving_remaining_minutes': (11 * 60) - summary['total_driving_time_minutes'],
+            'duty_limit_minutes': 14 * 60,  # 14 heures de service
+            'duty_remaining_minutes': (14 * 60) - summary['total_on_duty_time_minutes'],
+            'driving_percentage': round((summary['total_driving_time_minutes'] / (11 * 60)) * 100, 1),
+            'duty_percentage': round((summary['total_on_duty_time_minutes'] / (14 * 60)) * 100, 1),
+            'violations': []
+        }
+        
+        # Détecter les violations potentielles
+        if summary['total_driving_time_minutes'] > (11 * 60):
+            summary['hos_limits']['violations'].append({
+                'type': 'DRIVING_LIMIT_EXCEEDED',
+                'message': 'Limite de 11 heures de conduite dépassée',
+                'excess_minutes': summary['total_driving_time_minutes'] - (11 * 60)
+            })
+        
+        if summary['total_on_duty_time_minutes'] > (14 * 60):
+            summary['hos_limits']['violations'].append({
+                'type': 'DUTY_LIMIT_EXCEEDED',
+                'message': 'Limite de 14 heures de service dépassée',
+                'excess_minutes': summary['total_on_duty_time_minutes'] - (14 * 60)
+            })
+        
+        return Response(summary)
+        
+    except Exception as e:
+        logger.error(f"Erreur lors du résumé des segments: {str(e)}")
+        return Response({
+            'error': 'Erreur lors de la récupération du résumé des segments'
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(['POST'])
+@permission_classes([permissions.IsAuthenticated])
+def switch_segment_type(request, trip_id):
+    """Changer de type de segment (terminer l'actuel et démarrer un nouveau)"""
+    try:
+        user = request.user
+        
+        if not user.is_driver():
+            return Response({
+                'error': 'Seuls les conducteurs peuvent changer de segment'
+            }, status=status.HTTP_403_FORBIDDEN)
+        
+        try:
+            trip = Trip.objects.get(id=trip_id, driver=user)
+        except Trip.DoesNotExist:
+            return Response({
+                'error': 'Voyage non trouvé ou non assigné'
+            }, status=status.HTTP_404_NOT_FOUND)
+        
+        new_segment_type = request.data.get('segment_type')
+        if not new_segment_type:
+            return Response({
+                'error': 'Le nouveau type de segment est requis'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        with transaction.atomic():
+            # Terminer le segment actif s'il existe
+            active_segment = TripSegment.objects.filter(
+                trip=trip,
+                end_time__isnull=True
+            ).first()
+            
+            current_time = timezone.now()
+            current_location = request.data.get('location', '')
+            current_latitude = request.data.get('latitude')
+            current_longitude = request.data.get('longitude')
+            
+            if active_segment:
+                # Terminer le segment actif
+                active_segment.end_time = current_time
+                active_segment.end_location = current_location or active_segment.start_location
+                active_segment.end_latitude = current_latitude or active_segment.start_latitude
+                active_segment.end_longitude = current_longitude or active_segment.start_longitude
+                
+                duration = current_time - active_segment.start_time
+                active_segment.duration_minutes = int(duration.total_seconds() / 60)
+                
+                # Calculer la distance si possible
+                if (active_segment.start_latitude and active_segment.start_longitude and 
+                    active_segment.end_latitude and active_segment.end_longitude):
+                    nominatim_service = NominatimService()
+                    distance = nominatim_service.calculate_distance(
+                        active_segment.start_latitude, active_segment.start_longitude,
+                        active_segment.end_latitude, active_segment.end_longitude
+                    )
+                    active_segment.distance_km = distance
+                
+                active_segment.save()
+                
+                old_segment_data = TripSegmentSerializer(active_segment).data
+            else:
+                old_segment_data = None
+            
+            # Créer le nouveau segment
+            new_segment = TripSegment.objects.create(
+                trip=trip,
+                segment_type=new_segment_type,
+                start_time=current_time,
+                start_location=current_location,
+                start_latitude=current_latitude,
+                start_longitude=current_longitude,
+                notes=request.data.get('notes', '')
+            )
+        
+        return Response({
+            'success': True,
+            'message': f'Changement vers {new_segment.get_segment_type_display()} effectué',
+            'previous_segment': old_segment_data,
+            'new_segment': TripSegmentSerializer(new_segment).data
+        })
+        
+    except Exception as e:
+        logger.error(f"Erreur lors du changement de segment: {str(e)}")
+        return Response({
+            'error': 'Erreur lors du changement de segment'
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

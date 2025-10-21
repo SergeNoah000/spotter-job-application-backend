@@ -352,9 +352,7 @@ class Trip(models.Model):
     
     STATUS_CHOICES = [
         ('PLANNED', 'Planifié'),
-        ('AT_PICKUP', 'Au ramassage'),
-        ('IN_TRANSIT', 'En transit'),
-        ('AT_DELIVERY', 'À la livraison'),
+        ('IN_PROGRESS', 'En cours'),
         ('COMPLETED', 'Terminé'),
         ('CANCELLED', 'Annulé'),
     ]
@@ -453,104 +451,6 @@ class Trip(models.Model):
     destination_notes = models.TextField(
         blank=True,
         help_text="Notes spéciales pour le lieu d'arrivée"
-    )
-    
-    # Nouveau : Informations de ramassage (PICKUP)
-    pickup_company = models.CharField(
-        max_length=200,
-        blank=True,
-        help_text="Nom de la compagnie au ramassage"
-    )
-    pickup_contact = models.CharField(
-        max_length=100,
-        blank=True,
-        help_text="Contact au ramassage"
-    )
-    pickup_address = models.CharField(
-        max_length=300,
-        help_text="Adresse de ramassage",
-        default="Non spécifié"
-    )
-    pickup_latitude = models.DecimalField(
-        max_digits=9, 
-        decimal_places=6,
-        help_text="Latitude du point de ramassage",
-        default=0.0
-    )
-    pickup_longitude = models.DecimalField(
-        max_digits=9, 
-        decimal_places=6,
-        help_text="Longitude du point de ramassage",
-        default=0.0
-    )
-    pickup_planned_time = models.DateTimeField(
-        help_text="Heure de ramassage planifiée",
-        null=True,
-        blank=True
-    )
-    pickup_actual_time = models.DateTimeField(
-        null=True,
-        blank=True,
-        help_text="Heure de ramassage réelle"
-    )
-    pickup_notes = models.TextField(
-        blank=True,
-        help_text="Notes pour le ramassage"
-    )
-    
-    # Nouveau : Informations de livraison (DELIVERY/DROPOFF)
-    delivery_company = models.CharField(
-        max_length=200,
-        blank=True,
-        help_text="Nom de la compagnie à la livraison"
-    )
-    delivery_contact = models.CharField(
-        max_length=100,
-        blank=True,
-        help_text="Contact à la livraison"
-    )
-    delivery_address = models.CharField(
-        max_length=300,
-        help_text="Adresse de livraison",
-        default="Non spécifié"
-    )
-    delivery_latitude = models.DecimalField(
-        max_digits=9, 
-        decimal_places=6,
-        help_text="Latitude du point de livraison",
-        default=0.0
-    )
-    delivery_longitude = models.DecimalField(
-        max_digits=9, 
-        decimal_places=6,
-        help_text="Longitude du point de livraison",
-        default=0.0
-    )
-    delivery_planned_time = models.DateTimeField(
-        help_text="Heure de livraison planifiée",
-        null=True,
-        blank=True
-    )
-    delivery_actual_time = models.DateTimeField(
-        null=True,
-        blank=True,
-        help_text="Heure de livraison réelle"
-    )
-    delivery_notes = models.TextField(
-        blank=True,
-        help_text="Notes pour la livraison"
-    )
-    
-    # Signature de preuve de livraison
-    delivery_signature = models.TextField(
-        blank=True,
-        help_text="Signature électronique du destinataire"
-    )
-    delivery_photo = models.ImageField(
-        upload_to='trips/delivery_photos/',
-        null=True,
-        blank=True,
-        help_text="Photo de la livraison"
     )
     
     # Informations sur le colis/cargaison
@@ -722,6 +622,16 @@ class Trip(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    # Nouveaux champs pour la gestion des segments de voyage (ramassage -> livraison)
+    has_segments = models.BooleanField(
+        default=False,
+        help_text="Indique si ce voyage a des segments (ramassage/livraison)"
+    )
+    is_continuous_eld = models.BooleanField(
+        default=True,
+        help_text="Indique si ce voyage utilise l'ELD en mode continu"
+    )
     
     class Meta:
         ordering = ['-planned_departure']
@@ -1056,3 +966,654 @@ class TripWaypoint(models.Model):
     
     def __str__(self):
         return f"{self.name} (#{self.sequence_order})"
+
+
+class TripSegment(models.Model):
+    """
+    Segment de voyage - représente une portion d'un voyage avec un point de départ et d'arrivée
+    Un voyage peut avoir plusieurs segments (ramassage → dépôt intermédiaire → livraison finale)
+    """
+    
+    SEGMENT_TYPE_CHOICES = [
+        ('PICKUP', 'Ramassage'),
+        ('DELIVERY', 'Livraison'),
+        ('TRANSFER', 'Transfert'),
+        ('REPOSITIONING', 'Repositionnement'),
+    ]
+    
+    STATUS_CHOICES = [
+        ('PLANNED', 'Planifié'),
+        ('EN_ROUTE', 'En route'),
+        ('ARRIVED', 'Arrivé'),
+        ('LOADING', 'Chargement'),
+        ('UNLOADING', 'Déchargement'),
+        ('COMPLETED', 'Terminé'),
+        ('DELAYED', 'Retardé'),
+        ('CANCELLED', 'Annulé'),
+    ]
+    
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    trip = models.ForeignKey(
+        'Trip',
+        on_delete=models.CASCADE,
+        related_name='segments',
+        help_text="Voyage auquel appartient ce segment"
+    )
+    
+    # Ordre du segment dans le voyage
+    sequence_number = models.PositiveIntegerField(
+        help_text="Ordre de ce segment dans le voyage (1, 2, 3...)"
+    )
+    
+    # Type et statut
+    segment_type = models.CharField(
+        max_length=20,
+        choices=SEGMENT_TYPE_CHOICES,
+        default='PICKUP'
+    )
+    status = models.CharField(
+        max_length=20,
+        choices=STATUS_CHOICES,
+        default='PLANNED'
+    )
+    
+    # Localisation de départ
+    origin_name = models.CharField(max_length=200, help_text="Nom du lieu de départ")
+    origin_address = models.TextField(help_text="Adresse complète de départ")
+    origin_city = models.CharField(max_length=100)
+    origin_state = models.CharField(max_length=50)
+    origin_zip = models.CharField(max_length=20)
+    origin_latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    origin_longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    
+    # Localisation de destination
+    destination_name = models.CharField(max_length=200, help_text="Nom du lieu de destination")
+    destination_address = models.TextField(help_text="Adresse complète de destination")
+    destination_city = models.CharField(max_length=100)
+    destination_state = models.CharField(max_length=50)
+    destination_zip = models.CharField(max_length=20)
+    destination_latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    destination_longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    
+    # Informations temporelles
+    planned_departure = models.DateTimeField(help_text="Heure de départ prévue")
+    actual_departure = models.DateTimeField(null=True, blank=True, help_text="Heure de départ réelle")
+    planned_arrival = models.DateTimeField(help_text="Heure d'arrivée prévue")
+    actual_arrival = models.DateTimeField(null=True, blank=True, help_text="Heure d'arrivée réelle")
+    
+    # Informations de chargement
+    estimated_loading_time = models.DurationField(
+        null=True, 
+        blank=True,
+        help_text="Temps estimé pour le chargement/déchargement"
+    )
+    actual_loading_time = models.DurationField(
+        null=True,
+        blank=True,
+        help_text="Temps réel de chargement/déchargement"
+    )
+    loading_start_time = models.DateTimeField(null=True, blank=True)
+    loading_end_time = models.DateTimeField(null=True, blank=True)
+    
+    # Distance et kilométrage
+    planned_distance_miles = models.DecimalField(
+        max_digits=8,
+        decimal_places=2,
+        null=True,
+        blank=True,
+        help_text="Distance prévue en miles"
+    )
+    actual_distance_miles = models.DecimalField(
+        max_digits=8,
+        decimal_places=2,
+        null=True,
+        blank=True,
+        help_text="Distance réelle parcourue en miles"
+    )
+    odometer_start = models.IntegerField(null=True, blank=True)
+    odometer_end = models.IntegerField(null=True, blank=True)
+    
+    # Informations sur le chargement
+    cargo_description = models.TextField(blank=True, help_text="Description de la cargaison")
+    cargo_weight = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        null=True,
+        blank=True,
+        help_text="Poids de la cargaison en livres"
+    )
+    bill_of_lading = models.CharField(
+        max_length=100,
+        blank=True,
+        help_text="Numéro de connaissement"
+    )
+    
+    # Instructions spéciales
+    special_instructions = models.TextField(
+        blank=True,
+        help_text="Instructions spéciales pour ce segment"
+    )
+    
+    # Contact sur place
+    contact_name = models.CharField(max_length=100, blank=True)
+    contact_phone = models.CharField(max_length=20, blank=True)
+    contact_email = models.EmailField(blank=True)
+    
+    # Notes et remarques
+    notes = models.TextField(blank=True)
+    delay_reason = models.TextField(blank=True, help_text="Raison du retard si applicable")
+    
+    # Signature et confirmation
+    signature_data = models.TextField(blank=True, help_text="Données de signature numérique")
+    signed_by_name = models.CharField(max_length=200, blank=True)
+    signed_at = models.DateTimeField(null=True, blank=True)
+    
+    # Champs d'audit
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='trip_segments_created'
+    )
+    updated_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='trip_segments_updated'
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['trip', 'sequence_number']
+        unique_together = ['trip', 'sequence_number']
+        indexes = [
+            models.Index(fields=['trip', 'sequence_number']),
+            models.Index(fields=['status']),
+            models.Index(fields=['planned_departure']),
+            models.Index(fields=['actual_departure']),
+        ]
+    
+    def __str__(self):
+        return f"{self.trip} - Segment {self.sequence_number}: {self.origin_city} → {self.destination_city}"
+    
+    @property
+    def is_completed(self):
+        """Vérifie si le segment est terminé"""
+        return self.status == 'COMPLETED'
+    
+    @property
+    def is_delayed(self):
+        """Vérifie si le segment est en retard"""
+        if self.status == 'DELAYED':
+            return True
+        if self.actual_arrival and self.planned_arrival:
+            return self.actual_arrival > self.planned_arrival
+        if not self.actual_arrival and self.planned_arrival:
+            return timezone.now() > self.planned_arrival
+        return False
+    
+    @property
+    def delay_duration(self):
+        """Calcule la durée du retard"""
+        if not self.is_delayed:
+            return None
+        if self.actual_arrival and self.planned_arrival:
+            return self.actual_arrival - self.planned_arrival
+        if not self.actual_arrival and self.planned_arrival:
+            return timezone.now() - self.planned_arrival
+        return None
+    
+    @property
+    def estimated_duration(self):
+        """Durée estimée du segment"""
+        return self.planned_arrival - self.planned_departure
+    
+    @property
+    def actual_duration(self):
+        """Durée réelle du segment"""
+        if self.actual_departure and self.actual_arrival:
+            return self.actual_arrival - self.actual_departure
+        return None
+    
+    def start_segment(self, user=None):
+        """Démarre le segment"""
+        self.actual_departure = timezone.now()
+        self.status = 'EN_ROUTE'
+        if user:
+            self.updated_by = user
+        self.save()
+    
+    def arrive_at_destination(self, user=None):
+        """Marque l'arrivée à destination"""
+        self.actual_arrival = timezone.now()
+        self.status = 'ARRIVED'
+        if user:
+            self.updated_by = user
+        self.save()
+    
+    def start_loading(self, user=None):
+        """Démarre le chargement/déchargement"""
+        self.loading_start_time = timezone.now()
+        if self.segment_type == 'PICKUP':
+            self.status = 'LOADING'
+        else:
+            self.status = 'UNLOADING'
+        if user:
+            self.updated_by = user
+        self.save()
+    
+    def complete_loading(self, user=None):
+        """Termine le chargement/déchargement"""
+        self.loading_end_time = timezone.now()
+        if self.loading_start_time:
+            self.actual_loading_time = self.loading_end_time - self.loading_start_time
+        if user:
+            self.updated_by = user
+        self.save()
+    
+    def complete_segment(self, signature_data=None, signed_by_name=None, user=None):
+        """Complète le segment avec signature optionnelle"""
+        self.status = 'COMPLETED'
+        if signature_data:
+            self.signature_data = signature_data
+            self.signed_by_name = signed_by_name
+            self.signed_at = timezone.now()
+        if not self.actual_arrival:
+            self.actual_arrival = timezone.now()
+        if user:
+            self.updated_by = user
+        self.save()
+        
+        # Vérifier si c'est le dernier segment du voyage
+        next_segment = self.trip.segments.filter(sequence_number__gt=self.sequence_number).first()
+        if not next_segment:
+            # Dernier segment, peut-être terminer le voyage
+            all_completed = all(
+                seg.status == 'COMPLETED' 
+                for seg in self.trip.segments.all()
+            )
+            if all_completed and self.trip.status != 'COMPLETED':
+                self.trip.status = 'COMPLETED'
+                self.trip.actual_end_time = timezone.now()
+                self.trip.save()
+
+
+class SegmentStop(models.Model):
+    """
+    Arrêt durant un segment (pause, ravitaillement, inspection, etc.)
+    Permet de tracker tous les arrêts durant le trajet
+    """
+    
+    STOP_TYPE_CHOICES = [
+        ('FUEL', 'Ravitaillement'),
+        ('REST', 'Repos'),
+        ('MEAL', 'Repas'),
+        ('INSPECTION', 'Inspection'),
+        ('WEIGH_STATION', 'Pesée'),
+        ('MAINTENANCE', 'Maintenance'),
+        ('EMERGENCY', 'Urgence'),
+        ('OTHER', 'Autre'),
+    ]
+    
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    segment = models.ForeignKey(
+        TripSegment,
+        on_delete=models.CASCADE,
+        related_name='stops',
+        help_text="Segment durant lequel l'arrêt a eu lieu"
+    )
+    
+    # Type d'arrêt
+    stop_type = models.CharField(
+        max_length=20,
+        choices=STOP_TYPE_CHOICES,
+        default='REST'
+    )
+    
+    # Localisation
+    location_name = models.CharField(max_length=200, help_text="Nom du lieu d'arrêt")
+    address = models.TextField(blank=True)
+    city = models.CharField(max_length=100, blank=True)
+    state = models.CharField(max_length=50, blank=True)
+    latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    
+    # Horaires
+    arrival_time = models.DateTimeField(help_text="Heure d'arrivée à l'arrêt")
+    departure_time = models.DateTimeField(null=True, blank=True, help_text="Heure de départ de l'arrêt")
+    
+    # Kilométrage
+    odometer_reading = models.IntegerField(null=True, blank=True)
+    
+    # Informations spécifiques
+    fuel_gallons = models.DecimalField(
+        max_digits=6,
+        decimal_places=2,
+        null=True,
+        blank=True,
+        help_text="Gallons de carburant ajoutés"
+    )
+    fuel_cost = models.DecimalField(
+        max_digits=8,
+        decimal_places=2,
+        null=True,
+        blank=True,
+        help_text="Coût du carburant"
+    )
+    
+    # Notes
+    notes = models.TextField(blank=True)
+    receipt_image = models.ImageField(
+        upload_to='trip_stops/receipts/',
+        null=True,
+        blank=True,
+        help_text="Photo du reçu"
+    )
+    
+    # Champs d'audit
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='segment_stops_created'
+    )
+    updated_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='segment_stops_updated'
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['arrival_time']
+        indexes = [
+            models.Index(fields=['segment', 'arrival_time']),
+            models.Index(fields=['stop_type']),
+        ]
+    
+    def __str__(self):
+        return f"{self.get_stop_type_display()} - {self.location_name} ({self.arrival_time.strftime('%Y-%m-%d %H:%M')})"
+    
+    @property
+    def duration(self):
+        """Durée de l'arrêt"""
+        if self.departure_time:
+            return self.departure_time - self.arrival_time
+        return None
+    
+    @property
+    def duration_minutes(self):
+        """Durée de l'arrêt en minutes"""
+        if self.duration:
+            return self.duration.total_seconds() / 60
+        return None
+    
+    @property
+    def is_ongoing(self):
+        """Vérifie si l'arrêt est en cours"""
+        return self.departure_time is None
+
+
+class ContinuousDutyStatus(models.Model):
+    """
+    Statut de service continu - lie les entrées ELD aux segments de voyage
+    Permet un suivi ELD continu à travers plusieurs voyages et segments
+    """
+    
+    STATUS_CHOICES = [
+        ('OFF_DUTY', 'Hors service'),
+        ('SLEEPER_BERTH', 'Couchette'),
+        ('DRIVING', 'Conduite'),
+        ('ON_DUTY_NOT_DRIVING', 'En service (non-conduite)'),
+    ]
+    
+    EVENT_TYPE_CHOICES = [
+        ('AUTO', 'Automatique'),
+        ('MANUAL', 'Manuel'),
+        ('EDITED', 'Modifié'),
+        ('CERTIFIED', 'Certifié'),
+    ]
+    
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    
+    # Lien vers le conducteur
+    driver = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='continuous_duty_statuses',
+        limit_choices_to={'user_type': 'DRIVER'}
+    )
+    
+    # Lien vers le segment de voyage (optionnel - peut être hors voyage)
+    trip_segment = models.ForeignKey(
+        TripSegment,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='duty_statuses',
+        help_text="Segment de voyage durant lequel ce statut est actif"
+    )
+    
+    # Lien vers l'arrêt (si l'arrêt génère un changement de statut)
+    segment_stop = models.ForeignKey(
+        SegmentStop,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='duty_statuses',
+        help_text="Arrêt associé à ce changement de statut"
+    )
+    
+    # Statut et horaires
+    status = models.CharField(max_length=25, choices=STATUS_CHOICES)
+    start_time = models.DateTimeField(db_index=True)
+    end_time = models.DateTimeField(null=True, blank=True, db_index=True)
+    
+    # Type d'événement
+    event_type = models.CharField(
+        max_length=15,
+        choices=EVENT_TYPE_CHOICES,
+        default='AUTO',
+        help_text="Comment cet événement a été créé"
+    )
+    
+    # Localisation
+    location_description = models.CharField(max_length=200)
+    latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    
+    # Informations véhicule
+    vehicle = models.ForeignKey(
+        'Vehicle',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='duty_statuses'
+    )
+    odometer_reading = models.IntegerField(null=True, blank=True)
+    engine_hours = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
+    
+    # Notes et remarques
+    remarks = models.TextField(blank=True)
+    
+    # Édition et traçabilité
+    is_edited = models.BooleanField(default=False)
+    edit_reason = models.CharField(max_length=200, blank=True)
+    original_status = models.CharField(max_length=25, blank=True)
+    original_start_time = models.DateTimeField(null=True, blank=True)
+    original_end_time = models.DateTimeField(null=True, blank=True)
+    
+    # Certification
+    is_certified = models.BooleanField(default=False)
+    certified_at = models.DateTimeField(null=True, blank=True)
+    
+    # Champs d'audit
+    created_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='continuous_duty_created'
+    )
+    updated_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='continuous_duty_updated'
+    )
+    edited_by = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='continuous_duty_edited'
+    )
+    edited_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-start_time']
+        indexes = [
+            models.Index(fields=['driver', 'start_time']),
+            models.Index(fields=['driver', 'end_time']),
+            models.Index(fields=['trip_segment', 'start_time']),
+            models.Index(fields=['status', 'start_time']),
+            models.Index(fields=['is_certified']),
+        ]
+        verbose_name_plural = "Continuous duty statuses"
+    
+    def __str__(self):
+        end_display = self.end_time.strftime('%H:%M') if self.end_time else 'En cours'
+        return f"{self.driver.get_full_name()} - {self.get_status_display()}: {self.start_time.strftime('%Y-%m-%d %H:%M')} → {end_display}"
+    
+    @property
+    def is_active(self):
+        """Vérifie si ce statut est actuellement actif"""
+        return self.end_time is None
+    
+    @property
+    def duration(self):
+        """Durée du statut"""
+        if self.end_time:
+            return self.end_time - self.start_time
+        return timezone.now() - self.start_time
+    
+    @property
+    def duration_hours(self):
+        """Durée en heures"""
+        return self.duration.total_seconds() / 3600
+    
+    @property
+    def duration_minutes(self):
+        """Durée en minutes"""
+        return self.duration.total_seconds() / 60
+    
+    def end_status(self, end_time=None, user=None):
+        """Termine ce statut de service"""
+        if not self.end_time:
+            self.end_time = end_time or timezone.now()
+            if user:
+                self.updated_by = user
+            self.save()
+    
+    def edit_status(self, new_status=None, new_start_time=None, new_end_time=None, 
+                   reason="", edited_by=None):
+        """Modifie ce statut avec traçabilité"""
+        if not self.is_edited:
+            # Sauvegarder l'original
+            self.original_status = self.status
+            self.original_start_time = self.start_time
+            self.original_end_time = self.end_time
+        
+        # Appliquer les modifications
+        if new_status:
+            self.status = new_status
+        if new_start_time:
+            self.start_time = new_start_time
+        if new_end_time is not None:
+            self.end_time = new_end_time
+        
+        self.is_edited = True
+        self.edit_reason = reason
+        self.edited_by = edited_by
+        self.edited_at = timezone.now()
+        self.save()
+    
+    def certify(self, user=None):
+        """Certifie ce statut"""
+        self.is_certified = True
+        self.certified_at = timezone.now()
+        if user:
+            self.updated_by = user
+        self.save()
+    
+    @staticmethod
+    def get_active_status(driver):
+        """Récupère le statut actif actuel pour un conducteur"""
+        return ContinuousDutyStatus.objects.filter(
+            driver=driver,
+            end_time__isnull=True
+        ).order_by('-start_time').first()
+    
+    @staticmethod
+    def create_automatic_status(driver, status, trip_segment=None, segment_stop=None,
+                               location_description="", vehicle=None, latitude=None, 
+                               longitude=None, odometer_reading=None):
+        """Crée un nouveau statut automatiquement et termine le précédent"""
+        # Terminer le statut actif précédent
+        previous_status = ContinuousDutyStatus.get_active_status(driver)
+        if previous_status:
+            previous_status.end_status()
+        
+        # Créer le nouveau statut
+        new_status = ContinuousDutyStatus.objects.create(
+            driver=driver,
+            status=status,
+            trip_segment=trip_segment,
+            segment_stop=segment_stop,
+            start_time=timezone.now(),
+            event_type='AUTO',
+            location_description=location_description,
+            vehicle=vehicle,
+            latitude=latitude,
+            longitude=longitude,
+            odometer_reading=odometer_reading
+        )
+        
+        return new_status
+    
+    def clean(self):
+        """Validation des données"""
+        from django.core.exceptions import ValidationError
+        
+        if self.end_time and self.start_time >= self.end_time:
+            raise ValidationError("L'heure de début doit être avant l'heure de fin")
+        
+        # Vérifier les chevauchements pour le même conducteur
+        overlapping = ContinuousDutyStatus.objects.filter(
+            driver=self.driver
+        ).exclude(id=self.id)
+        
+        if self.end_time:
+            overlapping = overlapping.filter(
+                start_time__lt=self.end_time,
+                end_time__gt=self.start_time
+            ) | overlapping.filter(
+                start_time__lt=self.end_time,
+                end_time__isnull=True
+            )
+        else:
+            # Si pas de end_time, vérifier qu'il n'y a pas d'autre statut actif
+            overlapping = overlapping.filter(end_time__isnull=True)
+        
+        if overlapping.exists():
+            raise ValidationError("Ce statut chevauche un statut existant pour ce conducteur")

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Vehicle, Trip, RestStop, TripWaypoint, VehicleAssignment
+from .models import Vehicle, Trip, RestStop, TripWaypoint, VehicleAssignment, TripSegment
 from accounts.serializers import UserSerializer
 
 class VehicleAssignmentSerializer(serializers.ModelSerializer):
@@ -255,6 +255,123 @@ class TripWaypointSerializer(serializers.ModelSerializer):
             'created_at'
         ]
         read_only_fields = ['id', 'created_at']
+
+class TripSegmentSerializer(serializers.ModelSerializer):
+    """Serializer pour les segments de voyage (ramassage/livraison)"""
+    
+    segment_type_display = serializers.CharField(source='get_segment_type_display', read_only=True)
+    status_display = serializers.CharField(source='get_status_display', read_only=True)
+    trip_number = serializers.CharField(source='trip.trip_number', read_only=True)
+    trip_title = serializers.CharField(source='trip.title', read_only=True)
+    duration_minutes = serializers.ReadOnlyField()
+    is_completed = serializers.ReadOnlyField()
+    created_by_name = serializers.CharField(source='created_by.get_full_name', read_only=True, allow_null=True)
+    updated_by_name = serializers.CharField(source='updated_by.get_full_name', read_only=True, allow_null=True)
+    
+    class Meta:
+        model = TripSegment
+        fields = [
+            'id', 'trip', 'trip_number', 'trip_title', 'sequence_order',
+            'segment_type', 'segment_type_display',
+            'location_name', 'address', 'latitude', 'longitude',
+            'contact_name', 'contact_phone',
+            'cargo_description', 'cargo_weight_kg', 'cargo_quantity',
+            'reference_number', 'proof_of_delivery',
+            'planned_time', 'actual_arrival_time', 'actual_departure_time',
+            'distance_from_previous_km',
+            'status', 'status_display',
+            'special_instructions', 'driver_notes',
+            'signature_data', 'signed_by_name', 'signed_at',
+            'duration_minutes', 'is_completed',
+            'created_by', 'created_by_name', 'updated_by', 'updated_by_name',
+            'created_at', 'updated_at'
+        ]
+        read_only_fields = [
+            'id', 'trip_number', 'trip_title', 'actual_arrival_time', 'actual_departure_time',
+            'signed_at', 'duration_minutes', 'is_completed',
+            'created_by', 'created_by_name', 'updated_by', 'updated_by_name',
+            'created_at', 'updated_at'
+        ]
+    
+    def validate(self, data):
+        """Validation des données du segment"""
+        # Valider les coordonnées
+        latitude = data.get('latitude')
+        longitude = data.get('longitude')
+        
+        if latitude and abs(latitude) > 90:
+            raise serializers.ValidationError({
+                'latitude': "La latitude doit être entre -90 et 90"
+            })
+        
+        if longitude and abs(longitude) > 180:
+            raise serializers.ValidationError({
+                'longitude': "La longitude doit être entre -180 et 180"
+            })
+        
+        return data
+
+
+class TripSegmentCreateSerializer(serializers.ModelSerializer):
+    """Serializer pour créer un segment de voyage"""
+    
+    class Meta:
+        model = TripSegment
+        fields = [
+            'trip', 'sequence_order', 'segment_type',
+            'location_name', 'address', 'latitude', 'longitude',
+            'contact_name', 'contact_phone',
+            'cargo_description', 'cargo_weight_kg', 'cargo_quantity',
+            'reference_number', 'planned_time',
+            'distance_from_previous_km', 'special_instructions'
+        ]
+    
+    def create(self, validated_data):
+        """Créer le segment avec l'utilisateur qui crée"""
+        request = self.context.get('request')
+        if request and request.user:
+            validated_data['created_by'] = request.user
+        
+        return super().create(validated_data)
+
+
+class TripSegmentUpdateSerializer(serializers.ModelSerializer):
+    """Serializer pour mettre à jour un segment"""
+    
+    class Meta:
+        model = TripSegment
+        fields = [
+            'location_name', 'address', 'latitude', 'longitude',
+            'contact_name', 'contact_phone',
+            'cargo_description', 'cargo_weight_kg', 'cargo_quantity',
+            'reference_number', 'planned_time',
+            'distance_from_previous_km', 'special_instructions',
+            'driver_notes', 'proof_of_delivery'
+        ]
+    
+    def update(self, instance, validated_data):
+        """Mise à jour avec traçage de l'utilisateur"""
+        request = self.context.get('request')
+        if request and request.user:
+            validated_data['updated_by'] = request.user
+        
+        return super().update(instance, validated_data)
+
+
+class TripSegmentStartSerializer(serializers.Serializer):
+    """Serializer pour démarrer un segment"""
+    
+    latitude = serializers.DecimalField(max_digits=9, decimal_places=6, required=False)
+    longitude = serializers.DecimalField(max_digits=9, decimal_places=6, required=False)
+
+
+class TripSegmentCompleteSerializer(serializers.Serializer):
+    """Serializer pour terminer un segment"""
+    
+    signature_data = serializers.CharField(required=False, allow_blank=True)
+    signed_by_name = serializers.CharField(max_length=200, required=False, allow_blank=True)
+    proof_of_delivery = serializers.ImageField(required=False)
+    driver_notes = serializers.CharField(required=False, allow_blank=True)
 
 class TripSerializer(serializers.ModelSerializer):
     """Serializer complet pour les voyages"""

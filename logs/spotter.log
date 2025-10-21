@@ -4851,3 +4851,189 @@ INFO 2025-10-15 13:44:00,882 autoreload 661366 139771399165760 /home/sergeo/Docu
 INFO 2025-10-15 13:44:02,642 autoreload 662775 140487429064512 Watching for file changes with StatReloader
 INFO 2025-10-15 13:44:56,308 autoreload 662775 140487429064512 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
 INFO 2025-10-15 13:44:57,545 autoreload 662956 140023455704896 Watching for file changes with StatReloader
+INFO 2025-10-15 14:46:21,527 autoreload 662956 140023455704896 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-15 14:46:27,669 autoreload 668315 139880030545728 Watching for file changes with StatReloader
+INFO 2025-10-15 14:52:30,847 autoreload 668315 139880030545728 /home/sergeo/Documents/spotter-application/spotter-backend/trips/models.py changed, reloading.
+INFO 2025-10-15 14:52:47,416 autoreload 668777 140250923108160 Watching for file changes with StatReloader
+INFO 2025-10-15 14:54:13,587 autoreload 668777 140250923108160 /home/sergeo/Documents/spotter-application/spotter-backend/trips/models.py changed, reloading.
+INFO 2025-10-15 14:54:16,212 autoreload 668971 140538239866688 Watching for file changes with StatReloader
+INFO 2025-10-15 14:57:03,478 autoreload 668971 140538239866688 /home/sergeo/Documents/spotter-application/spotter-backend/trips/serializers.py changed, reloading.
+INFO 2025-10-15 14:57:05,147 autoreload 669174 140467212687168 Watching for file changes with StatReloader
+INFO 2025-10-15 15:01:18,672 autoreload 669174 140467212687168 /home/sergeo/Documents/spotter-application/spotter-backend/trips/models.py changed, reloading.
+INFO 2025-10-15 15:01:21,245 autoreload 669482 140493586569024 Watching for file changes with StatReloader
+INFO 2025-10-15 15:12:27,145 autoreload 669482 140493586569024 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-10-15 15:12:28,569 autoreload 670180 140358676002624 Watching for file changes with StatReloader
+INFO 2025-10-15 15:19:10,850 autoreload 670180 140358676002624 /home/sergeo/Documents/spotter-application/spotter-backend/trips/views.py changed, reloading.
+INFO 2025-10-15 15:19:12,427 autoreload 670519 139943130015552 Watching for file changes with StatReloader
+INFO 2025-10-15 15:20:16,061 autoreload 670519 139943130015552 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
+INFO 2025-10-15 15:20:17,319 autoreload 670720 140712804583232 Watching for file changes with StatReloader
+INFO 2025-10-15 15:47:47,852 autoreload 670720 140712804583232 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-15 15:47:50,380 autoreload 693023 140515431155520 Watching for file changes with StatReloader
+INFO 2025-10-15 15:48:44,454 autoreload 693023 140515431155520 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/urls.py changed, reloading.
+INFO 2025-10-15 15:48:45,710 autoreload 693111 140144855930688 Watching for file changes with StatReloader
+INFO 2025-10-15 15:52:43,093 autoreload 693111 140144855930688 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-15 15:52:46,585 autoreload 693547 140537112688448 Watching for file changes with StatReloader
+INFO 2025-10-15 15:57:57,473 autoreload 693547 140537112688448 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/serializers.py changed, reloading.
+INFO 2025-10-15 15:57:58,721 autoreload 693910 140103054014272 Watching for file changes with StatReloader
+INFO 2025-10-15 16:01:01,286 autoreload 693910 140103054014272 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-15 16:01:03,138 autoreload 694150 140355059799872 Watching for file changes with StatReloader
+INFO 2025-10-15 16:18:23,148 autoreload 694150 140355059799872 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-15 16:18:26,887 autoreload 695275 140402289624896 Watching for file changes with StatReloader
+INFO 2025-10-15 16:42:04,875 autoreload 695275 140402289624896 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/serializers.py changed, reloading.
+INFO 2025-10-15 16:42:07,118 autoreload 706621 140545713055552 Watching for file changes with StatReloader
+INFO 2025-10-16 04:19:26,063 autoreload 713670 139969855547200 Watching for file changes with StatReloader
+INFO 2025-10-16 07:58:14,130 basehttp 713670 139969693214464 "OPTIONS /api/accounts/login/ HTTP/1.1" 200 0
+ERROR 2025-10-16 07:58:33,884 log 713670 139969693214464 Internal Server Error: /api/accounts/login/
+Traceback (most recent call last):
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: trips_trip.has_segments
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/sergeo/Documents/spotter-application/spotter-backend/accounts/views.py", line 73, in post
+    'user': UserSerializer(user).data
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 555, in data
+    ret = super().data
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/rest_framework/serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/rest_framework/fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/rest_framework/fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+  File "/home/sergeo/Documents/spotter-application/spotter-backend/accounts/models.py", line 227, in has_active_trip
+    return self.current_trip is not None
+  File "/home/sergeo/Documents/spotter-application/spotter-backend/accounts/models.py", line 221, in current_trip
+    return self.trips.filter(status='IN_PROGRESS').first()
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/models/query.py", line 1057, in first
+    for obj in queryset[:1]:
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sergeo/Documents/spotter-application/.venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: trips_trip.has_segments
+ERROR 2025-10-16 07:58:33,918 basehttp 713670 139969693214464 "POST /api/accounts/login/ HTTP/1.1" 500 234446
+INFO 2025-10-16 08:02:26,873 autoreload 726538 140064408602432 Watching for file changes with StatReloader
+INFO 2025-10-16 08:02:32,601 basehttp 726538 140064246982400 "POST /api/accounts/login/ HTTP/1.1" 200 1568
+INFO 2025-10-16 08:02:32,764 basehttp 726538 140064246982400 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-10-16 08:02:32,909 basehttp 726538 140064246982400 "GET /api/accounts/profile/ HTTP/1.1" 200 978
+INFO 2025-10-16 08:02:33,692 basehttp 726538 140064246982400 "OPTIONS /api/trips/driver/current-trip/ HTTP/1.1" 200 0
+INFO 2025-10-16 08:02:33,736 basehttp 726538 140064246982400 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 12374
+INFO 2025-10-16 08:02:34,017 basehttp 726538 140064224003840 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 12374
+INFO 2025-10-16 08:02:45,968 basehttp 726538 140064224003840 "OPTIONS /api/trips/undefined/ HTTP/1.1" 200 0
+INFO 2025-10-16 08:02:45,990 basehttp 726538 140064246982400 "OPTIONS /api/trips/undefined/segments/summary/ HTTP/1.1" 200 0
+INFO 2025-10-16 08:02:45,996 basehttp 726538 140064215611136 "OPTIONS /api/trips/undefined/segments/summary/ HTTP/1.1" 200 0
+WARNING 2025-10-16 08:02:46,621 log 726538 140064246982400 Not Found: /api/trips/undefined/segments/summary/
+WARNING 2025-10-16 08:02:46,638 basehttp 726538 140064246982400 "GET /api/trips/undefined/segments/summary/ HTTP/1.1" 404 12812
+WARNING 2025-10-16 08:02:46,642 log 726538 140064224003840 Not Found: /api/trips/undefined/
+WARNING 2025-10-16 08:02:46,643 basehttp 726538 140064224003840 "GET /api/trips/undefined/ HTTP/1.1" 404 12761
+WARNING 2025-10-16 08:02:46,729 log 726538 140064215611136 Not Found: /api/trips/undefined/segments/summary/
+WARNING 2025-10-16 08:02:46,753 basehttp 726538 140064215611136 "GET /api/trips/undefined/segments/summary/ HTTP/1.1" 404 12812
+WARNING 2025-10-16 08:02:46,758 log 726538 140064246982400 Not Found: /api/trips/undefined/
+WARNING 2025-10-16 08:02:46,759 basehttp 726538 140064246982400 "GET /api/trips/undefined/ HTTP/1.1" 404 12761
+INFO 2025-10-16 08:03:42,321 basehttp 726538 140064246982400 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 12374
+INFO 2025-10-16 08:03:42,372 basehttp 726538 140064246982400 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 12374
+WARNING 2025-10-16 08:03:45,234 log 726538 140064246982400 Not Found: /api/trips/undefined/
+WARNING 2025-10-16 08:03:45,244 basehttp 726538 140064246982400 "GET /api/trips/undefined/ HTTP/1.1" 404 12761
+WARNING 2025-10-16 08:03:45,243 log 726538 140064215611136 Not Found: /api/trips/undefined/segments/summary/
+WARNING 2025-10-16 08:03:45,276 basehttp 726538 140064215611136 "GET /api/trips/undefined/segments/summary/ HTTP/1.1" 404 12812
+WARNING 2025-10-16 08:03:45,299 log 726538 140064224003840 Not Found: /api/trips/undefined/
+WARNING 2025-10-16 08:03:45,301 basehttp 726538 140064224003840 "GET /api/trips/undefined/ HTTP/1.1" 404 12761
+WARNING 2025-10-16 08:03:45,324 log 726538 140064246982400 Not Found: /api/trips/undefined/segments/summary/
+WARNING 2025-10-16 08:03:45,332 basehttp 726538 140064246982400 "GET /api/trips/undefined/segments/summary/ HTTP/1.1" 404 12812
+INFO 2025-10-16 08:03:51,449 basehttp 726538 140064246982400 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 12374
+INFO 2025-10-16 08:03:51,502 basehttp 726538 140064224003840 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 12374
+INFO 2025-10-16 08:12:45,861 autoreload 726538 140064408602432 /home/sergeo/Documents/spotter-application/spotter-backend/trips/urls.py changed, reloading.
+INFO 2025-10-16 08:12:48,419 autoreload 727331 140676027205440 Watching for file changes with StatReloader
+INFO 2025-10-16 08:12:53,893 autoreload 727331 140676027205440 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/urls.py changed, reloading.
+INFO 2025-10-16 08:12:55,510 autoreload 727399 140136536393536 Watching for file changes with StatReloader
+INFO 2025-10-16 08:13:03,120 autoreload 727399 140136536393536 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/services.py changed, reloading.
+INFO 2025-10-16 08:13:05,023 autoreload 727506 139991058310976 Watching for file changes with StatReloader
+INFO 2025-10-16 08:13:17,725 autoreload 727506 139991058310976 /home/sergeo/Documents/spotter-application/spotter-backend/trips/serializers.py changed, reloading.
+INFO 2025-10-16 08:13:20,824 autoreload 727556 140525671589696 Watching for file changes with StatReloader
+INFO 2025-10-16 08:36:41,552 autoreload 727556 140525671589696 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-16 08:36:44,167 autoreload 729027 139977718114112 Watching for file changes with StatReloader
+INFO 2025-10-16 09:05:02,231 autoreload 729027 139977718114112 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-16 09:05:13,878 autoreload 733008 140140005680960 Watching for file changes with StatReloader
+ERROR 2025-10-16 09:45:22,412 views 736655 140386410747712 Error changing duty status: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-16 09:45:22,438 log 736655 140386410747712 Internal Server Error: /api/eld/activity/change-status/
+INFO 2025-10-16 09:50:00,067 basehttp 733008 140139843278592 "POST /api/accounts/login/ HTTP/1.1" 200 1568
+INFO 2025-10-16 09:50:00,527 basehttp 733008 140139843278592 "GET /api/accounts/profile/ HTTP/1.1" 200 978
+INFO 2025-10-16 09:50:01,241 basehttp 733008 140139843278592 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 12374
+INFO 2025-10-16 09:50:01,433 basehttp 733008 140139843278592 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 12374
+WARNING 2025-10-16 09:50:21,226 log 733008 140139749701376 Not Found: /api/trips/undefined/segments/summary/
+WARNING 2025-10-16 09:50:21,227 basehttp 733008 140139749701376 "GET /api/trips/undefined/segments/summary/ HTTP/1.1" 404 12812
+WARNING 2025-10-16 09:50:21,234 log 733008 140139843278592 Not Found: /api/trips/undefined/
+WARNING 2025-10-16 09:50:21,245 basehttp 733008 140139843278592 "GET /api/trips/undefined/ HTTP/1.1" 404 12761
+WARNING 2025-10-16 09:50:21,258 log 733008 140139749701376 Not Found: /api/trips/undefined/segments/summary/
+WARNING 2025-10-16 09:50:21,265 basehttp 733008 140139749701376 "GET /api/trips/undefined/segments/summary/ HTTP/1.1" 404 12812
+WARNING 2025-10-16 09:50:21,282 log 733008 140139741308672 Not Found: /api/trips/undefined/
+WARNING 2025-10-16 09:50:21,285 basehttp 733008 140139741308672 "GET /api/trips/undefined/ HTTP/1.1" 404 12761
+WARNING 2025-10-16 09:51:00,661 log 733008 140139741308672 Not Found: /api/trips/undefined/segments/summary/
+WARNING 2025-10-16 09:51:00,693 basehttp 733008 140139741308672 "GET /api/trips/undefined/segments/summary/ HTTP/1.1" 404 12812
+WARNING 2025-10-16 09:51:00,702 log 733008 140139749701376 Not Found: /api/trips/undefined/
+WARNING 2025-10-16 09:51:00,704 basehttp 733008 140139749701376 "GET /api/trips/undefined/ HTTP/1.1" 404 12761
+INFO 2025-10-21 09:47:13,149 autoreload 447483 139962589333312 Watching for file changes with StatReloader
+ERROR 2025-10-21 09:55:29,768 views 451701 140497207539520 Error changing duty status: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-21 09:55:29,785 log 451701 140497207539520 Internal Server Error: /api/eld/activity/change-status/
+INFO 2025-10-21 10:04:30,467 basehttp 447483 139962426713856 "OPTIONS /api/accounts/login/ HTTP/1.1" 200 0
+INFO 2025-10-21 10:04:46,052 basehttp 447483 139962426713856 "POST /api/accounts/login/ HTTP/1.1" 200 1518
+INFO 2025-10-21 10:04:46,180 basehttp 447483 139962426713856 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-10-21 10:04:46,236 basehttp 447483 139962426713856 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+INFO 2025-10-21 10:04:46,789 basehttp 447483 139962405046016 "OPTIONS /api/trips/driver/current-trip/ HTTP/1.1" 200 0
+INFO 2025-10-21 10:04:46,801 basehttp 447483 139962405046016 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:04:47,096 basehttp 447483 139962426713856 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:05:02,941 basehttp 447483 139962426713856 "OPTIONS /api/eld-logs/driver-activity/ HTTP/1.1" 200 0
+WARNING 2025-10-21 10:05:05,700 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:05:05,701 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:05:05,779 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:05:05,779 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:05:32,964 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:05:32,966 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:06:02,958 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:06:02,961 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:06:33,013 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:06:33,020 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:07:03,023 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:07:03,024 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:07:32,957 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:07:32,962 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
