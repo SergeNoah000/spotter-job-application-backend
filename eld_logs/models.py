@@ -11,6 +11,8 @@ class ELDLog(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     trip = models.ForeignKey(
         Trip,
+        null=True,  
+        blank=True,
         on_delete=models.CASCADE,
         related_name='eld_logs'
     )
@@ -168,7 +170,7 @@ class DutyStatusEntry(models.Model):
     
     # Time and status - Garder DateTimeField (plus correct que TimeField de la conception)
     start_time = models.DateTimeField()
-    end_time = models.DateTimeField()
+    end_time = models.DateTimeField(null=True, blank=True)
     status = models.CharField(max_length=25, choices=STATUS_CHOICES)
     
     # Location information
@@ -226,7 +228,7 @@ class DutyStatusEntry(models.Model):
     @property
     def duration(self):
         """Durée de l'entrée"""
-        return self.end_time - self.start_time
+        return self.end_time - self.start_time if self.end_time else timedelta(0)
     
     @property
     def duration_hours(self):

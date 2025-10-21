@@ -78,8 +78,8 @@ class DutyStatusEntrySerializer(serializers.ModelSerializer):
             return round(duration.total_seconds() / 3600, 2)
         elif obj.start_time and not obj.end_time:
             # Segment actif - calculer depuis maintenant
-            from datetime import datetime
-            duration = datetime.now() - obj.start_time
+            from django.utils import timezone
+            duration = timezone.now() - obj.start_time
             return round(duration.total_seconds() / 3600, 2)
         return 0
     

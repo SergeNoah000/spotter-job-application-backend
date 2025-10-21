@@ -5037,3 +5037,618 @@ WARNING 2025-10-21 10:07:03,023 log 447483 139962426713856 Not Found: /api/eld-l
 WARNING 2025-10-21 10:07:03,024 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
 WARNING 2025-10-21 10:07:32,957 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
 WARNING 2025-10-21 10:07:32,962 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:08:02,952 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:08:02,960 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:08:33,857 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:08:33,857 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:09:02,955 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:09:02,956 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:09:32,965 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:09:32,968 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:10:02,996 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:10:02,996 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:10:33,002 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:10:33,011 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:11:02,976 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:11:02,977 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:11:32,957 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:11:32,959 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:12:02,964 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:12:02,973 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:12:32,973 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:12:32,974 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:13:02,959 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:13:02,962 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:13:32,956 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:13:32,961 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:14:02,955 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:14:02,969 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:14:32,986 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:14:33,006 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:15:02,958 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:15:02,959 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:15:32,962 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:15:32,963 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:16:02,956 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:16:02,956 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+INFO 2025-10-21 10:18:37,180 basehttp 447483 139962405046016 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:18:37,219 basehttp 447483 139962426713856 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+INFO 2025-10-21 10:18:37,243 basehttp 447483 139962405046016 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:18:41,654 basehttp 447483 139962405046016 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:18:41,669 basehttp 447483 139962405046016 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:18:50,079 basehttp 447483 139962426713856 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:18:50,112 basehttp 447483 139962405046016 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+INFO 2025-10-21 10:18:50,115 basehttp 447483 139962426713856 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:19:50,271 basehttp 447483 139962426713856 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:19:50,285 basehttp 447483 139962405046016 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:24:02,054 basehttp 447483 139962405046016 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+INFO 2025-10-21 10:31:40,987 basehttp 447483 139962426713856 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:31:41,018 basehttp 447483 139962405046016 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+INFO 2025-10-21 10:31:41,023 basehttp 447483 139962396129024 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:31:50,065 basehttp 447483 139962396129024 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+INFO 2025-10-21 10:31:50,073 basehttp 447483 139962405046016 "OPTIONS /api/trips/driver/current-trip/ HTTP/1.1" 200 0
+INFO 2025-10-21 10:31:50,094 basehttp 447483 139962426713856 "OPTIONS /api/trips/driver/current-trip/ HTTP/1.1" 200 0
+INFO 2025-10-21 10:31:50,121 basehttp 447483 139962405046016 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:31:50,153 basehttp 447483 139962426713856 "GET /api/trips/driver/current-trip/ HTTP/1.1" 200 38
+INFO 2025-10-21 10:31:50,165 basehttp 447483 139962396129024 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+INFO 2025-10-21 10:37:34,067 basehttp 447483 139962426713856 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+WARNING 2025-10-21 10:37:43,458 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:37:43,478 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:37:43,520 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:37:43,524 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:38:13,311 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:38:13,312 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:38:43,310 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:38:43,315 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:39:13,314 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:39:13,315 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:39:43,320 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:39:43,326 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:40:13,329 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:40:13,335 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:40:43,311 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:40:43,314 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:41:13,357 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:41:13,361 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:41:43,352 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:41:43,361 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:42:13,310 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:42:13,311 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:42:43,312 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:42:43,318 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:43:13,322 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:43:13,336 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:43:43,351 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:43:43,355 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:44:13,311 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:44:13,311 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:44:43,382 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:44:43,385 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:45:13,310 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:45:13,316 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:45:43,345 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:45:43,346 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:46:13,311 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:46:13,314 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:46:43,363 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:46:43,364 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:47:13,309 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:47:13,312 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:47:47,442 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:47:47,443 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:47:47,588 log 447483 139962396129024 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:47:47,589 basehttp 447483 139962396129024 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+INFO 2025-10-21 10:47:48,258 basehttp 447483 139962426713856 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+WARNING 2025-10-21 10:48:17,500 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:48:17,506 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:48:47,481 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:48:47,483 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:49:17,515 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:49:17,529 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:49:47,462 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:49:47,463 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+WARNING 2025-10-21 10:50:17,455 log 447483 139962426713856 Not Found: /api/eld-logs/driver-activity/
+WARNING 2025-10-21 10:50:17,458 basehttp 447483 139962426713856 "GET /api/eld-logs/driver-activity/ HTTP/1.1" 404 2987
+INFO 2025-10-21 10:50:38,982 basehttp 447483 139962426713856 "OPTIONS /api/eld-logs/activity/current/ HTTP/1.1" 200 0
+WARNING 2025-10-21 10:50:38,997 log 447483 139962426713856 Not Found: /api/eld-logs/activity/current/
+WARNING 2025-10-21 10:50:38,998 basehttp 447483 139962426713856 "GET /api/eld-logs/activity/current/ HTTP/1.1" 404 2990
+WARNING 2025-10-21 10:50:39,054 log 447483 139962426713856 Not Found: /api/eld-logs/activity/current/
+WARNING 2025-10-21 10:50:39,064 basehttp 447483 139962426713856 "GET /api/eld-logs/activity/current/ HTTP/1.1" 404 2990
+INFO 2025-10-21 10:50:39,121 basehttp 447483 139962396129024 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+WARNING 2025-10-21 10:51:09,009 log 447483 139962396129024 Not Found: /api/eld-logs/activity/current/
+WARNING 2025-10-21 10:51:09,010 basehttp 447483 139962396129024 "GET /api/eld-logs/activity/current/ HTTP/1.1" 404 2990
+WARNING 2025-10-21 10:51:39,016 log 447483 139962396129024 Not Found: /api/eld-logs/activity/current/
+WARNING 2025-10-21 10:51:39,017 basehttp 447483 139962396129024 "GET /api/eld-logs/activity/current/ HTTP/1.1" 404 2990
+WARNING 2025-10-21 10:52:09,058 log 447483 139962396129024 Not Found: /api/eld-logs/activity/current/
+WARNING 2025-10-21 10:52:09,061 basehttp 447483 139962396129024 "GET /api/eld-logs/activity/current/ HTTP/1.1" 404 2990
+WARNING 2025-10-21 10:52:39,013 log 447483 139962396129024 Not Found: /api/eld-logs/activity/current/
+WARNING 2025-10-21 10:52:39,016 basehttp 447483 139962396129024 "GET /api/eld-logs/activity/current/ HTTP/1.1" 404 2990
+WARNING 2025-10-21 10:53:09,007 log 447483 139962396129024 Not Found: /api/eld-logs/activity/current/
+WARNING 2025-10-21 10:53:09,008 basehttp 447483 139962396129024 "GET /api/eld-logs/activity/current/ HTTP/1.1" 404 2990
+WARNING 2025-10-21 10:53:39,020 log 447483 139962396129024 Not Found: /api/eld-logs/activity/current/
+WARNING 2025-10-21 10:53:39,030 basehttp 447483 139962396129024 "GET /api/eld-logs/activity/current/ HTTP/1.1" 404 2990
+INFO 2025-10-21 10:53:48,153 basehttp 447483 139962396129024 "OPTIONS /api/eld/activity/current/ HTTP/1.1" 200 0
+ERROR 2025-10-21 10:53:48,196 views 447483 139962396129024 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:53:48,197 log 447483 139962396129024 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:53:48,197 basehttp 447483 139962396129024 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:53:48,256 views 447483 139962396129024 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:53:48,259 log 447483 139962396129024 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:53:48,259 basehttp 447483 139962396129024 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+INFO 2025-10-21 10:53:48,258 basehttp 447483 139962426713856 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+ERROR 2025-10-21 10:54:18,260 views 447483 139962396129024 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:54:18,261 log 447483 139962396129024 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:54:18,261 basehttp 447483 139962396129024 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:54:48,225 views 447483 139962396129024 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:54:48,227 log 447483 139962396129024 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:54:48,232 basehttp 447483 139962396129024 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:55:18,225 views 447483 139962396129024 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:55:18,232 log 447483 139962396129024 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:55:18,237 basehttp 447483 139962396129024 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:55:48,223 views 447483 139962396129024 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:55:48,225 log 447483 139962396129024 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:55:48,226 basehttp 447483 139962396129024 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:56:18,219 views 447483 139962396129024 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:56:18,220 log 447483 139962396129024 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:56:18,226 basehttp 447483 139962396129024 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:56:48,220 views 447483 139962396129024 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:56:48,221 log 447483 139962396129024 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:56:48,222 basehttp 447483 139962396129024 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:57:18,219 views 447483 139962396129024 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:57:18,220 log 447483 139962396129024 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:57:18,239 basehttp 447483 139962396129024 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:57:48,222 views 447483 139962426713856 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:57:48,223 log 447483 139962426713856 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:57:48,237 basehttp 447483 139962426713856 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:58:18,217 views 447483 139962426713856 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:58:18,218 log 447483 139962426713856 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:58:18,233 basehttp 447483 139962426713856 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:58:48,221 views 447483 139962426713856 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:58:48,226 log 447483 139962426713856 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:58:48,234 basehttp 447483 139962426713856 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:59:18,382 views 447483 139962426713856 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:59:18,383 log 447483 139962426713856 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:59:18,389 basehttp 447483 139962426713856 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+ERROR 2025-10-21 10:59:48,241 views 447483 139962426713856 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'duty_status', 'start_time', 'vehicle'.
+ERROR 2025-10-21 10:59:48,246 log 447483 139962426713856 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 10:59:48,258 basehttp 447483 139962426713856 "GET /api/eld/activity/current/ HTTP/1.1" 500 110
+INFO 2025-10-21 10:59:53,173 autoreload 447483 139962589333312 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-21 11:00:53,885 autoreload 481159 139862465861440 Watching for file changes with StatReloader
+ERROR 2025-10-21 11:01:20,912 views 481159 139862303172352 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-21 11:01:20,916 log 481159 139862303172352 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:01:20,918 basehttp 481159 139862303172352 "GET /api/eld/activity/current/ HTTP/1.1" 500 81
+ERROR 2025-10-21 11:01:48,215 views 481159 139862303172352 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-21 11:01:48,215 log 481159 139862303172352 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:01:48,216 basehttp 481159 139862303172352 "GET /api/eld/activity/current/ HTTP/1.1" 500 81
+ERROR 2025-10-21 11:02:18,214 views 481159 139862303172352 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-21 11:02:18,216 log 481159 139862303172352 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:02:18,218 basehttp 481159 139862303172352 "GET /api/eld/activity/current/ HTTP/1.1" 500 81
+INFO 2025-10-21 11:02:43,724 basehttp 481159 139862303172352 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+ERROR 2025-10-21 11:02:48,278 views 481159 139862303172352 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-21 11:02:48,280 log 481159 139862303172352 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:02:48,281 basehttp 481159 139862303172352 "GET /api/eld/activity/current/ HTTP/1.1" 500 81
+ERROR 2025-10-21 11:03:18,214 views 481159 139862303172352 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-21 11:03:18,215 log 481159 139862303172352 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:03:18,216 basehttp 481159 139862303172352 "GET /api/eld/activity/current/ HTTP/1.1" 500 81
+ERROR 2025-10-21 11:03:48,219 views 481159 139862303172352 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-21 11:03:48,222 log 481159 139862303172352 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:03:48,228 basehttp 481159 139862303172352 "GET /api/eld/activity/current/ HTTP/1.1" 500 81
+ERROR 2025-10-21 11:03:55,890 views 481159 139862303172352 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-21 11:03:55,892 log 481159 139862303172352 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:03:55,892 basehttp 481159 139862303172352 "GET /api/eld/activity/current/ HTTP/1.1" 500 81
+ERROR 2025-10-21 11:03:55,922 views 481159 139862303172352 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-21 11:03:55,924 log 481159 139862303172352 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:03:55,925 basehttp 481159 139862303172352 "GET /api/eld/activity/current/ HTTP/1.1" 500 81
+INFO 2025-10-21 11:03:55,945 basehttp 481159 139862281766656 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+ERROR 2025-10-21 11:04:25,929 views 481159 139862303172352 Error fetching driver activity: Invalid field name(s) for model ELDLog: 'vehicle'.
+ERROR 2025-10-21 11:04:25,933 log 481159 139862303172352 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:04:25,938 basehttp 481159 139862303172352 "GET /api/eld/activity/current/ HTTP/1.1" 500 81
+WARNING 2025-10-21 11:04:55,915 log 481159 139862303172352 Unauthorized: /api/eld/activity/current/
+WARNING 2025-10-21 11:04:55,917 basehttp 481159 139862303172352 "GET /api/eld/activity/current/ HTTP/1.1" 401 183
+INFO 2025-10-21 11:08:04,940 autoreload 481159 139862465861440 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-21 11:08:06,461 autoreload 484349 139912050669376 Watching for file changes with StatReloader
+INFO 2025-10-21 11:11:00,464 autoreload 484349 139912050669376 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-21 11:11:02,246 autoreload 485464 140209848067904 Watching for file changes with StatReloader
+INFO 2025-10-21 11:15:45,408 basehttp 485464 140209752831744 "POST /api/accounts/login/ HTTP/1.1" 200 1518
+INFO 2025-10-21 11:15:45,576 basehttp 485464 140209752831744 "GET /api/accounts/profile/ HTTP/1.1" 200 949
+ERROR 2025-10-21 11:15:54,167 views 485464 140209752831744 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 11:15:54,168 log 485464 140209752831744 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:15:54,168 basehttp 485464 140209752831744 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 11:15:54,203 views 485464 140209752831744 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 11:15:54,204 log 485464 140209752831744 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:15:54,205 basehttp 485464 140209752831744 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 11:16:24,169 views 485464 140209752831744 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 11:16:24,170 log 485464 140209752831744 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:16:24,175 basehttp 485464 140209752831744 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 11:16:54,188 views 485464 140209752831744 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 11:16:54,192 log 485464 140209752831744 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:16:54,219 basehttp 485464 140209752831744 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 11:17:24,167 views 485464 140209752831744 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 11:17:24,179 log 485464 140209752831744 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:17:24,180 basehttp 485464 140209752831744 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 11:17:54,200 views 485464 140209752831744 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 11:17:54,201 log 485464 140209752831744 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 11:17:54,202 basehttp 485464 140209752831744 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+INFO 2025-10-21 12:02:19,318 autoreload 12848 140707593213760 Watching for file changes with StatReloader
+INFO 2025-10-21 12:03:37,986 basehttp 12848 140707423581952 "OPTIONS /api/eld/activity/current/ HTTP/1.1" 200 0
+ERROR 2025-10-21 12:03:39,031 views 12848 140707423581952 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:03:39,042 log 12848 140707423581952 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:03:39,047 basehttp 12848 140707423581952 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:04:08,023 views 12848 140707423581952 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:04:08,026 log 12848 140707423581952 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:04:08,027 basehttp 12848 140707423581952 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:04:38,008 views 12848 140707423581952 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:04:38,010 log 12848 140707423581952 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:04:38,012 basehttp 12848 140707423581952 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+INFO 2025-10-21 12:05:06,404 basehttp 12848 140707404359424 "OPTIONS /api/eld/activity/current/ HTTP/1.1" 200 0
+INFO 2025-10-21 12:05:06,411 basehttp 12848 140707395966720 "OPTIONS /api/accounts/profile/ HTTP/1.1" 200 0
+WARNING 2025-10-21 12:05:06,424 log 12848 140707404359424 Unauthorized: /api/eld/activity/current/
+WARNING 2025-10-21 12:05:06,425 basehttp 12848 140707404359424 "GET /api/eld/activity/current/ HTTP/1.1" 401 183
+WARNING 2025-10-21 12:05:06,469 log 12848 140707395966720 Unauthorized: /api/eld/activity/current/
+WARNING 2025-10-21 12:05:06,470 basehttp 12848 140707395966720 "GET /api/eld/activity/current/ HTTP/1.1" 401 58
+WARNING 2025-10-21 12:05:06,769 log 12848 140707395966720 Unauthorized: /api/accounts/profile/
+WARNING 2025-10-21 12:05:06,770 basehttp 12848 140707395966720 "GET /api/accounts/profile/ HTTP/1.1" 401 183
+ERROR 2025-10-21 12:05:07,992 views 12848 140707423581952 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:05:07,999 log 12848 140707423581952 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:05:08,000 basehttp 12848 140707423581952 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+INFO 2025-10-21 12:05:23,062 basehttp 12848 140707395966720 "OPTIONS /api/accounts/login/ HTTP/1.1" 200 0
+INFO 2025-10-21 12:05:24,559 basehttp 12848 140707395966720 "POST /api/accounts/login/ HTTP/1.1" 200 1568
+INFO 2025-10-21 12:05:24,894 basehttp 12848 140707395966720 "GET /api/accounts/profile/ HTTP/1.1" 200 978
+ERROR 2025-10-21 12:05:37,988 views 12848 140707423581952 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:05:37,988 log 12848 140707423581952 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:05:37,993 basehttp 12848 140707423581952 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:06:07,985 views 12848 140707423581952 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:06:07,985 log 12848 140707423581952 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:06:07,986 basehttp 12848 140707423581952 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:06:37,987 views 12848 140707423581952 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:06:37,988 log 12848 140707423581952 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:06:37,990 basehttp 12848 140707423581952 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:07:08,014 views 12848 140707423581952 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:07:08,019 log 12848 140707423581952 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:07:08,029 basehttp 12848 140707423581952 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:07:38,040 views 12848 140707423581952 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:07:38,043 log 12848 140707423581952 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:07:38,046 basehttp 12848 140707423581952 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:07:45,690 views 12848 140707395966720 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:07:45,692 log 12848 140707395966720 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:07:45,693 basehttp 12848 140707395966720 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:07:45,723 views 12848 140707395966720 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:07:45,724 log 12848 140707395966720 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:07:45,725 basehttp 12848 140707395966720 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:08:08,018 views 12848 140707423581952 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:08:08,023 log 12848 140707423581952 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:08:08,035 basehttp 12848 140707423581952 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+INFO 2025-10-21 12:09:02,009 autoreload 16166 139782813972288 Watching for file changes with StatReloader
+ERROR 2025-10-21 12:09:08,475 views 16166 139782651614976 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:09:08,476 log 16166 139782651614976 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:09:08,492 basehttp 16166 139782651614976 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:09:30,002 views 16166 139782629947136 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:09:30,017 log 16166 139782629947136 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:09:30,028 basehttp 16166 139782629947136 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:09:37,993 views 16166 139782651614976 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:09:37,995 log 16166 139782651614976 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:09:38,003 basehttp 16166 139782651614976 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:09:59,981 views 16166 139782629947136 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:09:59,983 log 16166 139782629947136 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:09:59,992 basehttp 16166 139782629947136 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:10:07,998 views 16166 139782651614976 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:10:08,000 log 16166 139782651614976 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:10:08,001 basehttp 16166 139782651614976 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:10:29,985 views 16166 139782629947136 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:10:29,986 log 16166 139782629947136 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:10:29,987 basehttp 16166 139782629947136 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:10:37,985 views 16166 139782651614976 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:10:37,986 log 16166 139782651614976 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:10:37,995 basehttp 16166 139782651614976 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:11:00,011 views 16166 139782629947136 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:11:00,014 log 16166 139782629947136 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:11:00,021 basehttp 16166 139782629947136 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:11:08,022 views 16166 139782651614976 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:11:08,023 log 16166 139782651614976 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:11:08,023 basehttp 16166 139782651614976 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:11:30,008 views 16166 139782629947136 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:11:30,010 log 16166 139782629947136 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:11:30,017 basehttp 16166 139782629947136 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:11:37,985 views 16166 139782651614976 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:11:37,989 log 16166 139782651614976 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:11:37,990 basehttp 16166 139782651614976 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+INFO 2025-10-21 12:11:55,031 autoreload 16166 139782813972288 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-21 12:11:56,217 autoreload 17533 140294526568256 Watching for file changes with StatReloader
+ERROR 2025-10-21 12:12:00,013 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:12:00,015 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:12:00,017 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:12:07,988 views 17533 140294342551296 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:12:07,989 log 17533 140294342551296 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:12:07,989 basehttp 17533 140294342551296 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:12:29,996 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:12:29,998 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:12:29,998 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:12:37,991 views 17533 140294342551296 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:12:37,992 log 17533 140294342551296 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:12:37,995 basehttp 17533 140294342551296 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:13:00,040 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:13:00,041 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:13:00,043 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:13:07,988 views 17533 140294342551296 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:13:07,989 log 17533 140294342551296 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:13:07,989 basehttp 17533 140294342551296 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:13:30,006 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:13:30,017 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:13:30,021 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:13:37,985 views 17533 140294342551296 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:13:37,986 log 17533 140294342551296 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:13:37,987 basehttp 17533 140294342551296 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:14:00,000 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:14:00,004 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:14:00,006 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:14:08,034 views 17533 140294342551296 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:14:08,036 log 17533 140294342551296 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:14:08,042 basehttp 17533 140294342551296 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:14:29,975 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:14:29,976 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:14:29,977 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:14:37,988 views 17533 140294342551296 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:14:37,989 log 17533 140294342551296 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:14:37,990 basehttp 17533 140294342551296 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:15:00,024 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:15:00,030 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:15:00,033 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:15:08,005 views 17533 140294342551296 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:15:08,008 log 17533 140294342551296 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:15:08,020 basehttp 17533 140294342551296 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:15:29,991 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:15:29,993 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:15:29,995 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:15:37,984 views 17533 140294342551296 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:15:37,986 log 17533 140294342551296 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:15:37,987 basehttp 17533 140294342551296 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:15:59,975 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:15:59,976 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:15:59,977 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+WARNING 2025-10-21 12:16:07,981 log 17533 140294342551296 Unauthorized: /api/eld/activity/current/
+WARNING 2025-10-21 12:16:07,982 basehttp 17533 140294342551296 "GET /api/eld/activity/current/ HTTP/1.1" 401 183
+INFO 2025-10-21 12:16:07,988 basehttp 17533 140294342551296 "OPTIONS /api/auth/refresh/ HTTP/1.1" 200 0
+WARNING 2025-10-21 12:16:08,255 log 17533 140294342551296 Not Found: /api/auth/refresh/
+WARNING 2025-10-21 12:16:08,257 basehttp 17533 140294342551296 "POST /api/auth/refresh/ HTTP/1.1" 404 2952
+ERROR 2025-10-21 12:16:29,997 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:16:29,998 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:16:29,999 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:17:00,019 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:17:00,024 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:17:00,045 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:17:30,046 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:17:30,054 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:17:30,058 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+INFO 2025-10-21 12:17:31,377 basehttp 17533 140294364325632 "GET /api/accounts/profile/ HTTP/1.1" 200 978
+ERROR 2025-10-21 12:18:03,702 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:18:03,703 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:18:03,704 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:18:29,975 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:18:29,976 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:18:29,977 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:19:00,001 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:19:00,004 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:19:00,007 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:19:30,003 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:19:30,005 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:19:30,006 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:20:00,039 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:20:00,045 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:20:00,045 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:20:30,004 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:20:30,006 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:20:30,007 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:21:00,002 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:21:00,006 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:21:00,011 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:21:30,004 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:21:30,007 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:21:30,009 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:22:00,005 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:22:00,008 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:22:00,008 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:22:30,038 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:22:30,041 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:22:30,043 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:23:00,022 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:23:00,023 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:23:00,024 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:23:30,024 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:23:30,027 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:23:30,030 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:24:00,007 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:24:00,011 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:24:00,013 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:24:29,989 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:24:29,990 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:24:29,992 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:25:00,006 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:25:00,008 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:25:00,010 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:25:29,979 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:25:29,981 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:25:29,984 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:26:00,032 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:26:00,035 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:26:00,037 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:26:30,021 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:26:30,025 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:26:30,026 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:26:59,977 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:26:59,979 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:26:59,981 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:27:30,036 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:27:30,038 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:27:30,048 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:27:59,992 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:27:59,994 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:27:59,996 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:28:30,017 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:28:30,021 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:28:30,023 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:29:00,019 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:29:00,024 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:29:00,032 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:29:30,028 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:29:30,033 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:29:30,048 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:30:00,021 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:30:00,023 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:30:00,028 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:30:29,979 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:30:29,982 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:30:29,983 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:31:00,018 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:31:00,021 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:31:00,060 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:31:30,015 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:31:30,016 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:31:30,017 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:32:00,012 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:32:00,017 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:32:00,038 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:32:30,002 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:32:30,006 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:32:30,015 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:33:00,030 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:33:00,034 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:33:00,040 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:33:29,994 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:33:29,999 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:33:30,007 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:33:59,989 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:33:59,991 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:33:59,992 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:34:29,987 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:34:29,994 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:34:29,998 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+ERROR 2025-10-21 12:34:59,986 views 17533 140294364325632 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:34:59,987 log 17533 140294364325632 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:34:59,991 basehttp 17533 140294364325632 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+INFO 2025-10-21 12:35:17,514 autoreload 17533 140294526568256 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/models.py changed, reloading.
+INFO 2025-10-21 12:35:21,332 autoreload 20881 140225822975808 Watching for file changes with StatReloader
+ERROR 2025-10-21 12:35:30,179 views 20881 140225728001792 Error fetching driver activity: NOT NULL constraint failed: eld_logs_eldlog.trip_id
+ERROR 2025-10-21 12:35:30,180 log 20881 140225728001792 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 12:35:30,181 basehttp 20881 140225728001792 "GET /api/eld/activity/current/ HTTP/1.1" 500 82
+INFO 2025-10-21 12:39:54,669 autoreload 21466 140081107998528 Watching for file changes with StatReloader
+INFO 2025-10-21 12:40:53,852 autoreload 22196 139832378623808 Watching for file changes with StatReloader
+INFO 2025-10-21 12:41:00,219 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:41:30,029 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:41:37,493 basehttp 22196 139832216508160 "OPTIONS /api/eld-logs/change-duty-status/ HTTP/1.1" 200 0
+WARNING 2025-10-21 12:41:37,708 log 22196 139832216508160 Not Found: /api/eld-logs/change-duty-status/
+WARNING 2025-10-21 12:41:37,709 basehttp 22196 139832216508160 "POST /api/eld-logs/change-duty-status/ HTTP/1.1" 404 2997
+INFO 2025-10-21 12:41:59,999 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:42:30,051 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:43:00,012 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:43:30,011 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:44:00,020 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:44:30,049 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:44:59,993 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:45:30,015 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:46:00,005 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:46:30,022 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:47:00,013 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:47:30,011 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:48:00,025 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:48:30,023 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:49:00,033 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:49:29,996 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:50:00,065 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:50:29,995 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:50:59,999 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:51:30,081 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:52:00,008 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:52:30,056 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:53:00,071 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:53:02,965 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:54:54,681 basehttp 22196 139832216508160 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 12:54:54,690 basehttp 22196 139832122668800 "GET /api/accounts/profile/ HTTP/1.1" 200 978
+INFO 2025-10-21 12:54:54,731 basehttp 22196 139832114276096 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+WARNING 2025-10-21 12:55:00,727 log 22196 139832114276096 Not Found: /api/eld-logs/change-duty-status/
+WARNING 2025-10-21 12:55:00,728 basehttp 22196 139832114276096 "POST /api/eld-logs/change-duty-status/ HTTP/1.1" 404 2997
+WARNING 2025-10-21 12:56:56,202 log 22196 139832114276096 Not Found: /api/eld-logs/change-duty-status/
+WARNING 2025-10-21 12:56:56,224 basehttp 22196 139832114276096 "POST /api/eld-logs/change-duty-status/ HTTP/1.1" 404 2997
+INFO 2025-10-21 12:58:42,391 basehttp 22196 139832114276096 "OPTIONS /api/eld/activity/change-duty-status/ HTTP/1.1" 200 0
+WARNING 2025-10-21 12:58:42,410 log 22196 139832114276096 Not Found: /api/eld/activity/change-duty-status/
+WARNING 2025-10-21 12:58:42,412 basehttp 22196 139832114276096 "POST /api/eld/activity/change-duty-status/ HTTP/1.1" 404 5572
+INFO 2025-10-21 13:00:01,134 basehttp 22196 139832114276096 "GET /api/accounts/profile/ HTTP/1.1" 200 978
+INFO 2025-10-21 13:01:06,787 basehttp 22196 139832114276096 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 13:01:06,875 basehttp 22196 139832114276096 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 13:01:06,899 basehttp 22196 139832122668800 "GET /api/accounts/profile/ HTTP/1.1" 200 978
+INFO 2025-10-21 13:01:13,029 basehttp 22196 139832114276096 "OPTIONS /api/eld/activity/change-status/ HTTP/1.1" 200 0
+WARNING 2025-10-21 13:01:13,039 log 22196 139832114276096 Bad Request: /api/eld/activity/change-status/
+WARNING 2025-10-21 13:01:13,041 basehttp 22196 139832114276096 "POST /api/eld/activity/change-status/ HTTP/1.1" 400 107
+WARNING 2025-10-21 13:01:31,291 log 22196 139832114276096 Bad Request: /api/eld/activity/change-status/
+WARNING 2025-10-21 13:01:31,295 basehttp 22196 139832114276096 "POST /api/eld/activity/change-status/ HTTP/1.1" 400 107
+INFO 2025-10-21 13:10:46,879 basehttp 22196 139832114276096 "POST /api/accounts/login/ HTTP/1.1" 200 1568
+INFO 2025-10-21 13:10:47,120 basehttp 22196 139832114276096 "GET /api/accounts/profile/ HTTP/1.1" 200 978
+INFO 2025-10-21 13:10:50,301 basehttp 22196 139832114276096 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+INFO 2025-10-21 13:10:50,350 basehttp 22196 139832114276096 "GET /api/eld/activity/current/ HTTP/1.1" 200 266
+ERROR 2025-10-21 13:10:54,955 views 22196 139832114276096 Error changing duty status: NOT NULL constraint failed: eld_logs_dutystatusentry.end_time
+ERROR 2025-10-21 13:10:54,956 log 22196 139832114276096 Internal Server Error: /api/eld/activity/change-status/
+ERROR 2025-10-21 13:10:54,956 basehttp 22196 139832114276096 "POST /api/eld/activity/change-status/ HTTP/1.1" 500 92
+INFO 2025-10-21 13:13:38,495 autoreload 22196 139832378623808 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/models.py changed, reloading.
+INFO 2025-10-21 13:13:42,538 autoreload 25500 140243708176192 Watching for file changes with StatReloader
+INFO 2025-10-21 13:14:36,602 autoreload 25500 140243708176192 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/services.py changed, reloading.
+INFO 2025-10-21 13:14:38,994 autoreload 25630 139647744304960 Watching for file changes with StatReloader
+ERROR 2025-10-21 13:16:41,139 views 25630 139647649330944 Error changing duty status: unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'
+ERROR 2025-10-21 13:16:41,140 log 25630 139647649330944 Internal Server Error: /api/eld/activity/change-status/
+ERROR 2025-10-21 13:16:41,153 basehttp 25630 139647649330944 "POST /api/eld/activity/change-status/ HTTP/1.1" 500 100
+INFO 2025-10-21 13:18:07,273 autoreload 25630 139647744304960 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-21 13:18:09,300 autoreload 27562 140411966969664 Watching for file changes with StatReloader
+INFO 2025-10-21 13:18:16,812 autoreload 27562 140411966969664 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-21 13:18:18,926 autoreload 27614 139628443543360 Watching for file changes with StatReloader
+ERROR 2025-10-21 13:19:07,874 views 27614 139628281050880 Error changing duty status: unsupported operand type(s) for -: 'NoneType' and 'datetime.datetime'
+ERROR 2025-10-21 13:19:07,875 log 27614 139628281050880 Internal Server Error: /api/eld/activity/change-status/
+ERROR 2025-10-21 13:19:07,877 basehttp 27614 139628281050880 "POST /api/eld/activity/change-status/ HTTP/1.1" 500 100
+INFO 2025-10-21 13:19:43,836 autoreload 27614 139628443543360 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/models.py changed, reloading.
+INFO 2025-10-21 13:19:45,274 autoreload 27816 140270224287552 Watching for file changes with StatReloader
+INFO 2025-10-21 13:19:49,479 autoreload 27816 140270224287552 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/models.py changed, reloading.
+INFO 2025-10-21 13:19:51,833 autoreload 27867 139946413598528 Watching for file changes with StatReloader
+INFO 2025-10-21 13:20:01,191 basehttp 27867 139946251237120 "POST /api/eld/activity/change-status/ HTTP/1.1" 200 802
+ERROR 2025-10-21 13:20:01,254 views 27867 139946251237120 Error fetching driver activity: can't subtract offset-naive and offset-aware datetimes
+ERROR 2025-10-21 13:20:01,255 log 27867 139946251237120 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 13:20:01,256 basehttp 27867 139946251237120 "GET /api/eld/activity/current/ HTTP/1.1" 500 85
+INFO 2025-10-21 13:20:50,446 autoreload 27867 139946413598528 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-21 13:20:52,446 autoreload 28000 140551202920256 Watching for file changes with StatReloader
+INFO 2025-10-21 13:20:54,774 basehttp 28000 140551041443584 "POST /api/eld/activity/change-status/ HTTP/1.1" 200 778
+ERROR 2025-10-21 13:20:54,828 views 28000 140551041443584 Error fetching driver activity: can't subtract offset-naive and offset-aware datetimes
+ERROR 2025-10-21 13:20:54,829 log 28000 140551041443584 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 13:20:54,830 basehttp 28000 140551041443584 "GET /api/eld/activity/current/ HTTP/1.1" 500 85
+INFO 2025-10-21 13:21:26,602 autoreload 28000 140551202920256 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-21 13:21:29,135 autoreload 28063 140046714193728 Watching for file changes with StatReloader
+INFO 2025-10-21 13:21:32,603 autoreload 28063 140046714193728 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-21 13:21:35,850 autoreload 28101 140462440187712 Watching for file changes with StatReloader
+INFO 2025-10-21 13:22:01,378 basehttp 28101 140462274901760 "POST /api/eld/activity/change-status/ HTTP/1.1" 200 816
+ERROR 2025-10-21 13:22:01,423 views 28101 140462274901760 Error fetching driver activity: can't subtract offset-naive and offset-aware datetimes
+ERROR 2025-10-21 13:22:01,426 log 28101 140462274901760 Internal Server Error: /api/eld/activity/current/
+ERROR 2025-10-21 13:22:01,426 basehttp 28101 140462274901760 "GET /api/eld/activity/current/ HTTP/1.1" 500 85
+INFO 2025-10-21 13:28:32,688 autoreload 28101 140462440187712 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/views.py changed, reloading.
+INFO 2025-10-21 13:28:35,712 autoreload 28529 139741394732864 Watching for file changes with StatReloader
+ERROR 2025-10-21 13:29:45,507 views 28529 139741232359168 Error changing duty status: can't subtract offset-naive and offset-aware datetimes
+ERROR 2025-10-21 13:29:45,508 log 28529 139741232359168 Internal Server Error: /api/eld/activity/change-status/
+ERROR 2025-10-21 13:29:45,508 basehttp 28529 139741232359168 "POST /api/eld/activity/change-status/ HTTP/1.1" 500 85
+INFO 2025-10-21 13:30:11,586 autoreload 28529 139741394732864 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/serializers.py changed, reloading.
+INFO 2025-10-21 13:30:13,798 autoreload 28735 140368333600576 Watching for file changes with StatReloader
+INFO 2025-10-21 13:30:24,698 autoreload 28735 140368333600576 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/serializers.py changed, reloading.
+INFO 2025-10-21 13:30:26,920 autoreload 28779 140119418492736 Watching for file changes with StatReloader
+INFO 2025-10-21 13:30:30,580 autoreload 28779 140119418492736 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/serializers.py changed, reloading.
+INFO 2025-10-21 13:30:32,599 autoreload 28813 140078577026880 Watching for file changes with StatReloader
+ERROR 2025-10-21 13:30:39,409 views 28813 140078412199680 Error changing duty status: type object 'datetime.timezone' has no attribute 'now'
+ERROR 2025-10-21 13:30:39,410 log 28813 140078412199680 Internal Server Error: /api/eld/activity/change-status/
+ERROR 2025-10-21 13:30:39,411 basehttp 28813 140078412199680 "POST /api/eld/activity/change-status/ HTTP/1.1" 500 85
+INFO 2025-10-21 13:31:09,644 autoreload 28813 140078577026880 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/serializers.py changed, reloading.
+INFO 2025-10-21 13:31:12,111 autoreload 28890 139674543511360 Watching for file changes with StatReloader
+INFO 2025-10-21 13:31:24,029 autoreload 28890 139674543511360 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/serializers.py changed, reloading.
+INFO 2025-10-21 13:31:26,131 autoreload 28938 140322410612544 Watching for file changes with StatReloader
+INFO 2025-10-21 13:31:31,928 basehttp 28938 140322248070912 "POST /api/eld/activity/change-status/ HTTP/1.1" 200 815
+INFO 2025-10-21 13:31:32,008 basehttp 28938 140322248070912 "GET /api/eld/activity/current/ HTTP/1.1" 200 4722
+INFO 2025-10-21 13:32:10,200 basehttp 28938 140322248070912 "POST /api/eld/activity/change-status/ HTTP/1.1" 200 816
+INFO 2025-10-21 13:32:10,297 basehttp 28938 140322248070912 "GET /api/eld/activity/current/ HTTP/1.1" 200 5279
+INFO 2025-10-21 13:32:26,377 basehttp 28938 140322248070912 "POST /api/eld/activity/change-status/ HTTP/1.1" 200 801
+INFO 2025-10-21 13:32:26,625 basehttp 28938 140322248070912 "GET /api/eld/activity/current/ HTTP/1.1" 200 5803
+INFO 2025-10-21 13:39:58,276 autoreload 28938 140322410612544 /home/sergeo/Documents/spotter-application/spotter-backend/eld_logs/services.py changed, reloading.
+INFO 2025-10-21 13:39:59,947 autoreload 29570 140623687149376 Watching for file changes with StatReloader
+INFO 2025-10-21 13:52:39,643 basehttp 29570 140623524562688 "GET /api/eld/activity/current/ HTTP/1.1" 200 5805
+INFO 2025-10-21 13:55:33,820 basehttp 29570 140623524562688 "GET /api/accounts/profile/ HTTP/1.1" 200 984
+INFO 2025-10-21 14:18:34,042 autoreload 29570 140623687149376 /home/sergeo/Documents/spotter-application/spotter-backend/spotter_project/settings.py changed, reloading.
+INFO 2025-10-21 14:18:40,335 autoreload 33387 140367835428672 Watching for file changes with StatReloader

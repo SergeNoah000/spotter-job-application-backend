@@ -254,7 +254,7 @@ class HOSRulesEngine:
         entry = DutyStatusEntry.objects.create(
             eld_log=today_log,
             start_time=now,
-            end_time=now,  # Sera mis à jour lors du prochain changement
+            end_time=None,  # Sera mis à jour lors du prochain changement
             status=status,
             location=location,
             latitude=latitude,

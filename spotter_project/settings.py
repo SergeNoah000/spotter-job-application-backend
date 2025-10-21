@@ -218,23 +218,23 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='nwec tsts jaey yoed
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='noreply@spotter-app.com')
 
 # Celery Configuration (for background tasks)
-CELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')
-CELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TIMEZONE = TIME_ZONE
+# CELERY_BROKER_URL = config('REDIS_URL', default='redis://localhost:6379/0')
+# CELERY_RESULT_BACKEND = config('REDIS_URL', default='redis://localhost:6379/0')
+# CELERY_ACCEPT_CONTENT = ['json']
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_RESULT_SERIALIZER = 'json'
+# CELERY_TIMEZONE = TIME_ZONE
 
 # Cache Configuration
-CACHES = {
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': config('REDIS_URL', default='redis://localhost:6379/1'),
-        'OPTIONS': {
-            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-        }
-    }
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django_redis.cache.RedisCache',
+#         'LOCATION': config('REDIS_URL', default='redis://localhost:6379/1'),
+#         'OPTIONS': {
+#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+#         }
+#     }
+# }
 
 # Session Configuration
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'

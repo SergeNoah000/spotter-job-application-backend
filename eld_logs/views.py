@@ -40,10 +40,10 @@ class ELDLogListCreateView(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         user = self.request.user
         
-        # Pour les conducteurs, assigner automatiquement leur ID et véhicule
+        # Pour les conducteurs, assigner automatiquement leur ID et numéro de véhicule
         if user.is_driver():
-            vehicle = user.assigned_vehicle if user.has_assigned_vehicle else None
-            serializer.save(driver=user, vehicle=vehicle)
+            vehicle_number = user.assigned_vehicle.vehicle_number if user.has_assigned_vehicle else 'N/A'
+            serializer.save(driver=user, vehicle_number=vehicle_number)
         else:
             serializer.save()
 
@@ -131,15 +131,15 @@ def create_hos_status_change(request):
             }, status=status.HTTP_400_BAD_REQUEST)
         
         # Créer un nouveau log ELD
+        now = timezone.now()
         eld_log = ELDLog.objects.create(
             driver=user,
-            log_date=datetime.now().date(),
+            log_date=now.date(),
             duty_status=duty_status_lower,
-            start_time=datetime.now(),
+            start_time=now,
             location=location,
             notes=notes,
             trip=user.current_trip if hasattr(user, 'current_trip') and user.current_trip else None,
-            vehicle=user.assigned_vehicle if user.has_assigned_vehicle else None,
             vehicle_number=user.assigned_vehicle.vehicle_number if user.has_assigned_vehicle else 'N/A'
         )
         
@@ -177,7 +177,7 @@ def get_driver_current_hos_status(request):
         from .models import DutyStatusEntry
         
         # Obtenir le log ELD d'aujourd'hui
-        today = datetime.now().date()
+        today = timezone.now().date()
         eld_log = ELDLog.objects.filter(
             driver=user,
             log_date=today
@@ -191,7 +191,7 @@ def get_driver_current_hos_status(request):
             ).first()
             
             if current_entry:
-                duration = datetime.now() - current_entry.start_time
+                duration = timezone.now() - current_entry.start_time
                 duration_hours = duration.total_seconds() / 3600
                 
                 current_status = {
@@ -222,7 +222,7 @@ def get_driver_current_hos_status(request):
                     'total_hours': float(eld_log.cycle_hours_used),
                     'remaining_hours': float(eld_log.cycle_hours_available)
                 },
-                'last_updated': datetime.now().isoformat()
+                'last_updated': timezone.now().isoformat()
             })
         else:
             # Pas de log pour aujourd'hui
@@ -244,7 +244,7 @@ def get_driver_current_hos_status(request):
                     'total_hours': 0,
                     'remaining_hours': 70
                 },
-                'last_updated': datetime.now().isoformat()
+                'last_updated': timezone.now().isoformat()
             })
             
     except Exception as e:
@@ -266,7 +266,7 @@ def get_driver_daily_logs(request):
         if date_param:
             target_date = datetime.strptime(date_param, '%Y-%m-%d').date()
         else:
-            target_date = datetime.now().date()
+            target_date = timezone.now().date()
         
         if user.is_driver():
             logs = ELDLog.objects.filter(
@@ -338,15 +338,14 @@ def change_duty_status(request):
                 'error': f'Invalid status. Must be one of: {valid_statuses}'
             }, status=status.HTTP_400_BAD_REQUEST)
         
-        today = datetime.now().date()
-        now = datetime.now()
+        today = timezone.now().date()
+        now = timezone.now()
         
         # Obtenir ou créer le log ELD d'aujourd'hui
         eld_log, created = ELDLog.objects.get_or_create(
             driver=user,
             log_date=today,
             defaults={
-                'vehicle': user.assigned_vehicle if user.has_assigned_vehicle else None,
                 'vehicle_number': user.assigned_vehicle.vehicle_number if user.has_assigned_vehicle else 'N/A',
                 'trip': None,
                 'created_by': user
@@ -406,6 +405,8 @@ def change_duty_status(request):
         })
         
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         logger.error(f"Error changing duty status: {str(e)}")
         return Response({
             'error': f'An error occurred: {str(e)}'
@@ -508,17 +509,15 @@ def get_driver_activity(request):
     
     try:
         # Récupérer tous les segments du conducteur pour aujourd'hui
-        today = datetime.now().date()
+        today = timezone.now().date()
         
         # Obtenir ou créer le log ELD du jour
         eld_log, created = ELDLog.objects.get_or_create(
             driver=user,
             log_date=today,
             defaults={
-                'vehicle': user.assigned_vehicle if user.has_assigned_vehicle else None,
-                'vehicle_number': user.assigned_vehicle.vehicle_number if user.has_assigned_vehicle else 'N/A',
-                'duty_status': 'off_duty',
-                'start_time': datetime.now()
+                'vehicle_number': user.assigned_vehicle.vehicle_number if hasattr(user, 'assigned_vehicle') and user.assigned_vehicle else 'N/A',
+                'created_by': user
             }
         )
         
@@ -554,7 +553,7 @@ def get_driver_activity(request):
         current_segment = segments.filter(end_time__isnull=True).first()
         current_status = None
         if current_segment:
-            duration = datetime.now() - current_segment.start_time
+            duration = timezone.now() - current_segment.start_time if current_segment.start_time else timedelta(0)
             current_status = {
                 'status': current_segment.status,
                 'start_time': current_segment.start_time.isoformat(),
@@ -570,13 +569,15 @@ def get_driver_activity(request):
             'hos_statistics': hos_stats,
             'daily_totals': {
                 'driving_hours': float(eld_log.driving_hours),
-                'on_duty_hours': float(eld_log.total_duty_hours),
-                'remaining_driving': eld_log.remaining_drive_time,
-                'remaining_on_duty': eld_log.remaining_duty_time
+                'on_duty_hours': float(eld_log.on_duty_not_driving_hours),
+                'remaining_driving': 11 - float(eld_log.driving_hours),
+                'remaining_on_duty': 14 - float(eld_log.driving_hours + eld_log.on_duty_not_driving_hours)
             }
         })
         
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         logger.error(f"Error fetching driver activity: {str(e)}")
         return Response({
             'error': f'An error occurred: {str(e)}'
@@ -594,7 +595,7 @@ def calculate_hos_statistics(segments):
         'sleeper_berth_time': 0
     }
     
-    now = datetime.now()
+    now = timezone.now()
     
     for segment in segments:
         end_time = segment.end_time if segment.end_time else now
@@ -650,15 +651,16 @@ def add_driver_activity_segment(request):
             }, status=status.HTTP_400_BAD_REQUEST)
         
         # Obtenir ou créer le log ELD du jour
-        today = datetime.now().date()
+        today = timezone.now().date()
+        now = timezone.now()
+        
         eld_log, created = ELDLog.objects.get_or_create(
             driver=user,
             log_date=today,
             defaults={
-                'vehicle': user.assigned_vehicle if user.has_assigned_vehicle else None,
                 'vehicle_number': user.assigned_vehicle.vehicle_number if user.has_assigned_vehicle else 'N/A',
                 'duty_status': 'off_duty',
-                'start_time': datetime.now()
+                'start_time': now
             }
         )
         
@@ -669,7 +671,7 @@ def add_driver_activity_segment(request):
         ).first()
         
         if current_segment:
-            current_segment.end_time = datetime.now()
+            current_segment.end_time = now
             current_segment.save()
         
         # Déterminer le voyage lié (si existant)
@@ -684,7 +686,7 @@ def add_driver_activity_segment(request):
         new_segment = DutyStatusEntry.objects.create(
             eld_log=eld_log,
             status=duty_status,
-            start_time=datetime.now(),
+            start_time=now,
             location=location,
             remarks=notes,
             latitude=latitude,
