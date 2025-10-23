@@ -324,7 +324,7 @@ def change_duty_status(request):
         }, status=status.HTTP_403_FORBIDDEN)
     
     try:
-        new_status = request.data.get('status')
+        new_status = request.data.get('status') if request.data.get('status') else  request.data.get('duty_status')
         location = request.data.get('location', 'Unknown')
         latitude = request.data.get('latitude')
         longitude = request.data.get('longitude')
@@ -632,7 +632,7 @@ def add_driver_activity_segment(request):
         }, status=status.HTTP_403_FORBIDDEN)
     
     try:
-        duty_status = request.data.get('status')
+        duty_status = request.data.get('status') or request.data.get('duty_status') 
         location = request.data.get('location', 'Unknown')
         notes = request.data.get('remarks', '')
         latitude = request.data.get('latitude')
@@ -826,7 +826,7 @@ class ELDLogViewSet(viewsets.ModelViewSet):
         
         # Valider le statut
         valid_statuses = ['OFF_DUTY', 'SLEEPER_BERTH', 'DRIVING', 'ON_DUTY_NOT_DRIVING']
-        duty_status = request.data.get('status')
+        duty_status = request.data.get('status') or request.data.get('duty_status')
         
         if duty_status not in valid_statuses:
             return Response(
