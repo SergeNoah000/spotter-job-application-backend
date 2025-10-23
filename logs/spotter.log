@@ -5653,3 +5653,4 @@ INFO 2025-10-21 13:55:33,820 basehttp 29570 140623524562688 "GET /api/accounts/p
 INFO 2025-10-21 14:18:34,042 autoreload 29570 140623687149376 /home/sergeo/Documents/spotter-application/spotter-backend/spotter_project/settings.py changed, reloading.
 INFO 2025-10-21 14:18:40,335 autoreload 33387 140367835428672 Watching for file changes with StatReloader
 INFO 2025-10-21 18:21:07,708 autoreload 33387 140367835428672 /home/sergeo/Documents/spotter-application/spotter-backend/spotter_project/settings.py changed, reloading.
+INFO 2025-10-21 18:21:46,177 autoreload 49777 140189321320256 Watching for file changes with StatReloader

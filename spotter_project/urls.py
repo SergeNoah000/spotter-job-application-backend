@@ -59,6 +59,13 @@ def api_root(request):
         'admin': '/admin/',
     })
 
+
+@api_view(['GET'])  
+@permission_classes([permissions.AllowAny])
+def health_check_view(request):
+    """Health check endpoint"""
+    return Response({'status': 'healthy'}, status=200)
+
 urlpatterns = [
     # Admin interface
     path('admin/', admin.site.urls),
@@ -77,6 +84,8 @@ urlpatterns = [
     
     # Django allauth (if needed for social auth)
     path('accounts/', include('allauth.urls')),
+
+    path('health/', health_check_view, name='health_check'),
 ]
 
 # Serve media files in development
